@@ -52,7 +52,7 @@ session_start();
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Login</h4>
+                    <h4 class="modal-title modal-title-custom">Login</h4>
                 </div>
                 <div class="modal-body">
                     <!-- Login Form -->
@@ -82,7 +82,7 @@ session_start();
                     <div class="item line"></div>
                 </div>
 -->
-                <div class="modal-footer">
+                <div class="modal-footer modal-footer-custom">
                     <div class="row">
                         <div class="circle"><img src="img/or.svg" width="60"></div>
                     </div>
@@ -114,7 +114,7 @@ session_start();
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Sign up</h4>
+                    <h4 class="modal-title modal-title-custom">Sign up</h4>
                 </div>
                 <div class="modal-body">
                     <!-- Sign up Form -->
@@ -136,7 +136,7 @@ session_start();
                         </div>
                     </form>
                 </div>
-                <div class="modal-footer">
+                <div class="modal-footer modal-footer-custom">
                     <div class="row">
                         <div class="circle"><img src="img/or.svg" width="60"></div>
                     </div>

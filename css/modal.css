@@ -22,6 +22,19 @@ body{
     
 }
 
+div#metricMenu.dropdown-menu{
+    
+    background-color: white;
+}
+
+#contestFooter{
+    
+ border-top: 1px solid #e5e5e5;   
+}
+
+#contestHeader{
+    border-bottom: 1px solid #e5e5e5;   
+}
 .b3header{
     margin-top: 10px;
     margin-bottom: 10px;
