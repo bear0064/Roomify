@@ -1,0 +1,129 @@
+a:focus {
+    outline: none;
+}
+.close:focus{
+    outline: none;
+}
+
+// Modal
+.modal-content {
+    border: none;
+}
+
+.modal-title {
+    padding: 30px 0 20px;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: .5px;
+    font-weight: 400;
+    color: #324559;
+}
+
+.form-group {
+    margin: 0 60px 30px;
+}
+
+.form-control {
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #ccd9e5;
+}
+
+.form-group input[type=email],
+.form-group input[type=password] {
+    padding: 0 0 10px 2px;
+}
+
+::-webkit-input-placeholder {
+    color: #ccd9e5;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: #ccd9e5;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #ccd9e5;
+}
+
+:-ms-input-placeholder {
+    color: #ccd9e5;
+}
+
+.message{
+    padding-bottom: 10px;
+    padding-left: 10px;
+    color: white;
+    font-weight: 300;
+    letter-spacing: .3px;
+}
+
+.remember-me {
+    color: #ccd9e5;
+    padding-left: 5px;
+}
+
+.sign-in-btn {
+    padding: 15px 0;
+    background-color: #334766;
+    border: none;
+    width: 100%;
+}
+
+.modal-footer{
+    border-radius: 0 0 4px 4px;
+    background-color: #f2f8fc;
+}
+
+.social-media{
+    margin: 20px 0;
+}
+
+.circle{
+    margin-top: -43px;
+    margin-bottom: 20px;
+}
+
+.facebook{
+    color: white;
+    background-color: #3b5998;
+    border-radius: 3px;
+    padding: 15px 25px;
+}
+.linkedin{
+    color: white;
+    background-color: #4875b4;
+    border-radius: 3px;
+    padding: 15px 22px;
+}
+.twitter{
+    color: white;
+    background-color: #00aced;
+    border-radius: 3px;
+    padding: 15px 25px;
+}
+
+//.group {
+//    display: table;
+//    width: 100%;
+//    font-size: 15px;
+//    letter-spacing: .3px;
+//}
+//
+//.item {
+//    display: table-cell;
+//}
+//
+//.text {
+//    white-space: nowrap;
+//    width: 1%;
+//    padding: 0 20px;
+//}
+//
+//.line {
+//    border-bottom: 1px solid #ccd9e5;
+//    position: relative;
+//    top: -.7em;
+//}
