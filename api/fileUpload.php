@@ -42,7 +42,7 @@ if( $_FILES['SelectedFile']['error']==0 && $_FILES['SelectedFile']['size'] > 0){
 
 
             // Success!
-            exit ('{"code":0, "message":"File Upload Success", "fileName":"'.$file_name.'"}');
+            exit ('{"code":0, "message":"File Upload Success", "fileName":"'.$safename.'"}');
 
 
             }else{
