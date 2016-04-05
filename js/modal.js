@@ -355,7 +355,7 @@ function saveRoomFeatures(){
         
         if ( featuresList.children[i].classList.contains("selected")){
             console.log(featuresList.children[i].dataset);
-            roomSelections[currentRoom].roomFeatures.push(featuresList.children[i].dataset);
+            roomSelections[currentRoom].roomFeatures.push(featuresList.children[i].dataset.name);
         }
     }
     
