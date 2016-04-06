@@ -301,7 +301,7 @@ function updateRoomsModal(response){
         
     }    
 
-     switchModalView(0);     
+     switchModalView(0);
 }
 
 function handleFeatureClick(ev){
@@ -446,7 +446,7 @@ function imagesModal(){
                  }, 2000);
                  
                  setTimeout(function(){
-                        let span = targetDiv.querySelector(".hidden");
+                        let span = targetDiv.querySelector("span.hidden");
                         span.classList.remove("hidden");
                         let thumb = targetDiv.querySelector(".myThumb");
                         thumb.src = "upload/" + response.fileName;
@@ -503,6 +503,10 @@ function createFileItem(fileName){
     let wrapper = document.createElement("div");
     let thumbDiv = document.createElement("div");
     let mainDiv = document.createElement("div");
+    let capDiv = document.createElement("div");
+    let capInput = document.createElement("textarea");
+    let capDone  = document.createElement("div");
+    let doneIcon = document.createElement("i");
     let breakDiv = document.createElement("div");
     let thumbImg = document.createElement("img");
     let nameH6 = document.createElement("h6");
@@ -513,9 +517,24 @@ function createFileItem(fileName){
     
     wrapper.setAttribute("class","nopadding");
     wrapper.setAttribute("data-name",fileName);
-    thumbDiv.setAttribute("class","col-sm-3 nopadding");
-    mainDiv.setAttribute("class","col-sm-9");
+    thumbDiv.setAttribute("class","col-sm-3");
+    mainDiv.setAttribute("class","col-sm-9 noleftpadding");
     breakDiv.setAttribute("class","lineBreak col-sm-12");
+    capDiv.setAttribute("class", "col-sm-9 nopadding hidden");
+
+    capInput.setAttribute("class","myForm col-sm-11");
+    capInput.setAttribute("rows","4");
+    capInput.setAttribute("placeholder","Add caption here.");
+    capDone.setAttribute("class","col-sm-1 capDone")
+
+    doneIcon.setAttribute("class","fa fa-check");
+    capDone.appendChild(doneIcon);
+    capDone.addEventListener("click", toggleCaption);
+
+    capDiv.appendChild(capInput);
+    capDiv.appendChild(capDone);
+
+
     
     thumbImg.setAttribute("class","img-thumbnail myThumb nopadding");
     thumbImg.src = "img/imgPlaceHolder.png";
@@ -531,12 +550,13 @@ function createFileItem(fileName){
                              
     progP.setAttribute("class","progBar");
     capSpan.setAttribute("class","addCaption pull-left");
-    capSpan.setAttribute("data-toggle","modal");
-    capSpan.setAttribute("data-target","#captionModal");
+    capSpan.addEventListener("click", toggleCaption);
   
     capSpan.innerHTML = "Add caption";
     successSpan.setAttribute("class","pull-right hidden");
     successSpan.innerHTML = ("Completed");
+
+
     
     nameH6.appendChild(closeBtn);
     thumbDiv.appendChild(thumbImg);
@@ -546,6 +566,7 @@ function createFileItem(fileName){
     mainDiv.appendChild(successSpan);
     wrapper.appendChild(thumbDiv);
     wrapper.appendChild(mainDiv);
+    wrapper.appendChild(capDiv);
     wrapper.appendChild(breakDiv);
     
     uploadList.appendChild(wrapper);
@@ -654,14 +675,41 @@ function showMetricLabel(ev){
 
 }
 
-function clearModalData(){
-    
-    
-    
+function toggleCaption(ev){
+
+    console.log(ev.target.parentElement);
+    let parent;
+
+    if (ev.target.classList.contains("fa-check")){
+
+        parent = ev.target.parentElement.parentElement.parentElement;
+    } else{
+
+        parent = ev.target.parentElement.parentElement;
+    }
+
+    let parentDivs = parent.querySelectorAll("div");
+
+    for (let i=0; i<parentDivs.length;i++){
+
+        if (parentDivs[i].classList.contains("col-sm-9")) {
+
+            if (parentDivs[i].classList.contains("hidden")) {
+                parentDivs[i].classList.remove("hidden");
+
+            } else {
+
+                parentDivs[i].classList.add("hidden");
+            }
+        }
+    }
+
 }
 
+function closeModal(ev) {
 
-//var isAdvancedUpload = function() {
-//  var div = document.createElement('div');
-//  return (('draggable' in div) || ('ondragstart' in div && 'ondrop' in div)) && 'FormData' in window && 'FileReader' in window;
-//}();
+    ev.preventDefault();
+
+
+
+}

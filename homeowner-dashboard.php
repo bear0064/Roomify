@@ -43,7 +43,7 @@ include ('api/authCheck.php');
             <div class="pull-right">
                 <ul class="nav">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="<?echo $_SESSION["user_pic"]?>" class="avatar img-circle img-thumbnail" alt="avatar"><i class="fa fa-chevron-down"></i></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="<?echo $_SESSION["user_pic"]?>" class="avatar img-circle img-thumbnail img-thumbnail-custom" alt="avatar"><i class="fa fa-chevron-down"></i></a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenu">
                             <a class="dropdown-item" href="homeowner-profile.php">Profile</a>
                             <a class="dropdown-item" href="#">Settings</a>
@@ -148,7 +148,7 @@ include ('api/authCheck.php');
 
                 <div class="col-sm-10 nopadding">
                     <div class="modal-header" id="contestHeader">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="clearModalData();">&times;</button>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="closeModal();">&times;</button>
                         <h5 class="modal-title">Create Contest</h5>
                     </div>
 
@@ -210,7 +210,7 @@ include ('api/authCheck.php');
                         <div class="col-sm-12">
                             <h6 id="imgLabel" class="b3header">Room Images</h6>
                             <!-- Drop Zone -->
-                            <div class="col-sm-6 uploadWrapper">
+                            <div class="col-sm-5 uploadWrapper">
                                 <div class="upload-drop-zone" id="dropZone">
                                     Just drag and drop files here
                                 </div>
@@ -226,7 +226,7 @@ include ('api/authCheck.php');
                                 </form>
                             </div>
 
-                            <div class="col-sm-6">
+                            <div class="col-sm-7 nopadding">
 
                                 <!-- Upload Finished -->
                                 <div id="uploadingQueue" class="list-group">

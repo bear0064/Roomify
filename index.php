@@ -59,11 +59,11 @@ session_start();
                     <form>
                         <div class="form-group">
                             <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Username or E-mail">
+                            <input type="email" class="form-control form-control-custom" id="exampleInputEmail3" placeholder="Username or E-mail">
                         </div>
                         <div class="form-group">
                             <label class="sr-only" for="exampleInputPassword3">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+                            <input type="password" class="form-control form-control-custom" id="exampleInputPassword3" placeholder="Password">
                         </div>
                         <div class="checkbox form-group">
                             <label>
@@ -121,15 +121,15 @@ session_start();
                     <form>
                         <div class="form-group">
                             <label class="sr-only" for="">Username</label>
-                            <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Username">
+                            <input type="email" class="form-control form-control-custom" id="exampleInputEmail3" placeholder="Username">
                         </div>
                         <div class="form-group">
                             <label class="sr-only" for="exampleInputEmail3">E-mail</label>
-                            <input type="email" class="form-control" id="exampleInputEmail3" placeholder="E-mail">
+                            <input type="email" class="form-control form-control-custom" id="exampleInputEmail3" placeholder="E-mail">
                         </div>
                         <div class="form-group">
                             <label class="sr-only" for="exampleInputPassword3">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+                            <input type="password" class="form-control form-control-custom" id="exampleInputPassword3" placeholder="Password">
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary sign-in-btn">Sign in</button>

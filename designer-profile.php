@@ -41,7 +41,7 @@ include ('api/authCheck.php');
             <div class="pull-right">
                 <ul class="nav">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="<?echo $_SESSION["user_pic"]?>" class="avatar img-circle img-thumbnail" alt="avatar"><i class="fa fa-chevron-down"></i></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="<?echo $_SESSION["user_pic"]?>" class="avatar img-circle img-thumbnail img-thumbnail-custom" alt="avatar"><i class="fa fa-chevron-down"></i></a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenu">
                             <a class="dropdown-item" href="designer-profile.php">Profile</a>
                             <a class="dropdown-item" href="#">Settings</a>
@@ -63,7 +63,7 @@ include ('api/authCheck.php');
                 <div class="col-xs-8">
                     <div class="media">
                         <div class="pull-left" href="#">
-                            <img class="media-object img-circle img-thumbnail" src="<?echo $_SESSION["user_pic"]?>" alt="avatar" style="width: 125px;height:125px;">
+                            <img class="media-object img-circle img-thumbnail img-thumbnail-custom" src="<?echo $_SESSION["user_pic"]?>" alt="avatar" style="width: 125px;height:125px;">
                         </div>
                         <div id="profile" class="media-body" style="padding-left: 20px">
 
@@ -263,7 +263,7 @@ include ('api/authCheck.php');
                         <div class="col-sm-3 col-md-3">
                             <div class="media">
                                 <div class="pull-left" href="#">
-                                    <img class="media-object img-circle img-thumbnail" src="images/128.jpg" alt="avatar" style="width: 90px;height:90px;">
+                                    <img class="media-object img-circle img-thumbnail img-thumbnail-custom" src="images/128.jpg" alt="avatar" style="width: 90px;height:90px;">
                                 </div>
                                 <div class="media-body cnt-left" style="padding-left: 20px">
                                     <div class="name">

@@ -157,7 +157,7 @@ body {
     color: #83c0ff;
 }
 
-.img-thumbnail{
+.img-thumbnail-custom{
     max-width: 4rem;
     border: none;
     background: none;
