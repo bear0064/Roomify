@@ -74,30 +74,38 @@ include ('api/authCheck.php');
             <!-- Dropdown Menues -->
             <div class="dropdown-category cnt-right">
 
-                <!-- Filter Dropdown -->
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        All <span class="caret"></span>
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-                        <a class="dropdown-item" href="#">Submitted</a>
-                        <a class="dropdown-item" href="#">Favourite</a>
-                        <a class="dropdown-item active" href="#">All</a>
+                <div id="dropMenus">
+
+                    <!-- Filter Dropdown -->
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            All <span class="caret"></span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+                            <a class="dropdown-item" href="#">Submitted</a>
+                            <a class="dropdown-item" href="#">Favourite</a>
+                            <a class="dropdown-item active" href="#">All</a>
+                        </div>
                     </div>
+
+                    <!-- Sort Dropdown -->
+                    <div class="btn-group">
+                        <button type="button" id="dropDownName" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Newest <span class="caret"></span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+                            <a class="dropdown-item active" value="Newest" onclick="setSortActiveDesigner(event);">Newest</a>
+                            <a class="dropdown-item" data-dropdown="Oldest" onclick="setSortActiveDesigner(event);">Oldest</a>
+                            <a class="dropdown-item" data-dropdown="Highest Prize" onclick="setSortActiveDesigner(event);">Highest Prize</a>
+                            <a class="dropdown-item" data-dropdown="Lowest Prize" onclick="setSortActiveDesigner(event);">Lowest Prize</a>
+                        </div>
+                    </div>
+
+
+
                 </div>
 
-                <!-- Sort Dropdown -->
-                <div class="btn-group">
-                    <button type="button" id="dropDownName" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Newest <span class="caret"></span>
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-                        <a class="dropdown-item active" value="Newest" onclick="setSortActiveDesigner(event);">Newest</a>
-                        <a class="dropdown-item" data-dropdown="Oldest" onclick="setSortActiveDesigner(event);">Oldest</a>
-                        <a class="dropdown-item" data-dropdown="Highest Prize" onclick="setSortActiveDesigner(event);">Highest Prize</a>
-                        <a class="dropdown-item" data-dropdown="Lowest Prize" onclick="setSortActiveDesigner(event);">Lowest Prize</a>
-                    </div>
-                </div>
+
             </div>
 
 
@@ -118,10 +126,10 @@ include ('api/authCheck.php');
                 </div>
 
                 <!-- Completed Tab w No Completed Contests -->
-                <div id="completed" class="tab-pane fade cnt-center" >
+<!--                <div id="completed" class="tab-pane fade cnt-center" >-->
 <!--                    <p>You have no completed contests.</p>-->
 <!--                    <p>Browse contests <a href="designer-browse.php">here</a></p>-->
-                </div>
+<!--                </div>-->
                 
                 
             </div>

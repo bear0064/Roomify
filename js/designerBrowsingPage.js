@@ -31,10 +31,6 @@ function getAllContests(data){
 
     for (let i=0; i < data.length; i++){
 
-
-
-
-
         data[i].closing_date = data[i].closing_date.split(/[- :]/);
         data[i].closing_date = new Date(data[i].closing_date[0], data[i].closing_date[1]-1, data[i].closing_date[2], data[i].closing_date[3], data[i].closing_date[4], data[i].closing_date[5]);
         console.log(data[i].closing_date);
