@@ -58,26 +58,5 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
     }
 }
 
-
-
-
-
-
-
-//$output = '{"code":0, "message":"All the records", "sortedBy":"'. $sortBy . '", "contests":[';
-////loop through records
-//$contests = array();
-//
-//while($row = $result->fetch(PDO::FETCH_ASSOC)){
-//    $contests[] = '{"c_user_id":' .$row["user_id"]. ', "c_username":"'.$row["user_username"].'", "c_project_id":'. $row["project_id"].', "c_created_date":"'.$row["created_date"].'", "c_closing_date":"'.$row["closing_date"].'", "c_prize":"' .$row["prize"].'" , "c_project_desc":"' .$row["project_desc"].'" , "c_project_title":"' .$row["project_title"].'", "c_room_id":"' .$row["room_id"].'", "c_room_name":"' .$row["room_name"].'", "c_room_type":"' .$row["room_type"].'" , "c_prop_id":"' .$row["prop_id"].'", "c_comment_extra_details":"' .$row["comment_extra_details"].'", "c_feature_name":"' .$row["feature_name"].'", "c_caption":"' .$row["caption"].'" , "c_filename":"' .$row["filename"].'"  , "c_filetype":"' .$row["filetype"].'" , "c_file_id":"' .$row["file_id"].'" , "c_public_name":"' .$row["public_name"].'"  }';
-//}
-//
-//$output .= implode(",", $contests);
-//$output .= ']}';
-
-var_dump( $projects );
-exit();
-
-
-
-//?>
+exit(json_encode($projects));
+?>

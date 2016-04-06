@@ -10,12 +10,12 @@ $file_type = $_FILES['SelectedFile']['type'];
 $file_size = $_FILES['SelectedFile']['size'];
 
 
-if( $_FILES['SelectedFile']['error']==0 && $_FILES['SelectedFile']['size'] > 0){
-    switch( $_FILES['SelectedFile']['type'] ){
+if( $_FILES['SelectedFile']['error'] > 0 && $_FILES['SelectedFile']['size'] > 8*MB) {
+    switch ($_FILES['SelectedFile']['type']) {
         case 'image/jpg':
         case 'image/jpeg':
         case 'image/pjpeg':
-            $ext = ".jpg";
+            $ext = ".jpeg";
             break;
         case 'image/gif':
             $ext = '.gif';
@@ -29,55 +29,61 @@ if( $_FILES['SelectedFile']['error']==0 && $_FILES['SelectedFile']['size'] > 0){
         default:
             $ext = 'EpicFail';
     }
-    if($ext != 'EpicFail') {
+    if ($ext != 'EpicFail') {
         $safename = md5($_FILES['SelectedFile']['name']) . "_" . time() . $ext;
         $dir = "../upload/";
         //now move the file from the temp folder to its new location
-        $ret = move_uploaded_file($_FILES['SelectedFile']['tmp_name'] , $dir . $safename);
-        if($ret){
+        $ret = move_uploaded_file($_FILES['SelectedFile']['tmp_name'], $dir . $safename);
+        if ($ret) {
             $infoMsg = "I have saved the file " . $_FILES['SelectedFile']['name'] . " as " . $dir . $safename . "!";
             $mime = $_FILES['SelectedFile']['type'];
             $filesize = $_FILES['SelectedFile']['size'];
 
 
-
             // Success!
-            exit ('{"code":0, "message":"File Upload Success", "fileName":"'.$safename.'"}');
+            exit ('{"code":0, "message":"File Upload Success", "fileName":"' . $safename . '"}');
 
 
-            }else{
+        } else {
             //the db failed so we should delete the image
             $feedback = 'Nothing saved due to database failure';
-              unlink($dir . $safename);        //php command for deleting a file (comes from unix command)
-
+            unlink($dir . $safename);        //php command for deleting a file (comes from unix command)
+            exit ('{"code":1, "message":' . $feedback . '}');
         }
-    } else{
+    } else {
         exit(json_encode("Not an image!"));
     }
-}else{
+}
+
+else{
     //there WAS an error
     switch($_FILES['SelectedFile']['error']){
-        case 1:
-            $feedback = 'The file was too large. Not saved.';
+        case UPLOAD_ERR_INI_SIZE:
+            $message = "The uploaded file exceeds the upload_max_filesize directive in php.ini";
             break;
-        case 2:
-            $feedback = 'The file was only partially uploaded. Network problem occurred.';
+        case UPLOAD_ERR_FORM_SIZE:
+            $message = "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form";
             break;
-        case 3:
-            $feedback = 'No file uploaded.';
+        case UPLOAD_ERR_PARTIAL:
+            $message = "The uploaded file was only partially uploaded";
             break;
-        case 4:
-            $feedback = 'The temp folder was missing or unavailable on the server';
+        case UPLOAD_ERR_NO_FILE:
+            $message = "No file was uploaded";
             break;
-        case 5:
-            $feedback = 'Unable to write the file to disk.';
+        case UPLOAD_ERR_NO_TMP_DIR:
+            $message = "Missing a temporary folder";
             break;
-        case 6:
-            $feedback = 'Virus potentially detected or invalid file extension.';
+        case UPLOAD_ERR_CANT_WRITE:
+            $message = "Failed to write file to disk";
+            break;
+        case UPLOAD_ERR_EXTENSION:
+            $message = "File upload stopped by extension";
             break;
         default:
-            $feedback = 'The uploaded file was empty.';
+            $message = "Unknown upload error";
+            break;
     }
+    return exit(json_encode($message));
 }
 
 

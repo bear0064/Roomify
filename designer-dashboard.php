@@ -60,8 +60,8 @@ include ('api/authCheck.php');
     <div class="tabs">
         <div class="container">
             <ul class="nav nav-pills">
-                <li class="nav-item"><a class="nav-link active" data-toggle="pill" href="#active">Active</a></li>
-                <li class="nav-item"><a class="nav-link" data-toggle="pill" href="#completed">Completed</a></li>
+                <li class="nav-item"><a class="nav-link active" data-toggle="pill" href="#active" onclick="setActive();">Active</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="pill" href="#completed" onclick="setCompleted();">Completed</a></li>
             </ul>
         </div>
     </div>
@@ -101,8 +101,7 @@ include ('api/authCheck.php');
             </div>
 
 
-            <!-- //TODO in the designerDash.js file - change the logic where when you get the data, instead of using id='row' user id='active'-->
-            <!-- //TODO that way you can set active to the below commented html-->
+            <div id="dashOutput">
 
                 <!-- Active Tab w No Active Contests -->
                 <!--
@@ -111,19 +110,23 @@ include ('api/authCheck.php');
                     <p>Browse contests <a href="designer-browse.php">here</a></p>
                 </div>
                 -->
-
                 <!-- Active Tab w Active Contests -->
-                <div id="active" class="tab-pane fade in active">
+                <div id="active" class="tab-pane fade in active" >
                     <div id="row" class="row">
 
                     </div>
                 </div>
 
                 <!-- Completed Tab w No Completed Contests -->
-                <div id="completed" class="tab-pane fade cnt-center">
-                    <p>You have no completed contests.</p>
-                    <p>Browse contests <a href="designer-browse.php">here</a></p>
+                <div id="completed" class="tab-pane fade cnt-center" >
+<!--                    <p>You have no completed contests.</p>-->
+<!--                    <p>Browse contests <a href="designer-browse.php">here</a></p>-->
                 </div>
+                
+                
+            </div>
+
+            
 
 
         </div>

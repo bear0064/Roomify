@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    retrieveDesignerActive();
+
 
     $(".dropdown-item").on("click", function() {
         $(".dropdown-item").removeClass("active");
@@ -8,9 +8,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-
+    retrieveDesignerActive();
+    
 });
 
+
+function setActive() {
+    console.log(true);
+    retrieveDesignerActive();
+}
+
+function setCompleted() {
+    console.log(true);
+    //fire off a get to the server return the results, else nothing
+    //document.getElementById("active").innerHTML = "";
+    //document.getElementById("dashOutput").innerHTML = "";
+    document.getElementById("completed").innerHTML = "";
+
+    var s = "";
+    s += "<p>You have no completed contests.</p>"+
+        "<p>Browse contests <a href='designer-browse.php'>here</a></p>";
+
+
+
+    document.getElementById("completed").innerHTML += s;
+
+
+}
 
 
 function retrieveDesignerActive() {
@@ -34,6 +58,8 @@ function getAllDesignerActiveprojects(data) {
     document.getElementById("row").innerHTML = "";
     console.log(data.projects);
     console.log(data.projects.length);
+
+    if (data.projects.length != 0) {
 
         for (let i = 0; i < data.projects.length; i++) {
 
@@ -83,7 +109,24 @@ function getAllDesignerActiveprojects(data) {
 
             document.getElementById("row").innerHTML += s;
         }
-    // }
+    }else {
+
+
+        document.getElementById("active").innerHTML = "";
+        document.getElementById("dashOutput").innerHTML = "";
+
+
+        var s = "";
+        s += "<div id='active' class='tab-pane fade in active cnt-center'>"+
+        "<p>You have no active contests.</p>"+
+        "<p>Browse contests <a href='designer-browse.php'>here</a></p>"+
+        "</div>";
+
+
+
+        document.getElementById("dashOutput").innerHTML += s;
+
+    }
 
 }
 
