@@ -10,7 +10,7 @@ $file_type = $_FILES['SelectedFile']['type'];
 $file_size = $_FILES['SelectedFile']['size'];
 
 
-if( $_FILES['SelectedFile']['error'] > 0 && $_FILES['SelectedFile']['size'] > 8*MB) {
+if( $_FILES['SelectedFile']['error'] == 0 && $_FILES['SelectedFile']['size'] > 0) {
     switch ($_FILES['SelectedFile']['type']) {
         case 'image/jpg':
         case 'image/jpeg':

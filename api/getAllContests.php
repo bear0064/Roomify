@@ -12,7 +12,6 @@ if (isset($_POST['getAll'])) {
 }
 $result = $conn->query($sqlQuery);
 
-
 $proj_id = 0;
 $projects = array();
 $rooms = array();
@@ -43,7 +42,8 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
             "room_id" => $row["room_id"],
             "room_name" => $row["room_name"],
             "room_type" => $row["room_type"],
-            "prop_id"=> $row["prop_id"],
+
+            "prop_id" => $row["prop_id"],
             "comment_extra_details" => $row["comment_extra_details"],
             "feature_name" => $row["feature_name"],
             "caption" => $row["caption"],
@@ -52,10 +52,10 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
             "public_name" => $row["public_name"]
         );
 
-        $counter = sizeof($projects) -1 ;
+        $counter = sizeof($projects) - 1;
         $projects[$counter]["rooms"] = $rooms;
-
     }
+
 }
 
 exit(json_encode($projects));
