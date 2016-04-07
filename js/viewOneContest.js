@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
 function passSingleContestId(){
 
     let contest = localStorage.getItem('contestId');
-    
+
     let data = new FormData();
     data.append("id", contest);
     //calls the data request function passing in desired url, parameters, and the function to fire upon callback
@@ -14,57 +14,71 @@ function passSingleContestId(){
 }
 
 function showSingleContest(data){
-console.log(data);
+    console.log(data);
 
-    if (data.contestDetails[0] == null){
+    if (data[0] == null){
         //TODO this is to prevent someone who may trip over an incorrect ID or tampers with that
         console.log('error');
     }
 
     
-    data.contestDetails[0].cl_date = data.contestDetails[0].cl_date.split(/[- :]/);
-    data.contestDetails[0].cl_date = new Date(data.contestDetails[0].cl_date[0], data.contestDetails[0].cl_date[1]-1, data.contestDetails[0].cl_date[2], data.contestDetails[0].cl_date[3], data.contestDetails[0].cl_date[4], data.contestDetails[0].cl_date[5]);
+    data[0].closing_date = data[0].closing_date.split(/[- :]/);
+    data[0].closing_date = new Date(data[0].closing_date[0], data[0].closing_date[1]-1, data[0].closing_date[2], data[0].closing_date[3], data[0].closing_date[4], data[0].closing_date[5]);
 
 
     var a = "";
     a +=
         "<div class='tab-price'>"+
             "<div class='tabs item-left'>"+
-                "<h4>" + data.contestDetails[0].c_name +"</h4>"+
+                "<h4>" + data[0].project_title +"</h4>"+
                     //TODO get the homeowner name related to the profile
-                    //TODO INNER JOIN to get this
-                "<p>Created by: <a href='designer-view-homeownerProfile.php'>Mike Z</a></p>"+
-                "<ul class='pager'>"+
-                    //TODO get the room labels
-                    "<li class='label label-pill room'>Bathroom</li>"+
-                    "<li class='label label-pill'>Flooring</li>"+
-                    "<li class='label label-pill'>Textiles</li>"+
+                "<p>Created by: <a href='designer-view-homeownerProfile.php' data-user='" + data[0].user_id +"'>"+ data[0].username  +"</a></p>"+
+                "<ul id='roomFeats' class='pager'>"+
+                    "<li class='label label-pill room'>"+data[0].rooms[0].room_type+"</li>"+
                 "</ul>"+
             "</div>"+
             "<div class='price item-right'>"+
-            "<div class='price-unit'>$"+ data.contestDetails[0].c_prize +"</div>"+
-            "<div class='time'>"+countdown(data.contestDetails[0].cl_date , null, countdown.DAYS)+"</div>"+
+            "<div class='price-unit'>$"+ data[0].prize +"</div>"+
+            "<div class='time'>"+countdown(data[0].closing_date , null, countdown.DAYS)+"</div>"+
         "</div>"+
         "<div class='clear'></div>"+
         "</div>";
 
     document.getElementById("contBrief").innerHTML +=a;
 
+    for (let k=0; k < data[0].rooms.length; k++) {
+
+        var y = "";
+        y +=
+
+
+            "<li class='label label-pill'>"+data[0].rooms[k].feature_name+"</li>";
+
+        document.getElementById("roomFeats").innerHTML +=y;
+
+    }
 
 
     var b = "";
     b +=
-        "<div class='gallery js-flickity'>" +
+        "<div id='imgLoop' class='gallery js-flickity'>" +
 
-            //TODO loop for each image add an extra image...
 
-            "<img src='images/slider/1.png' alt='orange tree' />"+
-            "<img src='images/slider/1.png' alt='submerged' />"+
-            "<img src='images/slider/1.png' alt='look-out' />"+
         "</div>";
 
-
     document.getElementById("imageSlider").innerHTML +=b;
+
+    for (let j=0; j < data[0].rooms.length; j++) {
+
+        var x = "";
+        x +=
+
+            "<img src='upload/" + data[0].rooms[j].filename.slice(0, - 2) + "."+ data[0].rooms[j].filetype.substring(6) +" ' alt='' />"
+
+        document.getElementById("imgLoop").innerHTML +=x;
+
+    }
+
 
     var elem = document.querySelector('.gallery');
     var flkty = new Flickity( elem, {
@@ -76,11 +90,14 @@ console.log(data);
     });
 
 
+
+
+
     var c = "";
     c +=
-    "<div class='title'>"+data.contestDetails[0].c_name+"</div>"+
+    "<div class='title'>"+data[0].project_title+"</div>"+
     "<div class='detail'>"+
-        "<p>"+data.contestDetails[0].c_desc+"</p>"+
+        "<p>"+data[0].project_desc+"</p>"+
     "</div>";
 
     document.getElementById("contestInfo").innerHTML +=c;
@@ -91,14 +108,14 @@ console.log(data);
     d +=
     "<div class='title'> Room Dimensions </div>"+
     "<div class='detail'>"+
-    "<p class='last-child'>width x length x height</p>"+
+    "<p class='last-child'>"+ data[0].rooms[0].room_length +" x " + data[0].rooms[0].room_width + " x " + data[0].rooms[0].rooms_height +"</p>"+
     "</div>";
 
     document.getElementById("sideInfo").innerHTML +=d;
 
     var e = '';
     e +=
-        "<li><a onclick='submitTo( this.dataset.contest );' data-contest='" + data.contestDetails[0].c_id +"' >Submit</a></li>";
+        "<li><a onclick='submitTo( this.dataset.contest );' data-contest='" + data[0].project_id +"' >Submit</a></li>";
     document.getElementById("designerSubmit").innerHTML +=e;
 
 }

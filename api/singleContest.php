@@ -2,24 +2,59 @@
 require_once("dbconnect.php");
 //fetch records from DB
 
-if (isset($_POST['id'])){
+if (isset($_POST['id'])) {
     $getMe = $_POST['id'];
-    $sqlQuery = "SELECT * FROM projects WHERE `project_id` = $getMe";
+    $sqlQuery = "SELECT u.user_id, u.user_username, pr.project_id, pr.created_date, pr.closing_date, pr.prize, pr.project_desc, pr.project_title, pr.state, prr.room_id, prr.room_name, prr.room_type, prr.room_width, prr.room_length, prr.room_height, prp.prop_id, prp.comment_extra_details, prp.feature_name, prf.caption, prf.filename, prf.filetype, prf.file_id, prf.public_name FROM projects AS pr INNER JOIN users as u ON pr.creator_id = u.user_id INNER JOIN project_rooms as prr ON prr.project_id = pr.project_id INNER JOIN project_properties as prp ON prp.room_id = prr.room_id INNER JOIN project_files as prf ON prf.room_id = prp.room_id WHERE pr.`project_id` = $getMe";
+
     $result = $conn->query($sqlQuery);
 
-    $output = '{"code":0, "message":"Got Project", "ID":"'. $getMe . '", "contestDetails":[';
-//loop through records
-    $contests = array();
+    $proj_id = 0;
+    $projects = array();
+    $rooms = array();
 
-    while($row = $result->fetch(PDO::FETCH_ASSOC)){
-        $contests[] = '{"c_id":' .$row["project_id"]. ', "c_name":"'.$row["project_title"].'", "c_prize":'. $row["prize"].', "c_date":"'.$row["created_date"].'", "cl_date":"'.$row["closing_date"].'", "c_desc":"' .$row["project_desc"].'"}';
+    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+
+        if ($proj_id != $row["project_id"]) {
+
+            $details = array(
+                "user_id" => $row["user_id"],
+                "project_id" => $row["project_id"],
+                "username" => $row["user_username"],
+                "created_date" => $row["created_date"],
+                "closing_date" => $row["closing_date"],
+                "prize" => $row["prize"],
+                "project_desc" => $row["project_desc"],
+                "project_title" => $row["project_title"],
+                "rooms" => array()
+            );
+
+            $proj_id = $row["project_id"];
+            $projects[] = $details;
+            $rooms = array();
+
+        } else {
+
+            $rooms[] = array(
+                "room_id" => $row["room_id"],
+                "room_name" => $row["room_name"],
+                "room_type" => $row["room_type"],
+                "room_width" => $row["room_width"],
+                "room_length" => $row["room_length"],
+                "room_height" => $row["room_height"],
+                "prop_id" => $row["prop_id"],
+                "comment_extra_details" => $row["comment_extra_details"],
+                "feature_name" => $row["feature_name"],
+                "caption" => $row["caption"],
+                "filename" => $row["filename"],
+                "filetype" => $row["filetype"],
+                "public_name" => $row["public_name"]
+            );
+
+            $counter = sizeof($projects) - 1;
+            $projects[$counter]["rooms"] = $rooms;
+
+        }
     }
-
-    $output .= implode(",", $contests);
-    $output .= ']}';
-    echo $output;
-    exit();
-
 }
-
+exit(json_encode($projects));
 ?>

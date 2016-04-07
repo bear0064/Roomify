@@ -71,7 +71,7 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
         );
 
         $counter = sizeof($projects) -1 ;
-        $projects[$counter]["room"] = $rooms;
+        $projects[$counter]["rooms"] = $rooms;
 
     }
 }

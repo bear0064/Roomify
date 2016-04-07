@@ -158,7 +158,7 @@ function getAllDesignerActiveprojects(data) {
                 "<div class='image-wrapper overlay-fade-in'>" +
                 //TODO Get the image
 
-                "<img class='card-img-top' src='upload/" + data[i].room[0].filename.slice(0, - 2) + "."+ data[i].room[0].filetype.substring(6) +" ' width='100%' alt='Card image cap'>" +
+                "<img class='card-img-top' src='upload/" + data[i].rooms[0].filename.slice(0, - 2) + "."+ data[i].rooms[0].filetype.substring(6) +" ' width='100%' alt='Card image cap'>" +
                 "<div class='image-overlay-content'>" +
                 "<h2><i class='fa fa-star-o'></i><i class='fa fa-check-circle-o'></i></h2>" +
                 "<div class='specs pull-xs-right'>" +
@@ -167,7 +167,7 @@ function getAllDesignerActiveprojects(data) {
                 "<p class=''>"+ countdown(data[i].closing_date , null, countdown.DAYS) +"</p>" +
                 "</div>" +
                 "<h6 class='pull-xs-left'>" +
-                "<span class='label'>" + data[i].room[0].room_type +"</span>" +
+                "<span class='label'>" + data[i].rooms[0].room_type +"</span>" +
                 "</h6>" +
                 "</div>" +
                 "</div>" +
@@ -249,7 +249,7 @@ function showActiveSortedContests(data){
                 "<div class='image-wrapper overlay-fade-in'>" +
                 //TODO Get the image
 
-                "<img class='card-img-top' src='upload/" + data[i].room[0].filename.slice(0, - 2) + "."+ data[i].room[0].filetype.substring(6) +" ' width='100%' alt='Card image cap'>" +
+                "<img class='card-img-top' src='upload/" + data[i].rooms[0].filename.slice(0, - 2) + "."+ data[i].rooms[0].filetype.substring(6) +" ' width='100%' alt='Card image cap'>" +
                 "<div class='image-overlay-content'>" +
                 "<h2><i class='fa fa-star-o'></i><i class='fa fa-check-circle-o'></i></h2>" +
                 "<div class='specs pull-xs-right'>" +
@@ -258,7 +258,7 @@ function showActiveSortedContests(data){
                 "<p class=''>"+ countdown(data[i].closing_date , null, countdown.DAYS) +"</p>" +
                 "</div>" +
                 "<h6 class='pull-xs-left'>" +
-                "<span class='label'>" + data[i].room[0].room_type +"</span>" +
+                "<span class='label'>" + data[i].rooms[0].room_type +"</span>" +
                 "</h6>" +
                 "</div>" +
                 "</div>" +
@@ -332,7 +332,7 @@ function getAllDesignerCompletedprojects(data) {
                 "<div class='image-wrapper overlay-fade-in'>" +
                 //TODO Get the image
 
-                "<img class='card-img-top' src='upload/" + data[i].room[0].filename.slice(0, - 2) + "."+ data[i].room[0].filetype.substring(6) +" ' width='100%' alt='Card image cap'>" +
+                "<img class='card-img-top' src='upload/" + data[i].rooms[0].filename.slice(0, - 2) + "."+ data[i].rooms[0].filetype.substring(6) +" ' width='100%' alt='Card image cap'>" +
                 "<div class='image-overlay-content'>" +
                 "<h2><i class='fa fa-star-o'></i><i class='fa fa-check-circle-o'></i></h2>" +
                 "<div class='specs pull-xs-right'>" +
@@ -341,7 +341,7 @@ function getAllDesignerCompletedprojects(data) {
                 "<p class=''>"+ countdown(data[i].closing_date , null, countdown.DAYS) +"</p>" +
                 "</div>" +
                 "<h6 class='pull-xs-left'>" +
-                "<span class='label'>" + data[i].room[0].room_type +"</span>" +
+                "<span class='label'>" + data[i].rooms[0].room_type +"</span>" +
                 "</h6>" +
                 "</div>" +
                 "</div>" +
@@ -394,8 +394,10 @@ function setSortCompletedDesigner(event){
 function showCompletedSortedContests(data){
 
     console.log(data);
-    
-        if (!data.length) {
+
+    document.getElementById("row").innerHTML = "";
+
+    if (data.length != 0) {
 
             for (let i=0; i < data.length; i++){
 
@@ -412,7 +414,7 @@ function showCompletedSortedContests(data){
                     "<div class='image-wrapper overlay-fade-in'>" +
                     //TODO Get the image
 
-                    "<img class='card-img-top' src='upload/" + data[i].room[0].filename.slice(0, - 2) + "."+ data[i].room[0].filetype.substring(6) +" ' width='100%' alt='Card image cap'>" +
+                    "<img class='card-img-top' src='upload/" + data[i].rooms[0].filename.slice(0, - 2) + "."+ data[i].rooms[0].filetype.substring(6) +" ' width='100%' alt='Card image cap'>" +
                     "<div class='image-overlay-content'>" +
                     "<h2><i class='fa fa-star-o'></i><i class='fa fa-check-circle-o'></i></h2>" +
                     "<div class='specs pull-xs-right'>" +
@@ -421,7 +423,7 @@ function showCompletedSortedContests(data){
                     "<p class=''>"+ countdown(data[i].closing_date , null, countdown.DAYS) +"</p>" +
                     "</div>" +
                     "<h6 class='pull-xs-left'>" +
-                    "<span class='label'>" + data[i].room[0].room_type +"</span>" +
+                    "<span class='label'>" + data[i].rooms[0].room_type +"</span>" +
                     "</h6>" +
                     "</div>" +
                     "</div>" +
