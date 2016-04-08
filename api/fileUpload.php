@@ -34,6 +34,7 @@ if( $_FILES['SelectedFile']['error'] == 0 && $_FILES['SelectedFile']['size'] > 0
         $dir = "../upload/";
         //now move the file from the temp folder to its new location
         $ret = move_uploaded_file($_FILES['SelectedFile']['tmp_name'], $dir . $safename);
+        
         if ($ret) {
             $infoMsg = "I have saved the file " . $_FILES['SelectedFile']['name'] . " as " . $dir . $safename . "!";
             $mime = $_FILES['SelectedFile']['type'];
@@ -46,7 +47,7 @@ if( $_FILES['SelectedFile']['error'] == 0 && $_FILES['SelectedFile']['size'] > 0
 
         } else {
             //the db failed so we should delete the image
-            $feedback = 'Nothing saved due to database failure';
+            $feedback = 'Nothing saved due write permissions';
             unlink($dir . $safename);        //php command for deleting a file (comes from unix command)
             exit ('{"code":1, "message":' . $feedback . '}');
         }
