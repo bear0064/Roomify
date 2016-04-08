@@ -17,6 +17,7 @@ include('api/authCheck.php');
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="js/libs/flickity/flickity.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <link href="css/modal.css" rel="stylesheet">
 </head>
 
 <body>
@@ -150,6 +151,56 @@ include('api/authCheck.php');
 </div>
 <!-- End of Contest Tabs Content -->
 
+
+<!-- Submission Modal -->
+
+<div class="modal fade" id="submissionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="">&times;</button>
+                <h5 class="modal-title">Submit to Contest</h5>
+            </div>
+            <div class="col-sm-12">
+                <!-- Drop Zone -->
+                <div class="col-sm-5 uploadWrapper">
+                    <div class="upload-drop-zone" id="dropZone">
+                        Just drag and drop files here
+                    </div>
+
+                    <!-- Standar Form -->
+                    <form action="" method="post" enctype="multipart/form-data" id="uploadForm">
+                        <div class="form-inline">
+                            <div class="form-group inputWrapper">
+                                <input type="file" name="files[]" class="fileInput" onchange="subBtnActivate();" id="uploadFiles">OR BROWSE
+                            </div>
+                            <button type="submit" class="btn btn-sm btn-primary hidden" id="uploadSubmit">Upload files</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-7">
+                    <h6 class="noTopMargin">Description</h6>
+                    <textarea rows="6" class="form-control" placeholder="Describe your mood board here."></textarea>
+                    <h6 class="b3header">Budget Used</h6>
+                    <span id="budgetVal" class="pull-xs-right">$500</span>
+                    <input type="range" id="budgetSlider" class="" value="500" min="200" max="15000" step="50" oninput="showPrizeValue(this.value);">
+                </div>
+
+            </div>
+
+            <div class="modal-footer" id="submissionFooter">
+                <button id="backBtn" type="button" class="btn btn-primary pull-xs-left hidden" onclick="">Back</button>
+                <span id="modalError" class="center"></span>
+                <button id="nextBtn" type="button" class="btn btn-primary pull-xs-right" onclick="">Next</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- End of Submission Modal -->
+
 <!-- Footer -->
 <footer>
     <div class="container">
@@ -212,6 +263,7 @@ include('api/authCheck.php');
 <script src="js/viewOneContest.js"></script>
 <script type="text/javascript" src="js/libs/flickity/flickity.pkgd.min.js"></script>
 <script src="js/countdown.js"></script>
+<script src="js/submitModal.js"></script>
 </body>
 
 </html>

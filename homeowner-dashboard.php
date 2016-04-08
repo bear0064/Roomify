@@ -277,27 +277,7 @@ include ('api/authCheck.php');
             </div>
         </div>
     </div>
-
-    <!-- Add Caption Modal -->
-    <div class="modal fade" id="captionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog modal-sm" role="document">
-            <div class="modal-content">
-                <div class="modal-header modal-header-sm">
-                    <button id="captionBtn" type="button" class="btn btn-sm btn-default pull-right" data-dismiss="modal">Done</button>
-                    <h5 class="modal-title">Add Caption</h5>
-
-                </div>
-                <div class="col-2m-12">
-                    <textarea class="form-control captionInput" rows="5" placeholder="Add brief photo caption"></textarea>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
-
+    
 
 
     <!--Start of Footer-->

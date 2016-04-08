@@ -77,6 +77,11 @@ textarea.myForm{
     margin-bottom: 10px;
 }
 
+.noTopMargin{
+    margin-bottom: 10px;
+
+}
+
 
 .modal-footer{  
     clear:both;

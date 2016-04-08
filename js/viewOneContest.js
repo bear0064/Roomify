@@ -115,7 +115,7 @@ function showSingleContest(data){
 
     var e = '';
     e +=
-        "<li><a onclick='submitTo( this.dataset.contest );' data-contest='" + data[0].project_id +"' >Submit</a></li>";
+        "<li><a onclick='submitTo( this.dataset.contest );' data-toggle='modal' data-target='#submissionModal' data-contest='" + data[0].project_id +"' >Submit</a></li>";
     document.getElementById("designerSubmit").innerHTML +=e;
 
 }
