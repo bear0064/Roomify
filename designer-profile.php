@@ -111,10 +111,12 @@ include ('api/authCheck.php');
             <!-- Portfolio Tab -->
             <div id="portfolio" class="tab-pane fade in active">
 
+                <div class="row upload">
                 <div class="save">
                     <div class="pull-xs-right">
                         <button type="submit" class="btn btn-primary">Upload</button>
                     </div>
+                </div>
                 </div>
                 
                 <!-- portfolio submissions - row 1 -->
@@ -307,15 +309,15 @@ include ('api/authCheck.php');
                     <h6>PERSONAL INFORMATION</h6>
                 </div>
                 <div class="col-md-8">
-                    <fieldset class="form-group">
+                    <fieldset class="form-group personalForm">
                         <label for="firstNameInput">First Name</label>
                         <input type="text" class="form-control" id="firstNameInput" placeholder="">
                     </fieldset>
-                    <fieldset class="form-group">
+                    <fieldset class="form-group personalForm">
                         <label for="lastNameInput">Last Name</label>
                         <input type="text" class="form-control" id="lastNameInput" placeholder="">
                     </fieldset>
-                    <div class="row">
+                    <div class="row personalForm">
                         <fieldset class="form-group col-sm-6">
                             <label for="addressInput">Address</label>
                             <input type="text" class="form-control" id="addressInput" placeholder="">
@@ -325,7 +327,7 @@ include ('api/authCheck.php');
                             <input type="text" class="form-control" id="address2Input" placeholder="">
                         </fieldset>
                     </div>
-                    <div class="row">
+                    <div class="row personalForm">
                         <fieldset class="form-group col-sm-6">
                             <label for="cityInput">City</label>
                             <input type="text" class="form-control" id="cityInput" placeholder="">
@@ -335,7 +337,7 @@ include ('api/authCheck.php');
                             <input type="text" class="form-control" id="stateInput" placeholder="">
                         </fieldset>
                     </div>
-                    <div class="row">
+                    <div class="row personalForm">
                         <fieldset class="form-group col-sm-6">
                             <label for="zipInput">Zip / Postal Code</label>
                             <input type="text" class="form-control" id="zipInput" placeholder="">
@@ -345,7 +347,7 @@ include ('api/authCheck.php');
                             <input type="text" class="form-control" id="countryInput" placeholder="">
                         </fieldset>
                     </div>
-                    <fieldset class="form-group">
+                    <fieldset class="form-group personalForm">
                         <label for="phoneNumber">Phone Number</label>
                         <div class="input-group">
                             <div class="input-group-addon">+1</div>

@@ -779,7 +779,7 @@ div#personal.tab-pane{
 .password,
 .save{
     margin-top: 2rem;
-    height:42px;
+    /*height:42px;*/
 }
 
 .save button{
@@ -794,6 +794,10 @@ div#personal.tab-pane{
     border: 1px solid #83c0ff;
     background: #83c0ff;
     color: white;
+}
+
+.upload .save{
+    margin-right: 3rem;
 }
 
 .password a{

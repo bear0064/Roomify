@@ -14,6 +14,8 @@ session_start();
     <!-- Bootstrap Styling -->
     <link rel="stylesheet" href="css/bootstrap.css">
 
+</head>
+
 <body>
     <nav class="navbar navbar-full bg-faded">
         <div class="container">
@@ -57,20 +59,20 @@ session_start();
                 <div class="modal-body">
                     <!-- Login Form -->
                     <form>
-                        <div class="form-group">
+                        <div class="form-group form-group-custom">
                             <label class="sr-only" for="exampleInputEmail3">Email address</label>
                             <input type="email" class="form-control form-control-custom" id="exampleInputEmail3" placeholder="Username or E-mail">
                         </div>
-                        <div class="form-group">
+                        <div class="form-group form-group-custom">
                             <label class="sr-only" for="exampleInputPassword3">Password</label>
                             <input type="password" class="form-control form-control-custom" id="exampleInputPassword3" placeholder="Password">
                         </div>
-                        <div class="checkbox form-group">
+                        <div class="checkbox form-group form-group-custom">
                             <label>
                                 <input type="checkbox"> <span class="remember-me">Remember me</span>
                             </label>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group form-group-custom">
                             <button type="submit" class="btn btn-primary sign-in-btn">Sign in</button>
                         </div>
                     </form>
@@ -119,19 +121,19 @@ session_start();
                 <div class="modal-body">
                     <!-- Sign up Form -->
                     <form>
-                        <div class="form-group">
+                        <div class="form-group form-group-custom">
                             <label class="sr-only" for="">Username</label>
                             <input type="email" class="form-control form-control-custom" id="exampleInputEmail3" placeholder="Username">
                         </div>
-                        <div class="form-group">
+                        <div class="form-group form-group-custom">
                             <label class="sr-only" for="exampleInputEmail3">E-mail</label>
                             <input type="email" class="form-control form-control-custom" id="exampleInputEmail3" placeholder="E-mail">
                         </div>
-                        <div class="form-group">
+                        <div class="form-group form-group-custom">
                             <label class="sr-only" for="exampleInputPassword3">Password</label>
                             <input type="password" class="form-control form-control-custom" id="exampleInputPassword3" placeholder="Password">
                         </div>
-                        <div class="form-group">
+                        <div class="form-group form-group-custom">
                             <button type="submit" class="btn btn-primary sign-in-btn">Sign in</button>
                         </div>
                     </form>
