@@ -677,7 +677,6 @@ function showMetricLabel(ev){
 
 function toggleCaption(ev){
 
-    console.log(ev.target.parentElement);
     let parent;
 
     if (ev.target.classList.contains("fa-check")){
@@ -703,6 +702,30 @@ function toggleCaption(ev){
             }
         }
     }
+
+    if (!ev.target.classList.contains("addCaption")){
+
+        for (let y=0; y < roomSelections[currentRoom].roomFiles.length; y++){
+
+            if (roomSelections[currentRoom].roomFiles[y].originalName == parent.dataset.name){
+
+                roomSelections[currentRoom].roomFiles[y].caption = parent.querySelector(".myForm").value;
+
+                if (parent.querySelector(".myForm").value.length > 0){
+
+                    parent.querySelector(".addCaption").innerHTML = "Edit Caption";
+
+                }else{
+
+                    parent.querySelector(".addCaption").innerHTML = "Add Caption";
+                }
+            }
+
+
+        }
+
+    }
+
 
 }
 

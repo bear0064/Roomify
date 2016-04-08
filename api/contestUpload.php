@@ -63,7 +63,7 @@ foreach ($room_features as $feature){
 
 foreach ($room_files as $file){
 
-    $sqlQuery6 = 'INSERT INTO `project_files`(`room_id`,`filename`,`filetype`,`filesize`) VALUES ('.$room_id.',"'.$file['name'].'","'.$file['type'].'","'.$file['size'].'")';
+    $sqlQuery6 = 'INSERT INTO `project_files`(`room_id`,`filename`,`filetype`,`filesize`,`public_name`,`caption`) VALUES ('.$room_id.',"'.$file['name'].'","'.$file['type'].'","'.$file['size'].'","'.$file['originalName'].'","'.$file['caption'].'")';
 
     $stmt6 = $conn->prepare($sqlQuery6);
     $stmt6->execute();
