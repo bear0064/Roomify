@@ -1,16 +1,28 @@
+let userSubmission;
+let projID;
+
 function submitTo(id){
 
-
-}
-
-function imagesModal(){
+    projID = id;
 
     let form = document.getElementById('uploadForm');
     let dropZone = document.getElementById('dropZone');
 
     let startUpload = function(files) {
-        
 
+        let progP = document.querySelector("p.progBar");
+        document.getElementById("imageUploadBox").classList.add("hidden");
+        document.getElementById("imagePreview").classList.remove("hidden");
+
+        let imageHeader = document.getElementById("imgName")
+        imageHeader.innerHTML = truncate(files[0].name);
+        let deleteIcon = document.createElement("i");
+        deleteIcon.setAttribute("class","fa fa-times pull-xs-right");
+        imageHeader.appendChild(deleteIcon);
+
+        setTimeout(function(){ progP.classList.add("loading"); }, 500);
+
+        
         let data = new FormData();
         data.append("SelectedFile", files[0]);
 
@@ -19,35 +31,30 @@ function imagesModal(){
             if (response.code == 0){
 
                 //add file to project files object
-                roomSelections[currentRoom].roomFiles.push({
-                    name: response.fileName,
-                    originalName: files[0].name,
-                    type: files[0].type,
-                    size: files[0].size,
-                    caption: ""
-                });
+               userSubmission = {
+                    projectId: id,
+                   file: {
+                       name: response.fileName,
+                       originalName: files[0].name,
+                       type: files[0].type,
+                       size: files[0].size,
+                   },
+                    description: "",
+                    budget: null
+                };
 
-                console.log(uploadList.childElementCount);
-
-                let targetDiv = uploadList.querySelector('[data-name="'+files[0].name+'"');
+                deleteIcon.addEventListener("click", function(){ deleteImage(response.fileName)});
 
                 setTimeout(function(){
-                    let progB = targetDiv.querySelector("p.progBar");
-                    progB.classList.add("success");
+                    progP.classList.add("success");
                 }, 2000);
 
                 setTimeout(function(){
-                    let span = targetDiv.querySelector("span.hidden");
-                    span.classList.remove("hidden");
-                    let thumb = targetDiv.querySelector(".myThumb");
+                    let thumb = document.querySelector("#imagePreview > img.myThumb");
                     thumb.src = "upload/" + response.fileName;
-                    let w = $('.myThumb').last().width();
-                    $('.myThumb').css({'height': w +'px'});
-
 
                 },4500);
 
-                console.log(roomSelections);
 
             }else{
                 console.log(response.message);
@@ -86,5 +93,68 @@ function imagesModal(){
         this.className = 'upload-drop-zone';
         return false;
     }
+
+}
+
+function subBtnActivate(){
+
+    oneFileBool = true;
+    document.getElementById("uploadSubmit").click();
+}
+
+function showBudgetValue(value){
+
+    document.getElementById("budgetVal").innerHTML= "$" + value;
+
+}
+
+function truncate(string){
+    if (string.length > 15)
+        return string.substring(0,15)+'...';
+    else
+        return string;
+}
+
+function deleteImage(file){
+
+    let data = new FormData();
+    data.append("file",file);
+    dataRequest("api/deleteUpload.php", data, function(res){
+
+        document.getElementById("imageUploadBox").classList.remove("hidden");
+        document.getElementById("imagePreview").classList.add("hidden");
+
+        let thumb = document.querySelector("#imagePreview > img.myThumb");
+        thumb.src = "img/imgPlaceHolder.png";
+
+        let progP = document.querySelector("p.progBar");
+        progP.className = "progBar";
+
+
+    });
+}
+
+function clearModal(){}
+
+function finalizeSubmit(){
+
+    userSubmission.description = document.getElementById("submissionDesc").value;
+    userSubmission.budget = document.getElementById("budgetSlider").value;
+
+
+    let data = new FormData();
+    data.append("projID", projID);
+    data.append("file", JSON.stringify(userSubmission.file));
+    data.append("desc", userSubmission.description);
+    data.append("budget", userSubmission.budget);
+
+    dataRequest("api/submissionUpload.php", data, function(res){
+
+        if  (res.code == 0){
+            console.log ("SUCCESS SUB UPLOAD");
+        }else{console.log("error :(");}
+    });
+
+    document.getElementById("submitBtn").setAttribute("data-dismiss","modal");
 
 }

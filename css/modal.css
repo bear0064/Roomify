@@ -64,12 +64,12 @@ textarea.myForm{
     color: #83c0ff;
 }
 
-#contestFooter{
+.myFooter{
     
  border-top: 1px solid #e5e5e5;   
 }
 
-#contestHeader{
+.myHeader{
     border-bottom: 1px solid #e5e5e5;   
 }
 .b3header{
@@ -257,6 +257,9 @@ span.bubble.finalStep:after{
 button.close.close-sm{
     
  font-size: 12px;   
+}
+button.close:hover{
+        color:darkred;
 }
 
 p.progBar{
@@ -459,4 +462,51 @@ input[type=range]:focus::-ms-fill-upper {
 .modal-header.modal-header-sm{
     
     padding: 5px; /* TODO CHANGE I DID THIS */
+}
+
+
+#imagePreview{
+
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    margin: 0 !important;
+    padding-top: 0.9375rem;
+
+}
+
+i.fa.fa-times:hover{
+
+    color: darkred;
+}
+
+#imageThumb{
+
+    height: 200px;
+    overflow: hidden;
+
+    background-color: #ffffff;
+    background-image: url("../img/imgPlaceHolder.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+img.myThumb{
+
+    object-fit: cover;
+    height: 229px;
+    width: 289px;
+
+    -webkit-transition: object-fit 1s;
+    -moz-transition: object-fit 1s;
+    -ms-transition: object-fit 1s;
+    -o-transition: object-fit 1s;
+    transition: object-fit 1s;
+
+}
+
+img.myThumb:hover{
+    
+    object-fit: contain;
 }

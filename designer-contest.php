@@ -157,18 +157,18 @@ include('api/authCheck.php');
 <div class="modal fade" id="submissionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header myHeader">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="">&times;</button>
                 <h5 class="modal-title">Submit to Contest</h5>
             </div>
-            <div class="col-sm-12">
+            <div class="col-sm-12" style="padding: 0.9375rem;">
                 <!-- Drop Zone -->
-                <div class="col-sm-5 uploadWrapper">
+                <div id="imageUploadBox" class="col-sm-5 uploadWrapper">
                     <div class="upload-drop-zone" id="dropZone">
                         Just drag and drop files here
                     </div>
 
-                    <!-- Standar Form -->
+                    <!-- Standard Form -->
                     <form action="" method="post" enctype="multipart/form-data" id="uploadForm">
                         <div class="form-inline">
                             <div class="form-group inputWrapper">
@@ -178,20 +178,28 @@ include('api/authCheck.php');
                         </div>
                     </form>
                 </div>
-                <div class="col-sm-7">
-                    <h6 class="noTopMargin">Description</h6>
-                    <textarea rows="6" class="form-control" placeholder="Describe your mood board here."></textarea>
-                    <h6 class="b3header">Budget Used</h6>
-                    <span id="budgetVal" class="pull-xs-right">$500</span>
-                    <input type="range" id="budgetSlider" class="" value="500" min="200" max="15000" step="50" oninput="showPrizeValue(this.value);">
+
+                <div id="imagePreview" class="col-sm-5 hidden">
+                        <img class="img-thumbnail myThumb nopadding" src="img/imgPlaceHolder.png">
+                    <div>
+                            <h6 id="imgName" class="b3header"><i class="fa fa-times pull-right"></i></h6>
+                            <p class="progBar"></p>
+                    </div>
+                </div>
+
+                <div class="col-sm-7" style="padding-right: 0;">
+                    <textarea id="submissionDesc" rows="8" class="form-control" placeholder="Describe your mood board here."></textarea>
+                    <div class="divider col-sm-12 nopadding"><hr></div>
+                    <h6 class="b3header">Budget Used <span id="budgetVal" class="pull-xs-right">$500</span> </h6>
+                    <input type="range" id="budgetSlider" class="" value="500" min="200" max="15000" step="50" oninput="showBudgetValue(this.value);">
                 </div>
 
             </div>
 
-            <div class="modal-footer" id="submissionFooter">
-                <button id="backBtn" type="button" class="btn btn-primary pull-xs-left hidden" onclick="">Back</button>
+            <div class="modal-footer myFooter" id="submissionFooter">
+                <button id="cancelBtn" type="button" class="btn btn-default pull-xs-left" onclick="clearModal();">Cancel</button>
                 <span id="modalError" class="center"></span>
-                <button id="nextBtn" type="button" class="btn btn-primary pull-xs-right" onclick="">Next</button>
+                <button id="submitBtn" type="button" class="btn btn-primary pull-xs-right" onclick="finalizeSubmit();">Submit</button>
             </div>
         </div>
     </div>

@@ -1,7 +1,8 @@
 <?php
 
-if (unlink(dirname(__FILE__) . "../upload/" . $_POST['file'])){
-    
+
+if (unlink(dirname(__DIR__) . "/upload/". $_POST['file'])){
+
     echo('{"code":0,"message":"Upload Deleted"}');
 }else{
 
