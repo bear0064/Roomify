@@ -46,13 +46,13 @@ function showSingleContest(data){
 
     document.getElementById("contBrief").innerHTML +=a;
 
-    for (let k=0; k < data[0].rooms.length; k++) {
+    for (let k=0; k < data[0].rooms[0].properties.length; k++) {
 
         var y = "";
         y +=
 
 
-            "<li class='label label-pill'>"+data[0].rooms[k].feature_name+"</li>";
+            "<li class='label label-pill'>"+data[0].rooms[0].properties[k].feature_name+"</li>";
 
         document.getElementById("roomFeats").innerHTML +=y;
 
@@ -68,12 +68,12 @@ function showSingleContest(data){
 
     document.getElementById("imageSlider").innerHTML +=b;
 
-    for (let j=0; j < data[0].rooms.length; j++) {
+    for (let j=0; j < data[0].rooms[0].files.length; j++) {
 
         var x = "";
         x +=
 
-            "<img src='upload/" + data[0].rooms[j].filename.slice(0, - 2) + "."+ data[0].rooms[j].filetype.substring(6) +" ' alt='' />"
+            "<img src='upload/" + data[0].rooms[0].files[j].filename.slice(0, - 2) + "."+ data[0].rooms[0].files[j].filetype.substring(6) +" ' alt='' />"
 
         document.getElementById("imgLoop").innerHTML +=x;
 
@@ -108,7 +108,7 @@ function showSingleContest(data){
     d +=
     "<div class='title'> Room Dimensions </div>"+
     "<div class='detail'>"+
-    "<p class='last-child'>"+ data[0].rooms[0].room_length +" x " + data[0].rooms[0].room_width + " x " + data[0].rooms[0].rooms_height +"</p>"+
+    "<p class='last-child'>"+ data[0].rooms[0].room_length +" x " + data[0].rooms[0].room_width + " x " + data[0].rooms[0].room_height +"</p>"+
     "</div>";
 
     document.getElementById("sideInfo").innerHTML +=d;

@@ -3,15 +3,23 @@ session_start();
 require_once("dbconnect.php");
 header("Content-Type: application/json");
 
-//fetch records from DB
-if (isset($_POST['getAll'])) {
 
-    $sortBy = $_POST['getAll'];
 
-    $sqlQuery = "SELECT u.user_id, u.user_username, pr.project_id, pr.created_date, pr.closing_date, pr.prize, pr.project_desc, pr.project_title, pr.state, prr.room_id, prr.room_name, prr.room_type, prp.prop_id, prp.comment_extra_details, prp.feature_name FROM users AS u INNER JOIN projects as pr ON u.user_id = pr.creator_id INNER JOIN project_rooms as prr ON prr.project_id = pr.project_id INNER JOIN project_properties as prp ON prp.room_id = prr.room_id WHERE state = 1 ORDER BY `created_date` DESC";
-}
+    $sqlQuery = "SELECT 
+u.user_id, u.user_username, 
+pr.project_id, pr.created_date, pr.closing_date, pr.prize, pr.project_desc, pr.project_title, pr.state, 
+prr.room_id, prr.room_name, prr.room_type, 
+prp.prop_id, prp.comment_extra_details, prp.feature_name 
+FROM users AS u INNER JOIN projects as pr ON u.user_id = pr.creator_id 
+INNER JOIN project_rooms as prr ON prr.project_id = pr.project_id 
+INNER JOIN project_properties as prp ON prp.room_id = prr.room_id 
+WHERE state = ? 
+ORDER BY pr.created_date DESC";
 
-$result = $conn->query($sqlQuery);
+
+
+$result = $conn->prepare($sqlQuery);
+$result->execute(array('qualifying'));
 
 $proj_id = 0;
 $room_id = 0;
@@ -26,7 +34,9 @@ $images = array();
 while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
 
     if ($proj_id != $row["project_id"]) {
-
+        $rooms = array();
+        $files = array();
+        $properties = array();
         $projects[] = array(
             "user_id" => $row["user_id"],
             "username" => $row["user_username"],
@@ -52,8 +62,10 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
             "feature_name" => $row["feature_name"]
         );
 
-        $f = "SELECT * FROM project_files where room_id = " . $row['room_id'];
-        $result2 = $conn->query($f);
+        $f = "SELECT * FROM project_files where room_id = ?";
+        $result2 = $conn->prepare($f);
+        $result2->execute(array($row['room_id']));
+
 
 
         while ($rowF = $result2->fetch(PDO::FETCH_ASSOC)) {
@@ -65,6 +77,7 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
                 "caption" => $rowF["caption"],
                 "public_name" => $rowF["public_name"]
             );
+
         }
 
         $proj_id = $row["project_id"];
@@ -74,11 +87,10 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
     } else {
 
         $rooms[0]["properties"][] = array(
-            "room_id" => $row["room_id"],
-            "room_name" => $row["room_name"],
-            "room_type" => $row["room_type"],
-            "comment_extra_details" => $row["comment_extra_details"],
+            "feature_name" => $row["feature_name"]
         );
+        $counter = sizeof($projects) - 1;
+        $projects[$counter]["rooms"] = $rooms;
     }
 }
 
