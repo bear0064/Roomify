@@ -2,117 +2,59 @@
 require_once("dbconnect.php");
 //fetch records from DB
 
- $sqlQuery = "SELECT 
-	u.user_id, 
-	u.user_username, 
-	pr.project_id, 
-	pr.created_date, 
-	pr.closing_date, 
-	pr.prize, 
-	pr.project_desc, 
-	pr.project_title, 
-	pr.state, 
-	prr.room_id, 
-	prr.room_name, 
-	prr.room_type, 
-	prr.room_width, 
-	prr.room_length, 
-	prr.room_height, 
-	prp.prop_id, 
-	prp.comment_extra_details, 
-	prp.feature_name 
+if (isset($_POST['id'])) {
+    $getMe = $_POST['id'];
+    $sqlQuery = "SELECT u.user_id, u.user_username, pr.project_id, pr.created_date, pr.closing_date, pr.prize, pr.project_desc, pr.project_title, pr.state, prr.room_id, prr.room_name, prr.room_type, prr.room_width, prr.room_length, prr.room_height, prp.prop_id, prp.comment_extra_details, prp.feature_name, prf.caption, prf.filename, prf.filetype, prf.file_id, prf.public_name FROM projects AS pr INNER JOIN users as u ON pr.creator_id = u.user_id INNER JOIN project_rooms as prr ON prr.project_id = pr.project_id INNER JOIN project_properties as prp ON prp.room_id = prr.room_id INNER JOIN project_files as prf ON prf.room_id = prp.room_id WHERE pr.`project_id` = $getMe";
 
-FROM 
-	users AS u 
-	INNER JOIN projects as pr ON u.user_id = pr.creator_id 
-	INNER JOIN project_rooms as prr ON prr.project_id = pr.project_id 
-	INNER JOIN project_properties as prp ON prp.room_id = prr.room_id 
+    $result = $conn->query($sqlQuery);
 
-WHERE 
-	pr.`project_id` = ?";
+    $proj_id = 0;
+    $projects = array();
+    $rooms = array();
 
+    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
 
+        if ($proj_id != $row["project_id"]) {
 
-
-$result = $conn->prepare($sqlQuery);
-$result->execute(array($_POST['id']));
-
-$proj_id = 0;
-$room_id = 0;
-$file_id = 0;
-
-$projects = array();
-$rooms = array();
-$files = array();
-$properties = array();
-$images = array();
-
-while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-
-    if ($proj_id != $row["project_id"]) {
-        $rooms = array();
-        $files = array();
-        $properties = array();
-        $projects[] = array(
-            "user_id" => $row["user_id"],
-            "username" => $row["user_username"],
-            "project_id" => $row["project_id"],
-            "created_date" => $row["created_date"],
-            "closing_date" => $row["closing_date"],
-            "prize" => $row["prize"],
-            "project_desc" => $row["project_desc"],
-            "project_title" => $row["project_title"],
-            "rooms" => array()
-        );
-
-        $rooms[] = array(
-            "room_id" => $row["room_id"],
-            "room_name" => $row["room_name"],
-            "room_type" => $row["room_type"],
-            "comment_extra_details" => $row["comment_extra_details"],
-            "room_width" => $row["room_width"],
-            "room_length" => $row["room_length"],
-            "room_height" => $row["room_height"],
-            "files" => array(),
-            "properties" => array()
-        );
-
-        $rooms[0]["properties"][] = array(
-            "feature_name" => $row["feature_name"]
-        );
-
-        $f = "SELECT * FROM project_files where room_id = ?";
-        $result2 = $conn->prepare($f);
-        $result2->execute(array($row['room_id']));
-
-
-
-        while ($rowF = $result2->fetch(PDO::FETCH_ASSOC)) {
-
-            $rooms[0]['files'][] = array(
-                "filename" => $rowF["filename"],
-                "filetype" => $rowF["filetype"],
-                "file_id" => $rowF["file_id"],
-                "caption" => $rowF["caption"],
-                "public_name" => $rowF["public_name"]
+            $details = array(
+                "user_id" => $row["user_id"],
+                "project_id" => $row["project_id"],
+                "username" => $row["user_username"],
+                "created_date" => $row["created_date"],
+                "closing_date" => $row["closing_date"],
+                "prize" => $row["prize"],
+                "project_desc" => $row["project_desc"],
+                "project_title" => $row["project_title"],
+                "rooms" => array()
             );
 
+            $proj_id = $row["project_id"];
+            $projects[] = $details;
+            $rooms = array();
+
+        } else {
+
+            $rooms[] = array(
+                "room_id" => $row["room_id"],
+                "room_name" => $row["room_name"],
+                "room_type" => $row["room_type"],
+                "room_width" => $row["room_width"],
+                "room_length" => $row["room_length"],
+                "room_height" => $row["room_height"],
+                "prop_id" => $row["prop_id"],
+                "comment_extra_details" => $row["comment_extra_details"],
+                "feature_name" => $row["feature_name"],
+                "caption" => $row["caption"],
+                "filename" => $row["filename"],
+                "filetype" => $row["filetype"],
+                "public_name" => $row["public_name"]
+            );
+
+            $counter = sizeof($projects) - 1;
+            $projects[$counter]["rooms"] = $rooms;
+
         }
-
-        $proj_id = $row["project_id"];
-        $counter = sizeof($projects) - 1;
-        $projects[$counter]["rooms"] = $rooms;
-
-    } else {
-
-        $rooms[0]["properties"][] = array(
-            "feature_name" => $row["feature_name"]
-        );
-        $counter = sizeof($projects) - 1;
-        $projects[$counter]["rooms"] = $rooms;
     }
 }
-
-
 exit(json_encode($projects));
 ?>

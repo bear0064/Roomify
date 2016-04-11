@@ -44,7 +44,7 @@ function getAllContests(data){
                     "<div class='image-wrapper overlay-fade-in'>" +
                                         //TODO Get the image
 
-                        "<img class='card-img-top' src='upload/" + data[i].rooms[0].files[0].filename.slice(0, - 2) + "."+ data[i].rooms[0].files[0].filetype.substring(6) +" ' width='100%' alt='Card image cap'>" +
+                        "<img class='card-img-top' src='upload/" + data[i].rooms[0].filename.slice(0, - 2) + "."+ data[i].rooms[0].filetype.substring(6) +" ' width='100%' alt='Card image cap'>" +
                                 "<div class='image-overlay-content'>" +
                                     "<h2><i class='fa fa-star-o'></i><i class='fa fa-check-circle-o'></i></h2>" +
                                     "<div class='specs pull-xs-right'>" +
