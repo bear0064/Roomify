@@ -147,7 +147,7 @@ include ('api/authCheck.php');
                 </div>
 
                 <div class="col-sm-10 nopadding">
-                    <div class="modal-header" id="contestHeader">
+                    <div class="modal-header myHeader" id="contestHeader">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="closeModal();">&times;</button>
                         <h5 class="modal-title">Create Contest</h5>
                     </div>
@@ -268,7 +268,7 @@ include ('api/authCheck.php');
 
 
                     </div>
-                    <div class="modal-footer" id="contestFooter">
+                    <div class="modal-footer myFooter" id="contestFooter">
                         <button id="backBtn" type="button" class="btn btn-primary pull-xs-left hidden" onclick="backClick();">Back</button>
                         <span id="modalError" class="center"></span>
                         <button id="nextBtn" type="button" class="btn btn-primary pull-xs-right" onclick="nextClick();">Next</button>
@@ -277,7 +277,7 @@ include ('api/authCheck.php');
             </div>
         </div>
     </div>
-    
+
 
 
     <!--Start of Footer-->

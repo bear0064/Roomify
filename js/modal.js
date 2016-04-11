@@ -448,10 +448,10 @@ function imagesModal(){
                  setTimeout(function(){
                         let span = targetDiv.querySelector("span.hidden");
                         span.classList.remove("hidden");
-                        let thumb = targetDiv.querySelector(".myThumb");
+                        let thumb = targetDiv.querySelector(".myThumb2");
                         thumb.src = "upload/" + response.fileName;
-                        let w = $('.myThumb').last().width();
-                        $('.myThumb').css({'height': w +'px'});
+                        let w = $('.myThumb2').last().width();
+                        $('.myThumb2').css({'height': w +'px'});
                      
                      
                  },4500);
@@ -536,7 +536,7 @@ function createFileItem(fileName){
 
 
     
-    thumbImg.setAttribute("class","img-thumbnail myThumb nopadding");
+    thumbImg.setAttribute("class","img-thumbnail myThumb2 nopadding");
     thumbImg.src = "img/imgPlaceHolder.png";
     
     nameH6.setAttribute("class","nopadding");
@@ -607,15 +607,15 @@ function finalizeContest(){
 }
 
 function dataRequest(url, params, callback){
-    
+
     let xhr = new XMLHttpRequest();
     xhr.open("POST", url, true);
-    
-    
+
+
     xhr.addEventListener("load", function(){
        callback(JSON.parse(xhr.responseText));
     });
-    
+
     xhr.send(params);
 }
 
@@ -627,7 +627,7 @@ function truncate(string){
 };
 
 function subBtnActivate(){
-    
+
     oneFileBool = true;
     document.getElementById("uploadSubmit").click();
 }
