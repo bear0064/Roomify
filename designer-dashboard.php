@@ -78,13 +78,13 @@ include ('api/authCheck.php');
 
                     <!-- Filter Dropdown -->
                     <div class="btn-group">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button type="button" id="filterDropDownName" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             All <span class="caret"></span>
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-                            <a class="dropdown-item" href="#">Submitted</a>
-                            <a class="dropdown-item" href="#">Favourite</a>
-                            <a class="dropdown-item active" href="#">All</a>
+                            <a class="filter dropdown-item" href="#">Submitted</a>
+                            <a class="filter dropdown-item" href="#">Favourite</a>
+                            <a class="filter dropdown-item active" href="#">All</a>
                         </div>
                     </div>
 
@@ -94,10 +94,10 @@ include ('api/authCheck.php');
                             Newest <span class="caret"></span>
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-                            <a class="dropdown-item active" value="Newest" onclick="setSortActiveDesigner(event);">Newest</a>
-                            <a class="dropdown-item" data-dropdown="Oldest" onclick="setSortActiveDesigner(event);">Oldest</a>
-                            <a class="dropdown-item" data-dropdown="Highest Prize" onclick="setSortActiveDesigner(event);">Highest Prize</a>
-                            <a class="dropdown-item" data-dropdown="Lowest Prize" onclick="setSortActiveDesigner(event);">Lowest Prize</a>
+                            <a class="sort dropdown-item active" value="Newest" onclick="setSortActiveDesigner(event);">Newest</a>
+                            <a class="sort dropdown-item" data-dropdown="Oldest" onclick="setSortActiveDesigner(event);">Oldest</a>
+                            <a class="sort dropdown-item" data-dropdown="Highest Prize" onclick="setSortActiveDesigner(event);">Highest Prize</a>
+                            <a class="sort dropdown-item" data-dropdown="Lowest Prize" onclick="setSortActiveDesigner(event);">Lowest Prize</a>
                         </div>
                     </div>
 

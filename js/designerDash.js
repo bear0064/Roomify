@@ -1,13 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
 
 
-    $(".dropdown-item").on("click", function() {
-        $(".dropdown-item").removeClass("active");
+    $(".sort.dropdown-item").on("click", function() {
+        $(".sort.dropdown-item").removeClass("active");
         $(this).addClass("active");
         $("#dropDownName")[0].innerHTML = this.innerHTML;
 
     });
 
+    $(".filter.dropdown-item").on("click", function() {
+        $(".filter.dropdown-item").removeClass("active");
+        $(this).addClass("active");
+        $("#filterDropDownName")[0].innerHTML = this.innerHTML;
+
+    });
+    
+    
     retrieveDesignerActive();
     retrieveDesignerCompleted();
 });
