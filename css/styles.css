@@ -334,13 +334,50 @@ div#submissions.tab-pane.empty{
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
     width: 95%;
-    height: 425px;
-    overflow: hidden;
+    /*height: 425px;*/
+    height: 465px;
+    /*overflow: hidden;*/
+    border: none;
+    border-radius: 0;
+}
+
+/*ADDED*/
+.submittedBadge{
+    position: absolute;
+    top: 25px;
+    right: -8px;
+    height: 35px;
+    line-height: 26px;
+    color: #ffffff;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    background: #324559;
+    padding: 5px 15px;
+}
+
+/*ADDED*/
+.card-block-footer{
+    padding: 0.75rem 1.75rem;
+}
+
+/*ADDED*/
+.card-img{
+    height: 310px;
+    width: 100%;
+    border-radius: 0;
     border: none;
 }
 
+/*ADDED*/
+.hidden{
+    display: none !important;
+}
+
+/*ADDED*/
 .card-img-top{
-    height: 285px;
+    height: 300px;
+    border-radius: 0;
 }
 
 .card a,
@@ -350,7 +387,7 @@ div#submissions.tab-pane.empty{
     text-decoration: none;
 }
 
-.card-fade {
+/*.card-fade {
     position: absolute;
     bottom: 0em;
     width: 100%;
@@ -360,7 +397,7 @@ div#submissions.tab-pane.empty{
     background-image: -o-linear-gradient( rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
     background-image: linear-gradient( rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
     background-image: -ms-linear-gradient( rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
-}
+}*/
 
 .designerCard{
     height: 345px;
@@ -375,7 +412,7 @@ div#submissions.tab-pane.empty{
 }
 
 /*  Image Overlay -- Sara  */
-.image-wrapper {
+/*.image-wrapper {
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -421,22 +458,20 @@ div#submissions.tab-pane.empty{
 
 .overlay-fade-in img {
     transition: all 0.2s linear;
-}
+}*/
 
-.overlay-fade-in .image-overlay-content {
+/*.overlay-fade-in .image-overlay-content {
     opacity: 0;
-    /*  background-color: rgba(0, 0, 0, 0.4);*/
     background-color: rgba(138, 158, 181, 0.8);
     transition: all 0.4s ease-in-out;
-}
+}*/
 
-.overlay-fade-in h2 {
+/*.overlay-fade-in h2 {
     color: #f2f2f2;
     font-size: 1.8rem;
     margin-top: 25%;
     opacity: 0;
     transition: all 0.2s ease-in-out;
-    /*  background: rgba(0, 0, 0, 0.7); */
 }
 
 .overlay-fade-in h2 i:first-child {
@@ -463,7 +498,7 @@ div#submissions.tab-pane.empty{
 
 .overlay-fade-in:hover .button {
     transition-delay: 0.2s;
-}
+}*/
 
 /* End of Cards */
 

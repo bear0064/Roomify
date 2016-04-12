@@ -101,44 +101,13 @@ include('api/designerCheck.php');
             <div id="active" class="tab-pane fade in active">
                 <div id="row">
 
-<!--                    <div class="col-sm-6 col-md-6">-->
-<!--                        <div class="card">-->
-<!--                            <a href="designer-contest.php">-->
-<!--                                <div class="image-wrapper overlay-fade-in">-->
-<!--                                    <img class="card-img-top" src="images/slider/1.png" width="100%" alt="Card image cap">-->
-<!--                                    <div class="image-overlay-content">-->
-<!--                                        <h2><i class="fa fa-star-o"></i><i class="fa fa-check-circle-o"></i></h2>-->
-<!--                                        <div class="specs pull-xs-right">-->
-<!--                                            <p class="">2 designs</p>-->
-<!--                                            <p class="">3 days 14 hours</p>-->
-<!--                                        </div>-->
-<!--                                        <h6 class="pull-xs-left">-->
-<!--                                            <span class="label">Bedroom</span>-->
-<!--                                            <span class="label">Bathroom</span>-->
-<!--                                        </h6>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                                <div class="card-block">-->
-<!--                                    <h6 class="card-title pull-xs-right prize">$600</h6>-->
-<!--                                    <h5 class="card-title pull-xs-left">Brighten up this space</h5>-->
-<!--                                </div>-->
-<!--                                <div class="card-block">-->
-<!--                                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
-<!--                                    <div class="card-fade"></div>-->
-<!--                                </div>-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-
-
-
                 </div>
             </div>
 
 
         <!--          //TODO   Add a load more script   -->
             
-            <div class="cnt-center">
+            <div class="clear cnt-center hidden">
                 <button class="btn btn-secondary">Load More</button>
             </div>
 

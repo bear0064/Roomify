@@ -140,56 +140,58 @@ include('api/homeownerCheck.php');
                     <div class="col-md-6">
                         <div class="card">
                             <a href="homeowner-contest.php">
-                                <div class="image-wrapper overlay-fade-in">
-                                    <img class="card-img-top" src="images/slider/1.png" width="100%" alt="Card image cap">
-                                    <div class="image-overlay-content">
-                                        <h2><i class="fa fa-star-o"></i><i class="fa fa-check-circle-o"></i></h2>
-                                        <div class="specs pull-xs-right">
-                                            <p class="">2 designs</p>
-                                            <p class="">3 days 14 hours</p>
-                                        </div>
-                                        <h6 class="pull-xs-left">
-                                            <span class="label">Bedroom</span>
-                                            <span class="label">Bathroom</span>
-                                        </h6>
+                                <div class="card-block">
+                                <h5 class="card-title">Make my bathroom modern</h5>
+                                <h6 class="card-subtitle text-muted">Bathroom</h6>
+                            </div>
+                            
+                            <div class="submittedBadge hidden">
+                                <span>Submitted</span>
+                            </div>
+                            
+                            <img class="card-img" src="images/slider/1.png" alt="Card image">
+                            
+                            <div class="card-block card-block-footer">
+                                <div class="row">
+                                    <div class="col-xs-8">
+                                        <span>Days Remaining</span><br>
+                                        <span class="prize">3 Days</span>
+                                    </div>
+                                    <div class="col-xs-4 text-xs-right">
+                                        <span>Prize</span><br>
+                                        <span class="prize">$400</span>
                                     </div>
                                 </div>
-                                <div class="card-block">
-                                    <h6 class="card-title pull-xs-right prize">$600</h6>
-                                    <h5 class="card-title pull-xs-left">Brighten up this space</h5>
-                                </div>
-                                <div class="card-block">
-                                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <div class="card-fade"></div>
-                                </div>
+                            </div>
                             </a>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="card">
                             <a href="#">
-                                <div class="image-wrapper overlay-fade-in">
-                                    <img class="card-img-top" src="images/1.png" width="100%" alt="Card image cap">
-                                    <div class="image-overlay-content">
-                                        <h2><i class="fa fa-star-o"></i><i class="fa fa-check-circle-o"></i></h2>
-                                        <div class="specs pull-xs-right">
-                                            <p class="">2 designs</p>
-                                            <p class="">3 days 14 hours</p>
-                                        </div>
-                                        <h6 class="pull-xs-left">
-                                            <span class="label">Bedroom</span>
-                                            <span class="label">Bathroom</span>
-                                        </h6>
+                                <div class="card-block">
+                                <h5 class="card-title">Make my bathroom modern</h5>
+                                <h6 class="card-subtitle text-muted">Bathroom</h6>
+                            </div>
+                            
+                            <div class="submittedBadge hidden">
+                                <span>Submitted</span>
+                            </div>
+                            
+                            <img class="card-img" src="images/slider/1.png" alt="Card image">
+                            
+                            <div class="card-block card-block-footer">
+                                <div class="row">
+                                    <div class="col-xs-8">
+                                        <span>Days Remaining</span><br>
+                                        <span class="prize">3 Days</span>
+                                    </div>
+                                    <div class="col-xs-4 text-xs-right">
+                                        <span>Prize</span><br>
+                                        <span class="prize">$400</span>
                                     </div>
                                 </div>
-                                <div class="card-block">
-                                    <h6 class="card-title pull-xs-right prize">$600</h6>
-                                    <h5 class="card-title pull-xs-left">Card title</h5>
-                                </div>
-                                <div class="card-block">
-                                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <div class="card-fade"></div>
-                                </div>
+                            </div>
                             </a>
                         </div>
                     </div>
@@ -197,7 +199,7 @@ include('api/homeownerCheck.php');
             </div>
 
             <!-- Completed Tab w No Completed Contests -->
-            <div id="completed" class="tab-pane fade cnt-center">
+            <div id="completed" class="tab-pane fade cnt-center empty">
                 <p>You have no completed contests.</p>
             </div>
 

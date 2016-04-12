@@ -78,6 +78,32 @@ include('api/homeownerCheck.php');
         <div class="tab-content">
 
             <!-- Sort Dropdown -->
+            <!-- <div class="dropdown-category cnt-right">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Newest <span class="caret"></span>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+                        <a class="dropdown-item" href="#">Oldest</a>
+                        <a class="dropdown-item active" href="#">Newest</a>
+                        <a class="dropdown-item" href="#">Highest Prize</a>
+                        <a class="dropdown-item" href="#">Lowest Prize</a>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Active Tab w No Active Contests -->
+            <!--
+<div id="active" class="tab-pane fade in active cnt-center">
+    <p>You have no active contests.</p>
+    <p>Click New Contest above to get started!</p>
+</div>
+-->
+
+            <!-- Active Tab w Active Contests -->
+            <div id="active" class="tab-pane fade in active">
+                
+                <!-- Sort Dropdown -->
             <div class="dropdown-category cnt-right">
                 <div class="btn-group">
                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -92,16 +118,6 @@ include('api/homeownerCheck.php');
                 </div>
             </div>
 
-            <!-- Active Tab w No Active Contests -->
-            <!--
-<div id="active" class="tab-pane fade in active cnt-center">
-    <p>You have no active contests.</p>
-    <p>Click New Contest above to get started!</p>
-</div>
--->
-
-            <!-- Active Tab w Active Contests -->
-            <div id="active" class="tab-pane fade in active">
                 <div id="activeRow">
 
                 </div>
