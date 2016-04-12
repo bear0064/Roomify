@@ -205,6 +205,7 @@ include ('api/authCheck.php');
     <script src="js/jquery-2.2.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/designerSort.js"></script>
     <script src="js/designerBrowsingPage.js"></script>
     <script src="js/countdown.js"></script>
 </body>
