@@ -129,7 +129,6 @@ function submitTo(contest){
 
 }
 
-
 function showContestSubmissions(data){
     
     
@@ -161,18 +160,18 @@ function showContestSubmissions(data){
                 }
     }else {
 
-        document.getElementById("outputSubmissions").innerHTML = "";
+        document.getElementById("submissions").innerHTML = "";
+        document.getElementById("submissions").classList.add('empty');
+        document.getElementById("submissions").classList.add('cnt-center');
 
 
         var s = "";
-        s += "<div id='active' class='tab-pane fade in active cnt-center'>"+
-            "<p>You have no active contests.</p>"+
-            "<p>Browse contests <a href='designer-browse.php'>here</a></p>"+
-            "</div>";
+        s +=
+        "<p>There are no submissions to this contest yet.</p>";
 
 
 
-        document.getElementById("dashOutput").innerHTML += s;
+        document.getElementById("submissions").innerHTML += s;
 
     }
 

@@ -114,6 +114,7 @@ include('api/authCheck.php');
                         <div class="col-md-6">
                             <div id="contestInfo" class="info">
 
+                                
                             </div>
                         </div>
                         <div class="col-md-3 col-md-offset-3">
@@ -131,15 +132,16 @@ include('api/authCheck.php');
             <!-- Contest Submissions Tab -->
 
             <!-- no submissions yet -->
-            <!-- <div id="submissions" class="tab-pane empty fade cnt-center">
-                <p>There are no submissions to this contest yet.</p>
-            </div> -->
+<!--        <div id="submissions" class="tab-pane empty fade cnt-center">-->
+<!--            <p>There are no submissions to this contest yet.</p>-->
+<!--        </div>-->
 
-            <!-- actual submissions -->
+<!--            actual submissions  -->
             <div id="submissions" class="tab-pane fade">
                 <div class="container">
                     <div id="outputSubmissions" class='row'>
-                </div>
+                        
+                    </div>
             </div>
 
             <!-- End of Submissions Tab -->

@@ -60,8 +60,8 @@ include ('api/authCheck.php');
     <div class="tabs">
         <div class="container">
             <ul class="nav nav-pills">
-                <li class="nav-item"><a class="nav-link active" data-toggle="pill" href="#active" onclick="setActive();">Active</a></li>
-                <li class="nav-item"><a class="nav-link" data-toggle="pill" href="#completed" onclick="setCompleted();">Completed</a></li>
+                <li class="nav-item"><a class="nav-link active" data-toggle="pill" href="#active" >Active</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="pill" href="#completed" >Completed</a></li>
             </ul>
         </div>
     </div>
@@ -109,33 +109,33 @@ include ('api/authCheck.php');
             </div>
 
 
-            <div id="dashOutput">
+            <!-- Active Tab w No Active Contests -->
+            <!--
+            <div id="active" class="tab-pane fade in active cnt-center">
+                <p>You have no active contests.</p>
+                <p>Browse contests <a href="designer-browse.html">here</a></p>
+            </div>
+            -->
 
-                <!-- Active Tab w No Active Contests -->
-                <!--
-                <div id="active" class="tab-pane fade in active cnt-center">
-                    <p>You have no active contests.</p>
-                    <p>Browse contests <a href="designer-browse.php">here</a></p>
+            <!-- Active Tab w Active Contests -->
+            <div id="active" class="tab-pane fade in active">
+                <div id="activerow" class="row">
+
                 </div>
-                -->
-                <!-- Active Tab w Active Contests -->
-                <div id="active" class="tab-pane fade in active" >
-                    <div id="row" class="row">
-
-                    </div>
-                </div>
-
-                <!-- Completed Tab w No Completed Contests -->
-<!--                <div id="completed" class="tab-pane fade cnt-center" >-->
-<!--                    <p>You have no completed contests.</p>-->
-<!--                    <p>Browse contests <a href="designer-browse.php">here</a></p>-->
-<!--                </div>-->
-                
-                
             </div>
 
-            
 
+
+            <!-- Completed Tab w No Completed Contests -->
+            <div id="completed" class="tab-pane fade in cnt-center">
+
+                <div id="completedrow" class="row">
+
+                </div>
+
+                <!--<p>You have no completed contests.</p>-->
+                <!--<p>Browse contests <a href="designer-browse.html">here</a></p>-->
+            </div>
 
         </div>
     </div>
