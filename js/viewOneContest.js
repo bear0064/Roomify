@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
     passSingleContestId();
-    getAllSubmissions();
 });
 
 function passSingleContestId(){
@@ -11,7 +10,7 @@ function passSingleContestId(){
     data.append("id", contest);
     //calls the data request function passing in desired url, parameters, and the function to fire upon callback
     dataRequest("api/singleContest.php", data, showSingleContest);
-
+    dataRequest("api/getContestSubmissions.php", data, showContestSubmissions);
 }
 
 function showSingleContest(data){
@@ -131,21 +130,52 @@ function submitTo(contest){
 }
 
 
-function getAllSubmissions(){
-    
-        let contest = localStorage.getItem('contestId');
-
-        let data = new FormData();
-        data.append("id", contest);
-        //calls the data request function passing in desired url, parameters, and the function to fire upon callback
-        dataRequest("api/getContestSubmissions.php", data, showAllSubmissions);
-
-}
-
-function showAllSubmissions(data){
+function showContestSubmissions(data){
     
     
     console.log(data);
+
+    if (data.length != 0) {
+
+                for (let i=0; i < data.length; i++){
+
+                    var s = "";
+                        s +=
+
+                    "<div class='col-md-6'>"+
+                    "<div class='card submissionCard'>"+
+                    "<a href='#'>"+
+                    "<img class='card-img-top' src='upload/"+ data[i].filename.slice(0, - 2) + "."+ data[i].filetype.substring(6) +"' width='100%' alt='Card image cap'>"+
+                    "<div class='card-block'>"+
+                    "<p class='card-text'>"+ data[i].submission_text +"</p>"+
+                    "<div class='card-fade'></div>"+
+                    "</div>"+
+                    "</a>"+
+                    "</div>"+
+                    "</div>"+
+                    "</div>";
+
+
+
+                    document.getElementById("outputSubmissions").innerHTML +=s;
+                }
+    }else {
+
+        document.getElementById("outputSubmissions").innerHTML = "";
+
+
+        var s = "";
+        s += "<div id='active' class='tab-pane fade in active cnt-center'>"+
+            "<p>You have no active contests.</p>"+
+            "<p>Browse contests <a href='designer-browse.php'>here</a></p>"+
+            "</div>";
+
+
+
+        document.getElementById("dashOutput").innerHTML += s;
+
+    }
+
 }
 
 

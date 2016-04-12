@@ -5,6 +5,7 @@ require_once("dbconnect.php");
 $sqlQuery = "SELECT 
 	pr.project_id, 
 	prs.user_id,
+	prs.submission_text,
 	sf.submission_id, 
 	sf.filename, 
 	sf.filetype 
@@ -32,32 +33,20 @@ $image = array();
 
 while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
 
-    if ($sub_id != $row["submission_id"]) {
-        //$image = array();
+
+
         $details = array(
             "project_id" => $row["project_id"],
             "submission_id" => $row["submission_id"],
+            "submission_text" => $row["submission_text"],
             "user_id" => $row["user_id"],
-            "image" => array()
-
-        );
-
-        $sub_id = $row["submission_id"];
-        $submissions[] = $details;
-
-
-    } else {
-
-        $image[] = array(
             "filename" => $row["filename"],
             "filetype" => $row["filetype"]
         );
 
-        $counter = sizeof($submissions) -1 ;
-        $submissions[$counter]["image"] = $image;
 
-        //$submissions[0]["image"] = $image;
-    }
+        $submissions[] = $details;
+
 
 
 }

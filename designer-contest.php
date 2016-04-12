@@ -137,22 +137,8 @@ include('api/authCheck.php');
 
             <!-- actual submissions -->
             <div id="submissions" class="tab-pane fade">
-                <div id="outputSubmissions" class="container">
-<!--                    <div class="row">-->
-<!--                        <div class="col-md-6">-->
-<!--                            <div class="card submissionCard">-->
-<!--                                <a href="#">-->
-<!--                                    <img class="card-img-top" src="images/1.png" width="100%" alt="Card image cap">-->
-<!--                                    <div class="card-block">-->
-<!--                                        <p class="card-text">Description of designers work will go here. For example,-->
-<!--                                            explanations for the choices they made, how they think their design will-->
-<!--                                            benefit the room, etc...</p>-->
-<!--                                        <div class="card-fade"></div>-->
-<!--                                    </div>-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
+                <div class="container">
+                    <div id="outputSubmissions" class='row'>
                 </div>
             </div>
 

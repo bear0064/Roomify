@@ -180,9 +180,7 @@ function getAllDesignerActiveprojects(data) {
                 "</a>"+
                 "</div>"+
                 "</div>";
-
-
-
+            
             document.getElementById("row").innerHTML +=s;
         }
     }else {
