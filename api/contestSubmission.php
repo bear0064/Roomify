@@ -17,7 +17,7 @@ $json = json_decode($json, true);
 $user_id = $_SESSION['user_id'];
 $sub_title = $json["submissionTitle"];
 $sub_desc = $json["submissionDescription"];
-$sub_id;
+
 $file_name = $_FILES['SelectedFile']['name'];
 $file_type = $_FILES['SelectedFile']['type'];
 $file_size = $_FILES['SelectedFile']['size'];

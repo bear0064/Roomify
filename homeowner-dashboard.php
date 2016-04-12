@@ -101,16 +101,14 @@ include ('api/authCheck.php');
 
             <!-- Active Tab w Active Contests -->
             <div id="active" class="tab-pane fade in active">
-                <div id="row">
+                <div id="activeRow">
 
-                    
                 </div>
             </div>
 
             <!-- Completed Tab w No Completed Contests -->
             <div id="completed" class="tab-pane fade cnt-center">
-                <p>You have no completed contests.</p>
-                <p>Click <strong>New Contest</strong> above to get started!</p>
+                <div id="completedRow"></div>
             </div>
 
 

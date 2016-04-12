@@ -20,6 +20,7 @@ function dataRequest(url, params, callback){
 
     xhr.addEventListener("load", function(){
         // console.log(xhr.responseText);
+        console.log(xhr.responseText);
        callback(JSON.parse(xhr.responseText));
     });
 
