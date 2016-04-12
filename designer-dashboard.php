@@ -1,6 +1,7 @@
 <?php
 session_start();
 include ('api/authCheck.php');
+include('api/designerCheck.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">

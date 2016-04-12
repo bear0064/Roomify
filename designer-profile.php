@@ -1,6 +1,7 @@
 <?php
 session_start();
 include ('api/authCheck.php');
+include('api/designerCheck.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -71,18 +72,23 @@ include ('api/authCheck.php');
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-3">
-                    <div class="row">
-                        <div class="col-xs-4 mail-like">
-                            <a href="#" class="item-left"><i class="fa fa-envelope-o"></i></a>
-                            <a href="#" class="item-right"><i class="fa fa-thumbs-o-up"></i></a>
-                            <div class="clear"></div>
+
+
+                <div class='col-xs-3'>
+                    <div class='row'>
+                        <div class='col-xs-4 mail-like'>
+                            <a href='#' class='item-left'><i class='fa fa-envelope-o'></i></a>
+                            <a href=''#' class='item-right'><i class='fa fa-thumbs-o-up'></i></a>
+                            <div class='clear'></div>
                         </div>
-                        <ul class="pager col-xs-8 item-right">
-<!--                            <li><a href="#">Edit Profile</a></li>-->
+                        <ul class='pager col-xs-8 item-right'>
+<!--                            <li><a href='#'>Edit Profile</a></li>-->
                         </ul>
                     </div>
                 </div>
+
+
+                
             </div>
         </div>
     </div>
