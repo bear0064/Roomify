@@ -75,5 +75,3 @@ function getAllContests(data){
     }
 }
 
-
-

@@ -44,9 +44,10 @@ include('api/authCheck.php');
         <div class="pull-right">
             <ul class="nav">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="<?echo $_SESSION["user_pic"]?>"
-                                                                                    class="avatar img-circle img-thumbnail img-thumbnail-custom"
-                                                                                    alt="avatar"><i
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img
+                            src="<? echo $_SESSION["user_pic"] ?>"
+                            class="avatar img-circle img-thumbnail img-thumbnail-custom"
+                            alt="avatar"><i
                             class="fa fa-chevron-down"></i></a>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenu">
                         <a class="dropdown-item" href="designer-profile.php">Profile</a>
@@ -71,7 +72,7 @@ include('api/authCheck.php');
                 <a href="designer-browse.php">All Contests</a>
             </div>
             <ul id="designerSubmit" class="pager col-xs-3">
-<!--                <li><a href="#">Submit</a></li>-->
+                <!--                <li><a href="#">Submit</a></li>-->
             </ul>
         </div>
         <div class="clear"></div>
@@ -83,73 +84,88 @@ include('api/authCheck.php');
 </div>
 <!-- End of Tabs Container -->
 
-<!-- Contest Tabs Content -->
-<div class="contestContent">
-    <div class="tab-content">
 
-        <!-- Contest Brief Tab -->
 
-        <div id="brief" class="tab-pane fade in active">
 
-            <!-- Brief Title -->
-            <div id="contBrief">
-            <!-- End of Brief Title -->
-            </div>
-            <!-- Slide Container -->
-            <div id="imageSlider" class="tab-content slider">
+    <!-- Contest Tabs Content -->
+    <div class="contestContent">
 
-            </div>
-            <!-- End of Slider Container -->
+        <div class="tab-content">
 
-            <!-- Brief Description -->
-            <div class="row">
-                <div class="col-md-6">
-                    <div id="contestInfo" class="info">
+<!--            <div id="contestOutput">-->
+
+
+                <!-- Contest Brief Tab -->
+
+                <div id="brief" class="tab-pane fade in active">
+
+                    <!-- Brief Title -->
+                    <div id="contBrief">
+                        <!-- End of Brief Title -->
+                    </div>
+                    <!-- Slide Container -->
+                    <div id="imageSlider" class="tab-content slider">
 
                     </div>
-                </div>
-                <div class="col-md-3 col-md-offset-3">
-                    <div id="sideInfo" class="info">
+                    <!-- End of Slider Container -->
 
-                    </div>
-                </div>
-            </div>
-            <!-- End of Brief Description -->
+                    <!-- Brief Description -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div id="contestInfo" class="info">
 
-        </div>
-        <!-- End of Contest Brief Tab -->
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-md-offset-3">
+                            <div id="sideInfo" class="info">
 
-
-        <!-- Contest Submissions Tab -->
-
-        <!-- no submissions yet -->
-        <!-- <div id="submissions" class="tab-pane empty fade cnt-center">
-            <p>There are no submissions to this contest yet.</p>
-        </div> -->
-
-        <!-- actual submissions -->
-        <div id="submissions" class="tab-pane fade">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card submissionCard">
-                            <a href="#">
-                                <img class="card-img-top" src="images/1.png" width="100%" alt="Card image cap">
-                                <div class="card-block">
-                                    <p class="card-text">Description of designers work will go here. For example, explanations for the choices they made, how they think their design will benefit the room, etc...</p>
-                                    <div class="card-fade"></div>
-                                </div>
-                            </a>
+                            </div>
                         </div>
                     </div>
+                    <!-- End of Brief Description -->
+
+                </div>
+                <!-- End of Contest Brief Tab -->
+
+
+            <!-- Contest Submissions Tab -->
+
+            <!-- no submissions yet -->
+            <!-- <div id="submissions" class="tab-pane empty fade cnt-center">
+                <p>There are no submissions to this contest yet.</p>
+            </div> -->
+
+            <!-- actual submissions -->
+            <div id="submissions" class="tab-pane fade">
+                <div id="outputSubmissions" class="container">
+<!--                    <div class="row">-->
+<!--                        <div class="col-md-6">-->
+<!--                            <div class="card submissionCard">-->
+<!--                                <a href="#">-->
+<!--                                    <img class="card-img-top" src="images/1.png" width="100%" alt="Card image cap">-->
+<!--                                    <div class="card-block">-->
+<!--                                        <p class="card-text">Description of designers work will go here. For example,-->
+<!--                                            explanations for the choices they made, how they think their design will-->
+<!--                                            benefit the room, etc...</p>-->
+<!--                                        <div class="card-fade"></div>-->
+<!--                                    </div>-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
                 </div>
             </div>
+
+            <!-- End of Submissions Tab -->
+
+                <!-- output div ends here-->
+<!--            </div>-->
+
         </div>
 
-        <!-- End of Submissions Tab -->
     </div>
-</div>
-<!-- End of Contest Tabs Content -->
+    <!-- End of Contest Tabs Content -->
+
 
 
 <!-- Submission Modal -->
@@ -172,39 +188,48 @@ include('api/authCheck.php');
                     <form action="" method="post" enctype="multipart/form-data" id="uploadForm">
                         <div class="form-inline">
                             <div class="form-group inputWrapper">
-                                <input type="file" name="files[]" class="fileInput" onchange="subBtnActivate();" id="uploadFiles">OR BROWSE
+                                <input type="file" name="files[]" class="fileInput" onchange="subBtnActivate();"
+                                       id="uploadFiles">OR BROWSE
                             </div>
-                            <button type="submit" class="btn btn-sm btn-primary hidden" id="uploadSubmit">Upload files</button>
+                            <button type="submit" class="btn btn-sm btn-primary hidden" id="uploadSubmit">Upload files
+                            </button>
                         </div>
                     </form>
                 </div>
 
                 <div id="imagePreview" class="col-sm-5 hidden">
-                        <img class="img-thumbnail myThumb nopadding" src="img/imgPlaceHolder.png">
+                    <img class="img-thumbnail myThumb nopadding" src="img/imgPlaceHolder.png">
                     <div>
-                            <h6 id="imgName" class="b3header"><i class="fa fa-times pull-right"></i></h6>
-                            <p class="progBar"></p>
+                        <h6 id="imgName" class="b3header"><i class="fa fa-times pull-right"></i></h6>
+                        <p class="progBar"></p>
                     </div>
                 </div>
 
                 <div class="col-sm-7" style="padding-right: 0;">
-                    <textarea id="submissionDesc" rows="8" class="form-control" placeholder="Describe your mood board here."></textarea>
-                    <div class="divider col-sm-12 nopadding"><hr></div>
-                    <h6 class="b3header">Budget Used <span id="budgetVal" class="pull-xs-right">$500</span> </h6>
-                    <input type="range" id="budgetSlider" class="" value="500" min="200" max="15000" step="50" oninput="showBudgetValue(this.value);">
+                    <textarea id="submissionDesc" rows="8" class="form-control"
+                              placeholder="Describe your mood board here."></textarea>
+                    <div class="divider col-sm-12 nopadding">
+                        <hr>
+                    </div>
+                    <h6 class="b3header">Budget Used <span id="budgetVal" class="pull-xs-right">$500</span></h6>
+                    <input type="range" id="budgetSlider" class="" value="500" min="200" max="15000" step="50"
+                           oninput="showBudgetValue(this.value);">
                 </div>
 
             </div>
 
             <div class="modal-footer myFooter" id="submissionFooter">
-                <button id="cancelBtn" type="button" class="btn btn-default pull-xs-left" onclick="clearModal();">Cancel</button>
+                <button id="cancelBtn" type="button" class="btn btn-default pull-xs-left" onclick="clearModal();">
+                    Cancel
+                </button>
                 <span id="modalError" class="center"></span>
-                <button id="submitBtn" type="button" class="btn btn-primary pull-xs-right" onclick="finalizeSubmit();">Submit</button>
+                <button id="submitBtn" type="button" class="btn btn-primary pull-xs-right" onclick="finalizeSubmit();">
+                    Submit
+                </button>
             </div>
         </div>
     </div>
 </div>
-
 
 
 <!-- End of Submission Modal -->

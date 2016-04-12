@@ -161,7 +161,7 @@ include ('api/authCheck.php');
       <!-- actual submissions -->
       <div id="submissions" class="tab-pane fade">
         <div class="container">
-          <div class="row">
+          <div id="" class="row">
             <div class="col-md-6">
               <div class="card submissionCard">
                 <a href="#">

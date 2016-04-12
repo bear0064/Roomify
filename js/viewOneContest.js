@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     passSingleContestId();
+    getAllSubmissions();
 });
 
 function passSingleContestId(){
@@ -14,6 +15,7 @@ function passSingleContestId(){
 }
 
 function showSingleContest(data){
+    
     console.log(data);
 
     if (data[0] == null){
@@ -127,3 +129,24 @@ function submitTo(contest){
 //    location.assign("http://localhost:8888/newRaumJS/designer-contest.php");
 
 }
+
+
+function getAllSubmissions(){
+    
+        let contest = localStorage.getItem('contestId');
+
+        let data = new FormData();
+        data.append("id", contest);
+        //calls the data request function passing in desired url, parameters, and the function to fire upon callback
+        dataRequest("api/getContestSubmissions.php", data, showAllSubmissions);
+
+}
+
+function showAllSubmissions(data){
+    
+    
+    console.log(data);
+}
+
+
+

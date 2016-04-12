@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
     
 });
 
-
 //sets the tab to active
 function setActive() {
 
@@ -63,7 +62,6 @@ function setActive() {
 
     retrieveDesignerActive();
 }
-
 
 //sets the tab to completed
 function setCompleted() {
