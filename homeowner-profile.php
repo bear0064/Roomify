@@ -66,13 +66,9 @@ include('api/homeownerCheck.php');
                         <div class="pull-left" href="#">
                             <img class="media-object img-circle img-thumbnail img-thumbnail-custom" src="<?echo $_SESSION["user_pic"]?>" alt="avatar" style="width: 125px;height:125px;">
                         </div>
-                        <div class="media-body" style="padding-left: 20px">
-                            <br>
-                            <p><span class="name">Mike Z</span></p>
-                            <p>
-                                English
-                                <br> America
-                            </p>
+                        <div id="profile" class="media-body" style="padding-left: 20px">
+
+
                         </div>
                     </div>
                 </div>
@@ -420,6 +416,9 @@ include('api/homeownerCheck.php');
     <!-- JavaScript -->
     <script src="js/jquery-2.2.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/designerHome.js"></script>
+
 
 </body>
 

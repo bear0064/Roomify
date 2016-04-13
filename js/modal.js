@@ -57,6 +57,10 @@ function modalInit(){
     contestDesc = document.getElementById("descInput");
     contestPrize = document.getElementById("prizeSlider");
     errorText = document.getElementById("modalError");
+    contestTitle.value = "";
+    contestDesc.value = "";
+    contestPrize.value = 500;
+    
     
     modalArray[0] = document.getElementById("step1");
     modalArray[1] = document.getElementById("step2");
@@ -602,6 +606,7 @@ function finalizeContest(){
     });
     
     nextButton.setAttribute("data-dismiss","modal");
+    clearModal();
     
     
 }
@@ -729,9 +734,7 @@ function toggleCaption(ev){
 
 }
 
-function closeModal(ev) {
-
-    ev.preventDefault();
+function clearModal() {
 
 
 

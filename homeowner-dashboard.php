@@ -33,7 +33,7 @@ include('api/homeownerCheck.php');
             <div class="inner-header">
                 <ul class="nav">
                     <li class="divider-vertical"></li>
-                    <li class="active"><a href="homeowner-contest.php"><i class="icon-home icon-white"></i> Dashboard</a></li>
+                    <li class="active"><a href="homeowner-dashboard.php"><i class="icon-home icon-white"></i> Dashboard</a></li>
                     <li class="browse"><a href="homeowner-browse.php"><i class="icon-home icon-white"></i> Browse</a></li>
                 </ul>
                 <ul class="comments">

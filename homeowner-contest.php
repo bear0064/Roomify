@@ -21,42 +21,48 @@ include('api/homeownerCheck.php');
 </head>
 
 <body>
-  <!-- Header Area -->
-  <div class="header">
-      <div class="navbar-inner">
-          <div class="logo">
-            <a href="#">
-              <i class="fa fa-connectdevelop"></i>
-            </a>            
+<body>
+<!-- Header Area -->
+<div class="header">
+  <div class="navbar-inner">
+    <div class="logo">
+      <a href="#">
+        <i class="fa fa-connectdevelop"></i>
+      </a>
+    </div>
+    <div class="inner-header">
+      <ul class="nav">
+        <li class="divider-vertical"></li>
+        <li><a href="homeowner-dashboard.php"><i class="icon-home icon-white"></i> Dashboard</a></li>
+        <li class="browse"><a href="designer-browse.php">Browse</a></li>
+      </ul>
+      <ul class="comments">
+        <li>
+          <a href="#"><i class="fa fa-comments-o"></i></a></li>
+        <li><a href="#"><i class="fa fa-bell-o"></i></a></li>
+      </ul>
+    </div>
+    <div class="pull-right">
+      <ul class="nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img
+                src="<? echo $_SESSION["user_pic"] ?>"
+                class="avatar img-circle img-thumbnail img-thumbnail-custom"
+                alt="avatar"><i
+                class="fa fa-chevron-down"></i></a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+            <a class="dropdown-item" href="designer-profile.php">Profile</a>
+            <a class="dropdown-item" href="#">Settings</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="api/logout.php">Logout</a>
           </div>
-          <div class="inner-header">
-              <ul class="nav">
-                  <li class="divider-vertical"></li>
-                  <li><a href="homeowner-dashboard.php"><i class="icon-home icon-white"></i> Dashboard</a></li>
-                  <li class="browse"><a href="homeowner-browse.php"><i class="icon-home icon-white"></i> Browse</a></li>
-              </ul>
-              <ul class="comments">
-                  <li><a href="#"><i class="fa fa-comments-o"></i></a></li>
-                  <li><a href="#"><i class="fa fa-bell-o"></i></a></li>
-              </ul>
-          </div>
-          <div class="pull-right">
-            <ul class="nav">
-                <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="<?echo $_SESSION["user_pic"]?>" class="avatar img-circle img-thumbnail img-thumbnail-custom" alt="avatar"><i class="fa fa-chevron-down"></i></a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-                            <a class="dropdown-item" href="designer-profile.php">Profile</a>
-                            <a class="dropdown-item" href="#">Settings</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="api/logout.php">Logout</a>
-                        </div>
-                    </li>
-            </ul>
-          </div>
-          <div class="clear"></div>
-      </div>
+        </li>
+      </ul>
+    </div>
+    <div class="clear"></div>
   </div>
-  <!-- End of Header Area -->
+</div>
+<!-- End of Header Area -->
     
   <!-- Tabs container -->
   <div class="tabs">
@@ -212,8 +218,6 @@ include('api/homeownerCheck.php');
   <script src="js/main.js"></script>
   <script src="js/viewOneContest.js"></script>
   <script src="js/countdown.js"></script>
-
-
 </body>
 
 </html>
