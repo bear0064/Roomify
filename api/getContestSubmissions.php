@@ -5,6 +5,7 @@ require_once("dbconnect.php");
 $sqlQuery = "SELECT 
 	pr.project_id, 
 	prs.user_id,
+	u.user_username,
 	prs.submission_text,
 	sf.submission_id, 
 	sf.filename, 
@@ -14,6 +15,7 @@ FROM
 	projects AS pr 
 	INNER JOIN project_submissions as prs ON pr.project_id = prs.project_id 
 	INNER JOIN submission_files as sf ON prs.submission_id = sf.submission_id
+	INNER JOIN users as u ON prs.user_id = u.user_id
 
 WHERE 
 	pr.project_id = ?
@@ -40,6 +42,7 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
             "submission_id" => $row["submission_id"],
             "submission_text" => $row["submission_text"],
             "user_id" => $row["user_id"],
+            "user_name" => $row["user_username"],
             "filename" => $row["filename"],
             "filetype" => $row["filetype"]
         );
