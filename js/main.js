@@ -23,3 +23,17 @@ function retrieveOne(contest){
     location.assign("http://localhost:8888/newRaumJS/designer-contest.php");
 }
 
+function getHomeOwner(homeowner){
+    console.log(homeowner);
+    localStorage.setItem('homeownerId', homeowner.user);
+    location.assign("http://localhost:8888/newRaumJS/designer-view-homeownerProfile.php");
+
+}
+
+// function getDesigner(designer){
+//     console.log(designer);
+//     localStorage.setItem('homeownerId', homeowner.user);
+//     location.assign("http://localhost:8888/newRaumJS/homeowner-view-designerProfile.php");
+//
+// }
+

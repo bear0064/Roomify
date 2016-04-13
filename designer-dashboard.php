@@ -101,12 +101,7 @@ include('api/designerCheck.php');
                             <a class="sort dropdown-item" data-dropdown="Lowest Prize" onclick="setSortActiveDesigner(event);">Lowest Prize</a>
                         </div>
                     </div>
-
-
-
                 </div>
-
-
             </div>
 
 
@@ -128,7 +123,7 @@ include('api/designerCheck.php');
 
 
             <!-- Completed Tab w No Completed Contests -->
-            <div id="completed" class="tab-pane fade in cnt-center">
+            <div id="completed" class="tab-pane empty fade cnt-center">
 
                 <div id="completedrow" class="row">
 

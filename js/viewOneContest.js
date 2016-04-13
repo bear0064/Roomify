@@ -33,7 +33,7 @@ function showSingleContest(data){
             "<div class='tabs item-left'>"+
                 "<h4>" + data[0].project_title +"</h4>"+
                     //TODO get the homeowner name related to the profile
-                "<p>Created by: <a href='designer-view-homeownerProfile.php' data-user='" + data[0].user_id +"'>"+ data[0].username  +"</a></p>"+
+                "<p>Created by: <a href='#' onclick='getHomeOwner( this.dataset );' data-user='" + data[0].user_id +"'>"+ data[0].username  +"</a></p>"+
                 "<ul id='roomFeats' class='pager'>"+
                     "<li class='label label-pill room'>"+data[0].rooms[0].room_type+"</li>"+
                 "</ul>"+
@@ -176,6 +176,4 @@ function showContestSubmissions(data){
     }
 
 }
-
-
 

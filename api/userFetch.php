@@ -26,6 +26,6 @@ while($row = $result->fetch(PDO::FETCH_ASSOC)){
 $output .= implode(",", $contests);
 $output .= ']}';
 
-echo $output;
-exit();
+
+exit($output);
 ?>
