@@ -14,6 +14,14 @@ function retrieveHoweownerActive(){
     dataRequest("api/getHomeownerDashboard.php", null, showAllHomeownerContests);
 }
 
+function setSortActiveDesigner(event){
+
+    let sortBy = event.target.innerHTML;
+    let data = new FormData();
+    data.append("sortActive", sortBy);
+    //calls the data request function passing in desired url, parameters, and the function to fire upon callback
+    dataRequest("api/designerActive.php", data, showAllHomeownerContests);
+}
 
 //Get contests from DB
 function showAllHomeownerContests(data){
@@ -51,7 +59,7 @@ function showAllHomeownerContests(data){
                             "<span>Submitted</span>" +
                         "</div>" +
 
-                        "<img class='card-img' src='upload/" + data[i].rooms[0].files[0].filename.slice(0, -2) + "."+ data[i].rooms[0].files[0].filetype.substring(6) + " ' alt='Card image'>" +
+                        "<img class='card-img' src='upload/" + data[i].rooms[0].files[0].filename + " ' alt='Card image'>" +
 
                         "<div class='card-block card-block-footer'>" +
                             "<div class='row'>" +

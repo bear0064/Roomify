@@ -49,7 +49,7 @@ function showHomeownerContestsActive(data) {
                 "<span>Submitted</span>" +
                 "</div>" +
 
-                "<img class='card-img' src='upload/" + data[i].rooms[0].files[0].filename.slice(0, -2) + "." + data[i].rooms[0].files[0].filetype.substring(6) + " ' alt='Card image'>" +
+                "<img class='card-img' src='upload/" + data[i].rooms[0].files[0].filename + " ' alt='Card image'>" +
 
                 "<div class='card-block card-block-footer'>" +
                 "<div class='row'>" +
@@ -120,7 +120,7 @@ function showHomeownerContestsCompleted(data) {
                 "<span>Submitted</span>" +
                 "</div>" +
 
-                "<img class='card-img' src='upload/" + data[i].rooms[0].file[0].filename.slice(0, -2) + "." + data[i].rooms[0].file[0].filetype.substring(6) + " ' alt='Card image'>" +
+                "<img class='card-img' src='upload/" + data[i].rooms[0].file[0].filename + " ' alt='Card image'>" +
 
                 "<div class='card-block card-block-footer'>" +
                 "<div class='row'>" +
@@ -224,7 +224,7 @@ function showSortedHoActContests(data){
                 "<span>Submitted</span>" +
                 "</div>" +
 
-                "<img class='card-img' src='upload/" + data[i].rooms[0].files[0].filename.slice(0, -2) + "." + data[i].rooms[0].files[0].filetype.substring(6) + " ' alt='Card image'>" +
+                "<img class='card-img' src='upload/" + data[i].rooms[0].files[0].filename + " ' alt='Card image'>" +
 
                 "<div class='card-block card-block-footer'>" +
                 "<div class='row'>" +

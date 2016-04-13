@@ -57,7 +57,7 @@ function getAllDesignerActiveprojects(data) {
                             "<span>Submitted</span>" +
                         "</div>" +
 
-                        "<img class='card-img' src='upload/" + data[i].rooms[0].filename.slice(0, - 2) + "."+ data[i].rooms[0].filetype.substring(6) + " ' alt='Card image'>" +
+                        "<img class='card-img' src='upload/" + data[i].rooms[0].filename + " ' alt='Card image'>" +
 
                         "<div class='card-block card-block-footer'>" +
                             "<div class='row'>" +
@@ -137,7 +137,7 @@ function getAllDesignerCompletedprojects(data) {
                             "<span>Submitted</span>" +
                         "</div>" +
 
-                        "<img class='card-img' src='upload/" + data[i].rooms[0].filename.slice(0, - 2) + "."+ data[i].rooms[0].filetype.substring(6) + " ' alt='Card image'>" +
+                        "<img class='card-img' src='upload/" + data[i].rooms[0].filename + " ' alt='Card image'>" +
 
                         "<div class='card-block card-block-footer'>" +
                             "<div class='row'>" +
@@ -216,7 +216,7 @@ function showActiveSortedContests(data){
                             "<span>Submitted</span>" +
                         "</div>" +
 
-                        "<img class='card-img' src='upload/" + data[i].rooms[0].filename.slice(0, - 2) + "."+ data[i].rooms[0].filetype.substring(6) + " ' alt='Card image'>" +
+                        "<img class='card-img' src='upload/" + data[i].rooms[0].filename + " ' alt='Card image'>" +
 
                         "<div class='card-block card-block-footer'>" +
                             "<div class='row'>" +
@@ -295,7 +295,7 @@ function showCompletedSortedContests(data){
                             "<span>Submitted</span>" +
                         "</div>" +
 
-                        "<img class='card-img' src='upload/" + data[i].rooms[0].filename.slice(0, - 2) + "."+ data[i].rooms[0].filetype.substring(6) + " ' alt='Card image'>" +
+                        "<img class='card-img' src='upload/" + data[i].rooms[0].filename + " ' alt='Card image'>" +
 
                         "<div class='card-block card-block-footer'>" +
                             "<div class='row'>" +

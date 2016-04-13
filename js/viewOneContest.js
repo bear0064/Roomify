@@ -74,7 +74,7 @@ function showSingleContest(data){
         var x = "";
         x +=
 
-            "<img src='upload/" + data[0].rooms[0].files[j].filename.slice(0, - 2) + "."+ data[0].rooms[0].files[j].filetype.substring(6) +" ' alt='' />"
+            "<img src='upload/" + data[0].rooms[0].files[j].filename +" ' alt='' />"
 
         document.getElementById("imgLoop").innerHTML +=x;
 
@@ -144,7 +144,7 @@ function showContestSubmissions(data){
                     "<div class='col-md-6'>"+
                     "<div class='card submissionCard' data-id='" + data[i].submission_id + "' onclick='showFullSize(this.dataset.id);'>"+
                     "<a href='#'>"+
-                    "<img class='card-img-top' src='upload/"+ data[i].filename.slice(0, - 2) + "."+ data[i].filetype.substring(6) +"' width='100%' alt='Card image cap'>"+
+                    "<img class='card-img-top' src='upload/"+ data[i].filename +"' width='100%' alt='Card image cap'>"+
                     "<div class='card-block'>"+
                     "<p class='card-text'>"+ data[i].submission_text +"</p>"+
                     "<div class='card-fade'></div>"+

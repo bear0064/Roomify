@@ -110,10 +110,10 @@ include('api/homeownerCheck.php');
                         Newest <span class="caret"></span>
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-                        <a class="dropdown-item" href="#">Oldest</a>
-                        <a class="dropdown-item active" href="#">Newest</a>
-                        <a class="dropdown-item" href="#">Highest Prize</a>
-                        <a class="dropdown-item" href="#">Lowest Prize</a>
+                        <a class="sort dropdown-item active" value="Newest" onclick="setSortActiveDesigner(event);">Newest</a>
+                        <a class="sort dropdown-item" data-dropdown="Oldest" onclick="setSortActiveDesigner(event);">Oldest</a>
+                        <a class="sort dropdown-item" data-dropdown="Highest Prize" onclick="setSortActiveDesigner(event);">Highest Prize</a>
+                        <a class="sort dropdown-item" data-dropdown="Lowest Prize" onclick="setSortActiveDesigner(event);">Lowest Prize</a>
                     </div>
                 </div>
             </div>
