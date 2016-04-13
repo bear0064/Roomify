@@ -80,68 +80,42 @@ include('api/homeownerCheck.php');
   </div>
     <!-- End of Tabs Container -->
 
+
+
+
   <!-- Contest Tabs Content -->
-  <!-- CHANGE - restructured -->
   <div class="contestContent">
+
     <div class="tab-content">
 
+      <!--            <div id="contestOutput">-->
+
+
       <!-- Contest Brief Tab -->
+
       <div id="brief" class="tab-pane fade in active">
 
         <!-- Brief Title -->
-        <div class="tab-price">
-          <div class="tabs item-left">
-            <h4>Brighten up this space</h4>
-            <p>Created by: <a href="homeowner-profile.php">Mike Z</a></p>
-            <ul class="pager">
-              <li class="label label-pill room">Bathroom</li>
-              <li class="label label-pill">Flooring</li>
-              <li class="label label-pill">Textiles</li>
-            </ul>
-          </div>
-          <div class="price item-right">
-            <div class="price-unit">
-              $100
-            </div>
-            <div class="time">
-              10 days 5 hours
-            </div>
-          </div>
-          <div class="clear"></div>
+        <div id="contBrief">
+          <!-- End of Brief Title -->
         </div>
-        <!-- End of Brief Title -->
-
         <!-- Slide Container -->
-        <div class="tab-content slider">
-          <div class="gallery js-flickity" data-flickity-options='{ "imagesLoaded": true, "percentPosition": false, "wrapAround": true }'>
-            <img src="images/slider/1.png" alt="orange tree" />
-            <img src="images/slider/1.png" alt="submerged" />
-            <img src="images/slider/1.png" alt="look-out" />
-          </div>
+        <div id="imageSlider" class="tab-content slider">
+
         </div>
         <!-- End of Slider Container -->
 
         <!-- Brief Description -->
         <div class="row">
           <div class="col-md-6">
-            <div class="info">
-              <div class="title">
-                Contest Brief
-              </div>
-              <div class="detail">
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <p class="last-child">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              </div>
+            <div id="contestInfo" class="info">
+
+
             </div>
           </div>
           <div class="col-md-3 col-md-offset-3">
-            <div class="info">
-              <div class="title">
-                Room Dimensions
-              </div>
-              <div class="detail">
-                <p>width x length x height</p>
-              </div>
+            <div id="sideInfo" class="info">
+
             </div>
           </div>
         </div>
@@ -150,39 +124,31 @@ include('api/homeownerCheck.php');
       </div>
       <!-- End of Contest Brief Tab -->
 
+
       <!-- Contest Submissions Tab -->
 
       <!-- no submissions yet -->
-      <!--
-      <div id="submissions" class="tab-pane empty fade cnt-center">
-          <p>There are no submissions to this contest yet.</p>
-      </div>
--->
+      <!--        <div id="submissions" class="tab-pane empty fade cnt-center">-->
+      <!--            <p>There are no submissions to this contest yet.</p>-->
+      <!--        </div>-->
 
-      <!-- actual submissions -->
+      <!--            actual submissions  -->
       <div id="submissions" class="tab-pane fade">
         <div class="container">
-          <div id="" class="row">
-            <div class="col-md-6">
-              <div class="card submissionCard">
-                <a href="#">
-                  <img class="card-img-top" src="images/1.png" width="100%" alt="Card image cap">
-                  <div class="card-block">
-                    <p class="card-text">Description of designers work will go here. For example, explanations for the choices they made, how they think their design will benefit the room, etc...</p>
-                    <div class="card-fade"></div>
-                  </div>
-                </a>
-              </div>
-            </div>
+          <div id="outputSubmissions" class='row'>
+
           </div>
         </div>
+
+        <!-- End of Submissions Tab -->
+
+        <!-- output div ends here-->
+        <!--            </div>-->
+
       </div>
 
-      <!-- End of Submissions Tab -->
-
     </div>
-  </div>
-  <!-- End of Contest Tabs Content -->
+    <!-- End of Contest Tabs Content -->
     
     <!-- Footer -->
   <footer>
