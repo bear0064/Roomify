@@ -30,6 +30,12 @@ function getHomeOwner(homeowner){
 
 }
 
+function retrieveOneHoCont(contest){
+    localStorage.setItem('contestId', contest.contest);
+    location.assign("http://localhost:8888/newRaumJS/homeowner-contest.php");
+}
+
+
 // function getDesigner(designer){
 //     console.log(designer);
 //     localStorage.setItem('homeownerId', homeowner.user);

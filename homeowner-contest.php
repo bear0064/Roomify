@@ -243,6 +243,11 @@ include('api/homeownerCheck.php');
   <script src="js/jquery-2.2.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/libs/flickity/flickity.pkgd.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/viewOneContest.js"></script>
+  <script src="js/countdown.js"></script>
+
+
 </body>
 
 </html>

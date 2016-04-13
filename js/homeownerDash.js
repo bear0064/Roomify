@@ -37,7 +37,7 @@ function showAllHomeownerContests(data){
         console.log(data[i].rooms[0].files[0].filename);
 
         var s = "";
-        s += "<div onclick='retrieveOne( this.dataset );' class='col-md-6' data-contest='" + data[i].project_id + "' >" +
+        s += "<div onclick='retrieveOneHoCont( this.dataset );' class='col-md-6' data-contest='" + data[i].project_id + "' >" +
                 "<div class='card'>" +
 
             //TODO get the link to work
