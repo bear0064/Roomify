@@ -31,30 +31,29 @@ function showSortedContests(data){
 
             //TODO get the link to work
             "<a >" +
-            "<div class='image-wrapper overlay-fade-in'>" +
-            //TODO Get the image
+                "<div class='card-block'>" +
+                            "<h5 class='card-title'>" + data[i].project_title +"</h5>" +
+                            "<h6 class='card-subtitle text-muted'>"+ data[i].rooms[0].room_type +"</h6>" +
+                        "</div>" +
 
-            "<img class='card-img-top' src='upload/" + data[i].rooms[0].files[0].filename.slice(0, - 2) + "."+ data[i].rooms[0].files[0].filetype.substring(6) +" ' width='100%' alt='Card image cap'>" +
-            "<div class='image-overlay-content'>" +
-            "<h2><i class='fa fa-star-o'></i><i class='fa fa-check-circle-o'></i></h2>" +
-            "<div class='specs pull-xs-right'>" +
+                        "<div class='submittedBadge hidden'>" +
+                            "<span>Submitted</span>" +
+                        "</div>" +
 
-            // "<p class=''>2 designs</p>"+
-            "<p class=''>"+ countdown(data[i].closing_date , null, countdown.DAYS) +"</p>" +
-            "</div>" +
-            "<h6 class='pull-xs-left'>" +
-            "<span class='label'>" + data[i].rooms[0].room_type +"</span>" +
-            "</h6>" +
-            "</div>" +
-            "</div>" +
-            "<div class='card-block'>" +
-            "<h6 class='card-title pull-xs-right prize'>$"+ data[i].prize +"</h6>" +
-            "<h5 class='card-title pull-xs-left'>" + data[i].project_title +"</h5>" +
-            "</div>" +
-            "<div class='card-block'>" +
-            "<p class='card-text'>"+ data[i].project_desc +"</p>" +
-            "<div class='card-fade'></div>" +
-            "</div>"+
+                        "<img class='card-img' src='upload/" + data[i].rooms[0].files[0].filename.slice(0, - 2) + "."+ data[i].rooms[0].files[0].filetype.substring(6) + " ' alt='Card image'>" +
+
+                        "<div class='card-block card-block-footer'>" +
+                            "<div class='row'>" +
+                                "<div class='col-xs-8'>"+
+                                    "<span>Days Remaining</span>" + "<br>" +
+                                    "<span class='prize'>"+ countdown(data[i].closing_date , null, countdown.DAYS) +"</span>" +
+                                "</div>" +
+                                "<div class='col-xs-4 text-xs-right'>"+
+                                    "<span>Prize</span>" + "<br>" +
+                                    "<span class='prize'>$"+ data[i].prize +"</span>" +
+                                "</div>" +
+                            "</div>" +
+                        "</div>" +
             "</a>"+
             "</div>"+
             "</div>";
