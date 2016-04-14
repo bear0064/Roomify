@@ -510,3 +510,8 @@ img.myThumb:hover{
     
     object-fit: contain;
 }
+
+#submissionText{
+
+    margin-top: 10px;
+}

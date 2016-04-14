@@ -1,3 +1,6 @@
+"use strict";
+let subData;
+
 document.addEventListener("DOMContentLoaded", function() {
     passSingleContestId();
 });
@@ -143,7 +146,7 @@ function submitTo(contest){
 function showContestSubmissions(data){
     
     
-    console.log(data);
+    subData = data;
 
     if (data.length != 0) {
 
@@ -153,8 +156,8 @@ function showContestSubmissions(data){
                         s +=
 
                     "<div class='col-md-6'>"+
-                    "<div class='card submissionCard' data-id='" + data[i].submission_id + "' onclick='showFullSize(this.dataset.id);'>"+
-                    "<a href='#'>"+
+                    "<div class='card submissionCard'>"+
+                    "<a href='#' data-toggle='modal' data-target='#submissionView' data-id='" + data[i].submission_id + "' onclick='showFullSize(this.dataset.id);'>"+
                     "<img class='card-img-top' src='upload/"+ data[i].filename +"' width='100%' alt='Card image cap'>"+
                     "</a>"+
                     "<div class='card-block card-block-footer'>"+
@@ -190,6 +193,29 @@ function showContestSubmissions(data){
         document.getElementById("submissions").innerHTML += s;
 
     }
+}
+
+function showFullSize(id){
+
+    let thisSub;
+
+    for (let i=0;i<subData.length;i++){
+
+        if (subData[i].submission_id == id){
+
+            thisSub = subData[i];
+        }
+
+    }
+
+
+    let img = document.getElementById("submissionImage");
+    let text = document.getElementById("submissionText");
+
+    img.src = "upload/"+ thisSub.filename;
+    text.innerHTML = thisSub.submission_text;
+
+
 
 }
 
