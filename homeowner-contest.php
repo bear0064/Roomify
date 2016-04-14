@@ -224,6 +224,28 @@ include('api/homeownerCheck.php');
 
   <!-- End of Submission Modal -->
 
+  <!-- Submission View Pop-Up -->
+
+  <div class="modal fade" id="submissionView" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <div class="row">
+          <div class="col-sm-8 nopadding">
+            <img id="submissionImage" src="" style="max-width:100%;"/>
+          </div>
+          <div class="col-sm-4">
+            <p id="submissionText" style="margin-top"></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- End of Submission View Pop-Up -->
+
   <!-- Footer -->
   <footer>
     <div class="container">
