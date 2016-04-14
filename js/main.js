@@ -23,6 +23,11 @@ function retrieveOne(contest){
     location.assign("http://localhost:8888/newRaumJS/designer-contest.php");
 }
 
+function retrieveDesProf(designer){
+    localStorage.setItem('designerId', designer.designer);
+    location.assign("http://localhost:8888/newRaumJS/homeowner-view-designerProfile.php");
+}
+
 function getHomeOwner(homeowner){
     console.log(homeowner);
 

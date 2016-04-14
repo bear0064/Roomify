@@ -1,3 +1,8 @@
+<?php
+session_start();
+include('api/authCheck.php');
+//include('api/designerCheck.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,12 +44,12 @@
             <div class="pull-right">
                 <ul class="nav">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="images/128.jpg" class="avatar img-circle img-thumbnail img-thumbnail-custom" alt="avatar"><i class="fa fa-chevron-down"></i></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="<?echo $_SESSION["user_pic"]?>" class="avatar img-circle img-thumbnail img-thumbnail-custom" alt="avatar"><i class="fa fa-chevron-down"></i></a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenu">
                             <a class="dropdown-item" href="homeowner-profile.php">Profile</a>
                             <a class="dropdown-item" href="#">Settings</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Logout</a>
+                            <a class="dropdown-item" href="api/logout.php">Logout</a>
                         </div>
                     </li>
                 </ul>
@@ -59,18 +64,8 @@
         <div class="container" style="padding-top: 50px">
             <div class="row">
             <div class="col-xs-8">
-                <div class="media">
-                    <div class="pull-left" href="#">
-                        <img class="media-object img-circle img-thumbnail img-thumbnail-custom" src="images/avatar.jpg" alt="avatar" style="width: 125px;height:125px;">
-                    </div>
-                    <div class="media-body" style="padding-left: 20px">
-                        <br>
-                        <p><span class="name">Natalia S</span></p>
-                        <p>
-                            English, French
-                            <br> Canada
-                        </p>
-                    </div>
+                <div id="designerProfile" class="media">
+
                 </div>
             </div>
             <div class="col-xs-3">
@@ -180,18 +175,8 @@
                 </div>
 
                 <!-- submissions - row 1 -->
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card submissionCard">
-                            <a href="#">
-                                <img class="card-img-top" src="images/1.png" width="100%" alt="Card image cap">
-                                <div class="card-block">
-                                    <p class="card-text">Description of designers work will go here. For example, explanations for the choices they made, how they think their design will benefit the room, etc...</p>
-                                    <div class="card-fade"></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+                <div id="outputSubmissions" class="row">
+                    
                 </div>
             </div>
             <!-- End of Submissions Tab -->
@@ -365,6 +350,8 @@
     <!-- JavaScript -->
     <script src="js/libs/jQuery/jquery-2.2.1.min.js"></script>
     <script src="js/libs/bootstrap/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/displayDesignerProfile.js"></script>
 </body>
 
 </html>

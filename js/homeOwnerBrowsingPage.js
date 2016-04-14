@@ -32,7 +32,7 @@ function getAllDesigners(data) {
 
             var s = "";
             s +=
-                "<div class='col-md-6'>" +
+                "<div onclick='retrieveDesProf( this.dataset );' class='col-md-6' data-designer='" + data.users[i].u_id +"' class='col-md-6'>" +
                     "<div class='card designerCard'>" +
                         "<img class='card-img-top' src='"+ data.users[i].u_photoURL +"' width='100%' alt='Card image cap'>" +
                         "<div class='card-block'>" +
