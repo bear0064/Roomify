@@ -164,10 +164,10 @@ include('api/authCheck.php');
                 <!-- Sort Dropdown -->
                 <div class="dropdown-category cnt-right">
                     <div class="btn-group">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button type="button" id="dropDownName" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Newest <span class="caret"></span>
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+                        <div  class="dropdown-menu" aria-labelledby="dropdownMenu">
                             <a class="dropdown-item active" href="#">Newest</a>
                             <a class="dropdown-item" href="#">Oldest</a>
                         </div>
@@ -176,7 +176,7 @@ include('api/authCheck.php');
 
                 <!-- submissions - row 1 -->
                 <div id="outputSubmissions" class="row">
-                    
+
                 </div>
             </div>
             <!-- End of Submissions Tab -->

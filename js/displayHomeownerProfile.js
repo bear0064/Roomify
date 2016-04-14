@@ -16,7 +16,7 @@ function passHomeowner() {
     let data = new FormData();
     data.append("userId", user);
 
-    dataRequest("api/getHoDet.php", data, showHomeownerDetails);
+    dataRequest("api/userFetch.php", data, showHomeownerDetails);
     dataRequest("api/getHoAct.php", data, showHomeownerContestsActive);
     dataRequest("api/getHoCom.php", data, showHomeownerContestsCompleted);
 

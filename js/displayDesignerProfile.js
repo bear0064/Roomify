@@ -76,18 +76,18 @@ function showDesignerSubmissions(data) {
         }
     }else {
 
-        document.getElementById("submissions").innerHTML = "";
-        document.getElementById("submissions").classList.add('empty');
-        document.getElementById("submissions").classList.add('cnt-center');
+        document.getElementById("outputSubmissions").innerHTML = "";
+        document.getElementById("outputSubmissions").classList.add('empty');
+        document.getElementById("outputSubmissions").classList.add('cnt-center');
 
 
         var s = "";
         s +=
-            "<p>There are no submissions to this contest yet.</p>";
+            "<p>This user has not submitted to any contests yet.</p>"+
+            "<p>Invite them to your next design.</p>";
 
 
-
-        document.getElementById("submissions").innerHTML += s;
+        document.getElementById("outputSubmissions").innerHTML += s;
 
     }
 }
