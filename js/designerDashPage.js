@@ -14,13 +14,78 @@ document.addEventListener("DOMContentLoaded", function () {
         $("#filterDropDownName")[0].innerHTML = this.innerHTML;
 
     });
+
+    var active = document.getElementById("activePill");
+    var complete = document.getElementById("completedPill");
+    var drop = document.getElementById("dropDown");
+
+    active.addEventListener('click', function(){
+
+        drop.innerHTML = '';
+
+        var s = "";
+        s +=
+            "<button type='button' id='dropDownName' class='btn btn-default dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>"+
+            "Newest <span class='caret'></span>"+
+            "</button>"+
+            "<div class='dropdown-menu' aria-labelledby='dropdownMenu'>"+
+            "<a class='sort dropdown-item active' value='Newest' onclick='sortDesActive(event);'>Newest</a>"+
+            "<a class='sort dropdown-item' data-dropdown='Oldest' onclick='sortDesActive(event);'>Oldest</a>"+
+            "<a class='sort dropdown-item' data-dropdown='Highest Prize' onclick='sortDesActive(event);'>Highest Prize</a>"+
+            "<a class='sort dropdown-item' data-dropdown='Lowest Prize' onclick='sortDesActive(event);'>Lowest Prize</a>"+
+            "</div>";
+
+        drop.innerHTML += s;
+
+
+        $(".sort.dropdown-item").on("click", function() {
+            $(".sort.dropdown-item").removeClass("active");
+            $(this).addClass("active");
+            $("#dropDownName")[0].innerHTML = this.innerHTML;
+
+        });
+
+
+
+    });
+    complete.addEventListener('click', function(){
+
+        drop.innerHTML = '';
+
+        var s = "";
+        s +=
+            "<button type='button' id='dropDownName' class='btn btn-default dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>"+
+            "Newest <span class='caret'></span>"+
+            "</button>"+
+            "<div class='dropdown-menu' aria-labelledby='dropdownMenu'>"+
+            "<a class='sort dropdown-item active' value='Newest' onclick='sortDesCompleted(event);'>Newest</a>"+
+            "<a class='sort dropdown-item' data-dropdown='Oldest' onclick='sortDesCompleted(event);'>Oldest</a>"+
+        "<a class='sort dropdown-item' data-dropdown='Highest Prize' onclick='sortDesCompleted(event);'>Highest Prize</a>"+
+        "<a class='sort dropdown-item' data-dropdown='Lowest Prize' onclick='sortDesCompleted(event);'>Lowest Prize</a>"+
+        "</div>";
+
+        drop.innerHTML += s;
+
+        $(".sort.dropdown-item").on("click", function() {
+            $(".sort.dropdown-item").removeClass("active");
+            $(this).addClass("active");
+            $("#dropDownName")[0].innerHTML = this.innerHTML;
+
+        });
+
+    });
+
+ 
+
+
+
     
-    
+
+
+
     retrieveDesignerActive();
     retrieveDesignerCompleted();
 });
-
-
 
 function retrieveDesignerActive() {
     let getMe = 'designersActive';

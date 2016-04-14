@@ -1,8 +1,13 @@
 <?php
+session_start();
 require_once("dbconnect.php");
 //fetch records from DB
+$result = "";
 
-$sqlQuery = "SELECT 
+
+if (isset($_POST['userId'])) {
+
+    $sqlQuery = "SELECT 
 	pr.project_id, 
 	prs.user_id,
 	u.user_username,
@@ -23,10 +28,103 @@ ORDER BY
 	pr.created_date DESC";
 
 
+    $result = $conn->prepare($sqlQuery);
+    $result->execute(array($_POST['userId']));
 
 
-$result = $conn->prepare($sqlQuery);
-$result->execute(array($_POST['userId']));
+}
+
+if (isset($_POST['sortMethod'])) {
+
+    $sortBy = $_POST['sortMethod'];
+
+    if ($sortBy == 'Newest') {
+
+        $sqlQuery = "SELECT 
+	pr.project_id, 
+	prs.user_id,
+	u.user_username,
+	prs.submission_text,
+	sf.submission_id, 
+	sf.filename, 
+	sf.filetype 
+
+FROM 
+	projects AS pr 
+	INNER JOIN project_submissions as prs ON pr.project_id = prs.project_id 
+	INNER JOIN submission_files as sf ON prs.submission_id = sf.submission_id
+	INNER JOIN users as u ON prs.user_id = u.user_id
+
+WHERE  
+    prs.user_id = ?
+ORDER BY 
+	pr.created_date DESC";
+
+        $result = $conn->prepare($sqlQuery);
+        $result->execute(array($_SESSION['user_id']));
+
+    }
+
+
+    if ($sortBy == 'Oldest') {
+
+
+        $sqlQuery = "SELECT 
+	pr.project_id, 
+	prs.user_id,
+	u.user_username,
+	prs.submission_text,
+	sf.submission_id, 
+	sf.filename, 
+	sf.filetype 
+
+FROM 
+	projects AS pr 
+	INNER JOIN project_submissions as prs ON pr.project_id = prs.project_id 
+	INNER JOIN submission_files as sf ON prs.submission_id = sf.submission_id
+	INNER JOIN users as u ON prs.user_id = u.user_id
+
+WHERE  
+    prs.user_id = ?
+ORDER BY 
+	pr.created_date";
+
+        $result = $conn->prepare($sqlQuery);
+        $result->execute(array($_SESSION['user_id']));
+
+    }
+
+
+}
+
+
+else {
+    $sqlQuery = "SELECT 
+	pr.project_id, 
+	prs.user_id,
+	u.user_username,
+	prs.submission_text,
+	sf.submission_id, 
+	sf.filename, 
+	sf.filetype 
+
+FROM 
+	projects AS pr 
+	INNER JOIN project_submissions as prs ON pr.project_id = prs.project_id 
+	INNER JOIN submission_files as sf ON prs.submission_id = sf.submission_id
+	INNER JOIN users as u ON prs.user_id = u.user_id
+
+WHERE  
+    prs.user_id = ?
+ORDER BY 
+	pr.created_date DESC";
+
+    $result = $conn->prepare($sqlQuery);
+    $result->execute(array($_SESSION['user_id']));
+
+
+}
+
 
 $sub_id = 0;
 
@@ -34,7 +132,6 @@ $submissions = array();
 $image = array();
 
 while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-
 
 
     $details = array(
@@ -49,7 +146,6 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
 
 
     $submissions[] = $details;
-
 
 
 }

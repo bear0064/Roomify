@@ -1,7 +1,7 @@
 <?php
 session_start();
 include('api/authCheck.php');
-//include('api/homeownerCheck.php');
+include('api/homeownerCheck.php');
 ?>
 
 <!DOCTYPE html>
@@ -34,8 +34,8 @@ include('api/authCheck.php');
     <div class="inner-header">
       <ul class="nav">
         <li class="divider-vertical"></li>
-        <li><a href="designer-dashboard.php"><i class="icon-home icon-white"></i> Dashboard</a></li>
-        <li class="browse"><a href="designer-browse.php">Browse</a></li>
+        <li><a href="homeowner-dashboard.php"><i class="icon-home icon-white"></i> Dashboard</a></li>
+        <li class="browse"><a href="homeowner-browse.php">Browse</a></li>
       </ul>
       <ul class="comments">
         <li>
@@ -71,7 +71,7 @@ include('api/authCheck.php');
     <div class="row">
       <div class="col-xs-9 back">
         <i class="fa fa-chevron-left"></i>
-        <a href="designer-browse.php">All Contests</a>
+        <a href="homeowner-browse.php">All Contests</a>
       </div>
       <ul id="designerSubmit" class="pager col-xs-3">
         <!--                <li><a href="#">Submit</a></li>-->

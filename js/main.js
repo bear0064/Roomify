@@ -33,14 +33,16 @@ function getHomeOwner(homeowner){
 
     //TODO this needs some though
 
-    localStorage.setItem('homeownerId', homeowner.user);
+
     
     if(localStorage.getItem('ut') == '1' ){
 
+        localStorage.setItem('homeownerId', homeowner.user);
         location.assign("http://localhost:8888/newRaumJS/homeowner-view-homeowner.php");
         
     } else {
 
+        localStorage.setItem('designerId', homeowner.user);
         location.assign("http://localhost:8888/newRaumJS/designer-view-designer.php");
         
     }
@@ -143,7 +145,7 @@ function showSortedCompletedContests(data){
 
     console.log(data);
 
-    document.getElementById("row").innerHTML = "";
+    document.getElementById("completedrow").innerHTML = "";
 
     if (data.length != 0) {
 
@@ -168,7 +170,7 @@ function showSortedCompletedContests(data){
                 "<span>Submitted</span>" +
                 "</div>" +
 
-                "<img class='card-img' src='upload/" + data[i].rooms[0].filename + " ' alt='Card image'>" +
+                "<img class='card-img' src='upload/" + data[i].rooms[0].files[0].filename + " ' alt='Card image'>" +
 
                 "<div class='card-block card-block-footer'>" +
                 "<div class='row'>" +
@@ -188,7 +190,7 @@ function showSortedCompletedContests(data){
 
 
 
-            document.getElementById("row").innerHTML +=s;
+            document.getElementById("completedrow").innerHTML +=s;
         }
     }else {
         document.getElementById("dashOutput").innerHTML = "";
@@ -207,3 +209,24 @@ function showSortedCompletedContests(data){
         document.getElementById("dashOutput").innerHTML += s;
     }
 }
+
+function sortDesActive(){
+
+    let sortBy = event.target.innerHTML;
+    let data = new FormData();
+    data.append("sortUserActive", sortBy);
+    //calls the data request function passing in desired url, parameters, and the function to fire upon callback
+    dataRequest("api/sort.php", data, showSortedActiveContests);
+
+}
+
+function sortDesCompleted(){
+
+    let sortBy = event.target.innerHTML;
+    let data = new FormData();
+    data.append("sortUserComplete", sortBy);
+    //calls the data request function passing in desired url, parameters, and the function to fire upon callback
+    dataRequest("api/sort.php", data, showSortedCompletedContests);
+
+}
+

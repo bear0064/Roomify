@@ -1,7 +1,7 @@
 <?php
 session_start();
 include ('api/authCheck.php');
-//include('api/designerCheck.php');
+include('api/designerCheck.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,8 +61,8 @@ include ('api/authCheck.php');
     <div class="tabs">
         <div class="container">
             <ul class="nav nav-pills">
-                <li class="nav-item"><a class="nav-link active" data-toggle="pill" href="#active" >Active</a></li>
-                <li class="nav-item"><a class="nav-link" data-toggle="pill" href="#completed" >Completed</a></li>
+                <li class="nav-item"><a id="activePill" class="nav-link active" data-toggle="pill" href="#active" >Active</a></li>
+                <li class="nav-item"><a id="completedPill" class="nav-link" data-toggle="pill" href="#completed" >Completed</a></li>
             </ul>
         </div>
     </div>
@@ -90,15 +90,15 @@ include ('api/authCheck.php');
                     </div>
 
                     <!-- Sort Dropdown -->
-                    <div class="btn-group">
+                    <div id="dropDown" class="btn-group">
                         <button type="button" id="dropDownName" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Newest <span class="caret"></span>
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-                            <a class="sort dropdown-item active" value="Newest" onclick="sortActive(event);">Newest</a>
-                            <a class="sort dropdown-item" data-dropdown="Oldest" onclick="sortActive(event);">Oldest</a>
-                            <a class="sort dropdown-item" data-dropdown="Highest Prize" onclick="sortActive(event);">Highest Prize</a>
-                            <a class="sort dropdown-item" data-dropdown="Lowest Prize" onclick="sortActive(event);">Lowest Prize</a>
+                            <a class="sort dropdown-item active" value="Newest" onclick="sortDesActive(event);">Newest</a>
+                            <a class="sort dropdown-item" data-dropdown="Oldest" onclick="sortDesActive(event);">Oldest</a>
+                            <a class="sort dropdown-item" data-dropdown="Highest Prize" onclick="sortDesActive(event);">Highest Prize</a>
+                            <a class="sort dropdown-item" data-dropdown="Lowest Prize" onclick="sortDesActive(event);">Lowest Prize</a>
                         </div>
                     </div>
                 </div>
@@ -123,7 +123,7 @@ include ('api/authCheck.php');
 
 
             <!-- Completed Tab w No Completed Contests -->
-            <div id="completed" class="tab-pane empty fade cnt-center">
+            <div id="completed" class="tab-pane fade">
 
                 <div id="completedrow" class="row">
 
@@ -198,7 +198,6 @@ include ('api/authCheck.php');
     <script src="js/libs/jQuery/jquery-2.2.1.min.js"></script>
     <script src="js/libs/bootstrap/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/designerSort.js"></script>
     <script src="js/countdown.js"></script>
     <script src="js/designerDashPage.js"></script>
 </body>

@@ -8,7 +8,7 @@ if (isset($_POST['getAllDesigners'])) {
 
     $sortBy = $_SESSION['user_id'];
     // use $_SESSION['user_id']
-    $sqlQuery = "SELECT * FROM users WHERE current_mode = 'homeowner'";
+    $sqlQuery = "SELECT * FROM users WHERE current_mode = 'designer'";
 
 }
 

@@ -1,7 +1,7 @@
 <?php
 session_start();
 include ('api/authCheck.php');
-//include('api/designerCheck.php');
+include('api/designerCheck.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -171,28 +171,20 @@ include ('api/authCheck.php');
                 <!-- Sort Dropdown -->
                 <div class="dropdown-category cnt-right">
                     <div class="btn-group">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button type="button" id="dropDownName" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Newest <span class="caret"></span>
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-                            <a class="dropdown-item active" href="#">Newest</a>
-                            <a class="dropdown-item" href="#">Oldest</a>
+                        <div  class="dropdown-menu" aria-labelledby="dropdownMenu">
+                            <a class="sort dropdown-item active" href="#" onclick="sortDesignerSubmissions(event);">Newest</a>
+                            <a class="sort dropdown-item" href="#" onclick="sortDesignerSubmissions(event);">Oldest</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- submissions - row 1 -->
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card submissionCard">
-                            <a href="#">
-                                <img class="card-img-top" src="images/1.png" width="100%" alt="Card image cap">
-                                <div class="card-block">
-                                    <p class="card-text">Description of designers work will go here. For example, explanations for the choices they made, how they think their design will benefit the room, etc...</p>
-                                    <div class="card-fade"></div>
-                                </div>
-                            </a>
-                        </div>
+                <div id="submissions" class="row">
+                        <div id="outputSubmissions" class="row">
+
                     </div>
                 </div>
             </div>
@@ -275,7 +267,7 @@ include ('api/authCheck.php');
                                 </div>
                                 <div class="media-body cnt-left" style="padding-left: 20px">
                                     <div class="name">
-                                        <a href="designer-view-homeownerProfile.html">Mike Z</a>
+                                        <a href="designer-view-homeownerProfile.php">Mike Z</a>
                                     </div>
                                     <div class="day">
                                         Feb 26, 2016

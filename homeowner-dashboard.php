@@ -1,7 +1,7 @@
 <?php
 session_start();
 include ('api/authCheck.php');
-//include('api/homeownerCheck.php');
+include('api/homeownerCheck.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -124,8 +124,11 @@ include ('api/authCheck.php');
             </div>
 
             <!-- Completed Tab w No Completed Contests -->
-            <div id="completed" class="tab-pane fade cnt-center">
-                <div id="completedrow"></div>
+            <div id="completed" class="tab-pane fade">
+                <div id="completedrow">
+
+
+                </div>
             </div>
 
 
