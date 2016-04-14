@@ -156,16 +156,21 @@ function showContestSubmissions(data){
                     "<div class='card submissionCard' data-id='" + data[i].submission_id + "' onclick='showFullSize(this.dataset.id);'>"+
                     "<a href='#'>"+
                     "<img class='card-img-top' src='upload/"+ data[i].filename +"' width='100%' alt='Card image cap'>"+
-                    "<div class='card-block'>"+
-                    "<p class='card-text'>"+ data[i].submission_text +"</p>"+
-                    "<div class='card-fade'></div>"+
-                    "</div>"+
                     "</a>"+
+                    "<div class='card-block card-block-footer'>"+
+                    "<div class='row'>"+
+                    "<div class='col-xs-8'>"+
+                    "<span>Submitted By</span><br>"+
+                    "<span class='prize'><a href='#' onclick='retrieveDesProf( this.dataset );' data-designer='" + data[i].user_id + "'>"+ data[i].user_name +"</a></span>"+
+                    "</div>"+
+
+                    "<div class='col-xs-4 text-xs-right'><span>Budget Used</span><br>"+
+                    "<span class='prize'>$" + data[i].budget + "</span>" +
+                    "</div>"+
+                    "</div>"+
                     "</div>"+
                     "</div>"+
                     "</div>";
-
-
 
                     document.getElementById("outputSubmissions").innerHTML +=s;
                 }

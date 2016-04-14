@@ -44,9 +44,6 @@ function getHomeOwner(homeowner){
         location.assign("http://localhost:8888/newRaumJS/designer-view-designer.php");
         
     }
-    
-    
-
 }
 
 function retrieveOneHoCont(contest){

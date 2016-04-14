@@ -7,6 +7,7 @@ $sqlQuery = "SELECT
 	prs.user_id,
 	u.user_username,
 	prs.submission_text,
+	prs.budget,
 	sf.submission_id, 
 	sf.filename, 
 	sf.filetype 
@@ -41,6 +42,7 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
             "project_id" => $row["project_id"],
             "submission_id" => $row["submission_id"],
             "submission_text" => $row["submission_text"],
+            "budget" => $row["budget"],
             "user_id" => $row["user_id"],
             "user_name" => $row["user_username"],
             "filename" => $row["filename"],
