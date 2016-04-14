@@ -73,7 +73,7 @@ function showSortedActiveContests(data){
 
     document.getElementById("activerow").innerHTML = "";
 
-    console.log( data[0].rooms[0].files[0].filename);
+    console.log();
 
     if (data.length != 0) {
 
@@ -98,7 +98,7 @@ function showSortedActiveContests(data){
                 "<span>Submitted</span>" +
                 "</div>" +
 
-                "<img class='card-img' src='upload/" + data[i].rooms[0].files[0].filename.slice(0, - 2) + "."+ data[i].rooms[0].files[0].filetype.substring(6) + " ' alt='Card image'>" +
+                "<img class='card-img' src='upload/" + data[i].rooms[0].files[0].filename + " ' alt='Card image'>" +
 
                 "<div class='card-block card-block-footer'>" +
                 "<div class='row'>" +

@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     retrieveHomeownerProfile();
+    retrieveHoweownerActive();
 
 });
 
@@ -38,15 +39,6 @@ function getHomeownerProfile(data){
 }
 
 
-
-document.addEventListener("DOMContentLoaded", function() {
-    retrieveHoweownerActive();
-
-});
-
-
-
-
 function retrieveHoweownerActive(){
     let getMe = 'homeownersActive';
     let data = new FormData();
@@ -54,7 +46,6 @@ function retrieveHoweownerActive(){
     //calls the data request function passing in desired url, parameters, and the function to fire upon callback
     dataRequest("api/getHomeownerDashboard.php", null, showAllHomeownerContests);
 }
-
 
 //Get contests from DB
 function showAllHomeownerContests(data){
