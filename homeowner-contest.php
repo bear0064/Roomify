@@ -1,7 +1,7 @@
 <?php
 session_start();
 include('api/authCheck.php');
-include('api/homeownerCheck.php');
+//include('api/homeownerCheck.php');
 ?>
 
 <!DOCTYPE html>
