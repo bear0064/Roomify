@@ -53,7 +53,7 @@ require_once("dbconnect.php");
                 $email = $user_profile->email;
                 $user_username = $firstName . substr($lastName, 0, 1);
                 $country = $details->country;
-                $user_type = 2;
+                $current_mode = 'designer';
                 $photoURL = $user_profile->photoURL;
 
                 $sqlQuery = "SELECT * FROM users WHERE user_email = '$user_profile->email'";
@@ -70,7 +70,7 @@ require_once("dbconnect.php");
                     
                 } else if (empty($results2)) {
 
-                    $sqlQuery = "INSERT INTO `users` (`user_id`, `user_email`, `user_first`, `user_last`, `user_username`, `created_date`, `user_type`, `current_mode`, `user_country`, `photoURL`) VALUES (NULL, '$email', '$firstName', '$lastName', '$user_username', CURRENT_TIMESTAMP, $user_type, 'designer', '$country', '$photoURL' )";
+                    $sqlQuery = "INSERT INTO `users` (`user_id`, `user_email`, `user_first`, `user_last`, `user_username`, `created_date`, `current_mode`, `user_country`, `photoURL`) VALUES (NULL, '$email', '$firstName', '$lastName', '$user_username', CURRENT_TIMESTAMP, $current_mode, 'designer', '$country', '$photoURL' )";
                     $results = $conn->prepare($sqlQuery);
                     $results->execute();
 
@@ -81,9 +81,9 @@ require_once("dbconnect.php");
 
                     //TODO get the user type
                     //redirect home
-                    $_SESSION["user_type"] = $user_type;
+                    $_SESSION["current_mode"] = $current_mode;
 
-                    if ($_SESSION["user_type"] == 1){
+                    if ($_SESSION["current_mode"] == 'homeowner'){
 
                         header('Location: http://localhost:8888/newRaumJS/homeowner-profile.php');
                     } else {

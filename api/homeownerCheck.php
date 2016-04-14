@@ -1,5 +1,5 @@
 <?php
-if ($_SESSION['user_type'] == '2' ){
+if ($_SESSION['current_mode'] == 'designer' ){
 
     header('Location: http://localhost:8888/newRaumJS/designer-profile.php');
 
