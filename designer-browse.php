@@ -80,10 +80,10 @@ include('api/designerCheck.php');
                     </button>
 
                     <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-                        <a class="dropdown-item active" value="Newest" onclick="setSortDesignerBrowse(event);">Newest</a>
-                        <a class="dropdown-item" data-dropdown="Oldest" onclick="setSortDesignerBrowse(event);">Oldest</a>
-                        <a class="dropdown-item" data-dropdown="Highest Prize" onclick="setSortDesignerBrowse(event);">Highest Prize</a>
-                        <a class="dropdown-item" data-dropdown="Lowest Prize" onclick="setSortDesignerBrowse(event);">Lowest Prize</a>
+                        <a class="dropdown-item active" value="Newest" onclick="sortActive(event);">Newest</a>
+                        <a class="dropdown-item" data-dropdown="Oldest" onclick="sortActive(event);">Oldest</a>
+                        <a class="dropdown-item" data-dropdown="Highest Prize" onclick="sortActive(event);">Highest Prize</a>
+                        <a class="dropdown-item" data-dropdown="Lowest Prize" onclick="sortActive(event);">Lowest Prize</a>
                     </div>
 
                 </div>
@@ -97,20 +97,16 @@ include('api/designerCheck.php');
             </div>
 -->
 
-            <!-- Active Tab w Active Contests --> 
+            <!-- Active Tab w Active Contests -->
             <div id="active" class="tab-pane fade in active">
-                <div id="row">
+                <div id="activerow" class="row">
 
                 </div>
+                <div class="cnt-center">
+                    <button class="btn btn-secondary">Load More</button>
+                </div>
+
             </div>
-
-
-        <!--          //TODO   Add a load more script   -->
-            
-            <div class="clear cnt-center hidden">
-                <button class="btn btn-secondary">Load More</button>
-            </div>
-
         </div>
     </div>    
     <!--End of Tab Content Container-->
@@ -171,8 +167,8 @@ include('api/designerCheck.php');
     <!--End of Footer-->
     
     <!-- JavaScript -->
-    <script src="js/jquery-2.2.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/libs/jQuery/jquery-2.2.1.min.js"></script>
+    <script src="js/libs/bootstrap/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/designerSort.js"></script>
     <script src="js/designerBrowsingPage.js"></script>

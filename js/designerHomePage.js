@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
     retrieveDesignerProfile();
 
+
+
 });
 
 
@@ -12,12 +14,12 @@ function retrieveDesignerProfile(){
     dataRequest("api/userFetch.php", data, getDesignerProfile);
 }
 
-
 function getDesignerProfile(data){
 
 
     document.getElementById("profile").innerHTML = "";
 
+        localStorage.setItem('ut', data.users[0].u_usertype);
 
         var s = "";
         s += "<br>"+

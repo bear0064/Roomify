@@ -280,10 +280,10 @@ include('api/designerCheck.php');
 <!-- End of Footer -->
 
 <!-- JavaScript -->
-<script src="js/jquery-2.2.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="js/libs/jQuery/jquery-2.2.1.min.js"></script>
+<script src="js/libs/bootstrap/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
-<script src="js/viewOneContest.js"></script>
+<script src="js/displayContest.js"></script>
 <script type="text/javascript" src="js/libs/flickity/flickity.pkgd.min.js"></script>
 <script src="js/countdown.js"></script>
 <script src="js/submitModal.js"></script>

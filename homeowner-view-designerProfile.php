@@ -363,8 +363,8 @@
     <!-- End of Footer -->
 
     <!-- JavaScript -->
-    <script src="js/jquery-2.2.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/libs/jQuery/jquery-2.2.1.min.js"></script>
+    <script src="js/libs/bootstrap/bootstrap.min.js"></script>
 </body>
 
 </html>

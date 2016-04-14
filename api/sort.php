@@ -5,9 +5,9 @@ header("Content-Type: application/json");
 
 //fetch records from DB
 
-if (isset($_POST['sort'])){
+if (isset($_POST['sortActive'])){
 
-    $sortBy = $_POST['sort'];
+    $sortBy = $_POST['sortActive'];
 
     if ($sortBy == 'Newest') {
         $sqlQuery = "SELECT 
@@ -51,6 +51,56 @@ INNER JOIN project_properties as prp ON prp.room_id = prr.room_id
 WHERE `state` = 1 ORDER BY `prize`";
     }
 }
+
+
+if (isset($_POST['sortComplete'])){
+
+    $sortBy = $_POST['sortComplete'];
+
+    if ($sortBy == 'Newest') {
+        $sqlQuery = "SELECT 
+u.user_id, u.user_username, 
+pr.project_id, pr.created_date, pr.closing_date, pr.prize, pr.project_desc, pr.project_title, pr.state, 
+prr.room_id, prr.room_name, prr.room_type, 
+prp.prop_id, prp.comment_extra_details, prp.feature_name 
+FROM users AS u INNER JOIN projects as pr ON u.user_id = pr.creator_id 
+INNER JOIN project_rooms as prr ON prr.project_id = pr.project_id 
+INNER JOIN project_properties as prp ON prp.room_id = prr.room_id
+WHERE state = 3 ORDER BY `created_date` DESC";
+    } else if ($sortBy == 'Oldest') {
+        $sqlQuery = "SELECT 
+u.user_id, u.user_username, 
+pr.project_id, pr.created_date, pr.closing_date, pr.prize, pr.project_desc, pr.project_title, pr.state, 
+prr.room_id, prr.room_name, prr.room_type, 
+prp.prop_id, prp.comment_extra_details, prp.feature_name 
+FROM users AS u INNER JOIN projects as pr ON u.user_id = pr.creator_id 
+INNER JOIN project_rooms as prr ON prr.project_id = pr.project_id 
+INNER JOIN project_properties as prp ON prp.room_id = prr.room_id
+WHERE `state` = 3 ORDER BY `created_date`";
+    } else if ($sortBy == 'Highest Prize') {
+        $sqlQuery = "SELECT 
+u.user_id, u.user_username, 
+pr.project_id, pr.created_date, pr.closing_date, pr.prize, pr.project_desc, pr.project_title, pr.state, 
+prr.room_id, prr.room_name, prr.room_type, 
+prp.prop_id, prp.comment_extra_details, prp.feature_name 
+FROM users AS u INNER JOIN projects as pr ON u.user_id = pr.creator_id 
+INNER JOIN project_rooms as prr ON prr.project_id = pr.project_id 
+INNER JOIN project_properties as prp ON prp.room_id = prr.room_id
+WHERE `state` = 3 ORDER BY `prize` DESC";
+    } else if ($sortBy == 'Lowest Prize') {
+        $sqlQuery = "SELECT 
+u.user_id, u.user_username, 
+pr.project_id, pr.created_date, pr.closing_date, pr.prize, pr.project_desc, pr.project_title, pr.state, 
+prr.room_id, prr.room_name, prr.room_type, 
+prp.prop_id, prp.comment_extra_details, prp.feature_name 
+FROM users AS u INNER JOIN projects as pr ON u.user_id = pr.creator_id 
+INNER JOIN project_rooms as prr ON prr.project_id = pr.project_id 
+INNER JOIN project_properties as prp ON prp.room_id = prr.room_id
+WHERE `state` = 3 ORDER BY `prize`";
+    }
+}
+
+
 
 $result = $conn->query($sqlQuery);
 

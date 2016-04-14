@@ -95,10 +95,10 @@ include('api/designerCheck.php');
                             Newest <span class="caret"></span>
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-                            <a class="sort dropdown-item active" value="Newest" onclick="setSortActiveDesigner(event);">Newest</a>
-                            <a class="sort dropdown-item" data-dropdown="Oldest" onclick="setSortActiveDesigner(event);">Oldest</a>
-                            <a class="sort dropdown-item" data-dropdown="Highest Prize" onclick="setSortActiveDesigner(event);">Highest Prize</a>
-                            <a class="sort dropdown-item" data-dropdown="Lowest Prize" onclick="setSortActiveDesigner(event);">Lowest Prize</a>
+                            <a class="sort dropdown-item active" value="Newest" onclick="sortActive(event);">Newest</a>
+                            <a class="sort dropdown-item" data-dropdown="Oldest" onclick="sortActive(event);">Oldest</a>
+                            <a class="sort dropdown-item" data-dropdown="Highest Prize" onclick="sortActive(event);">Highest Prize</a>
+                            <a class="sort dropdown-item" data-dropdown="Lowest Prize" onclick="sortActive(event);">Lowest Prize</a>
                         </div>
                     </div>
                 </div>
@@ -195,12 +195,12 @@ include('api/designerCheck.php');
     <!--End of Footer-->
 
     <!-- JavaScript -->
-    <script src="js/jquery-2.2.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/libs/jQuery/jquery-2.2.1.min.js"></script>
+    <script src="js/libs/bootstrap/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/designerSort.js"></script>
     <script src="js/countdown.js"></script>
-    <script src="js/designerDash.js"></script>
+    <script src="js/designerDashPage.js"></script>
 </body>
 
 </html>

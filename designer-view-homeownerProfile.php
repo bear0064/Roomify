@@ -103,11 +103,10 @@ include('api/designerCheck.php');
                         Newest <span class="caret"></span>
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-                        <a class="dropdown-item active" value="Newest" onclick="setSortHoDes(event);">Newest</a>
-                        <a class="dropdown-item" data-dropdown="Oldest" onclick="setSortHoDes(event);">Oldest</a>
-                        <a class="dropdown-item" data-dropdown="Highest Prize" onclick="setSortHoDes(event);">Highest Prize</a>
-                        <a class="dropdown-item" data-dropdown="Lowest Prize" onclick="setSortHoDes(event);">Lowest Prize</a>
-
+                        <a class="dropdown-item active" value="Newest" onclick="sortActive(event);">Newest</a>
+                        <a class="dropdown-item" data-dropdown="Oldest" onclick="sortActive(event);">Oldest</a>
+                        <a class="dropdown-item" data-dropdown="Highest Prize" onclick="sortActive(event);">Highest Prize</a>
+                        <a class="dropdown-item" data-dropdown="Lowest Prize" onclick="sortActive(event);">Lowest Prize</a>
                     </div>
                 </div>
             </div>
@@ -194,8 +193,8 @@ include('api/designerCheck.php');
     <!-- End of Footer -->
 
     <!-- JavaScript -->
-    <script src="js/jquery-2.2.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/libs/jQuery/jquery-2.2.1.min.js"></script>
+    <script src="js/libs/bootstrap/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/countdown.js"></script>
     <script src="js/displayHomeownerProfile.js"></script>

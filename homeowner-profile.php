@@ -119,84 +119,31 @@ include('api/homeownerCheck.php');
             <!-- Sort Dropdown -->
             <div class="dropdown-category cnt-right">
                 <div class="btn-group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button type="button" id="dropDownName" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Newest <span class="caret"></span>
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-                        <a class="dropdown-item" href="#">Oldest</a>
-                        <a class="dropdown-item active" href="#">Newest</a>
-                        <a class="dropdown-item" href="#">Highest Prize</a>
-                        <a class="dropdown-item" href="#">Lowest Prize</a>
-                    </div>
-                </div>
-            </div>
-            
-                <div class="row">
-                    <!-- CHANGE - removed col-sm-6 from cards -->
-                    <div class="col-md-6">
-                        <div class="card">
-                            <a href="homeowner-contest.php">
-                                <div class="card-block">
-                                <h5 class="card-title">Make my bathroom modern</h5>
-                                <h6 class="card-subtitle text-muted">Bathroom</h6>
-                            </div>
-                            
-                            <div class="submittedBadge hidden">
-                                <span>Submitted</span>
-                            </div>
-                            
-                            <img class="card-img" src="images/slider/1.png" alt="Card image">
-                            
-                            <div class="card-block card-block-footer">
-                                <div class="row">
-                                    <div class="col-xs-8">
-                                        <span>Days Remaining</span><br>
-                                        <span class="prize">3 Days</span>
-                                    </div>
-                                    <div class="col-xs-4 text-xs-right">
-                                        <span>Prize</span><br>
-                                        <span class="prize">$400</span>
-                                    </div>
-                                </div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card">
-                            <a href="#">
-                                <div class="card-block">
-                                <h5 class="card-title">Make my bathroom modern</h5>
-                                <h6 class="card-subtitle text-muted">Bathroom</h6>
-                            </div>
-                            
-                            <div class="submittedBadge hidden">
-                                <span>Submitted</span>
-                            </div>
-                            
-                            <img class="card-img" src="images/slider/1.png" alt="Card image">
-                            
-                            <div class="card-block card-block-footer">
-                                <div class="row">
-                                    <div class="col-xs-8">
-                                        <span>Days Remaining</span><br>
-                                        <span class="prize">3 Days</span>
-                                    </div>
-                                    <div class="col-xs-4 text-xs-right">
-                                        <span>Prize</span><br>
-                                        <span class="prize">$400</span>
-                                    </div>
-                                </div>
-                            </div>
-                            </a>
-                        </div>
+                        <a class="dropdown-item active" value="Newest" onclick="sortActive(event);">Newest</a>
+                        <a class="dropdown-item" data-dropdown="Oldest" onclick="sortActive(event);">Oldest</a>
+                        <a class="dropdown-item" data-dropdown="Highest Prize" onclick="sortActive(event);">Highest Prize</a>
+                        <a class="dropdown-item" data-dropdown="Lowest Prize" onclick="sortActive(event);">Lowest Prize</a>
                     </div>
                 </div>
             </div>
 
+
+                <div id="activerow" class="row">
+
+                </div>
+
+
+            </div>
+
             <!-- Completed Tab w No Completed Contests -->
-            <div id="completed" class="tab-pane fade cnt-center empty">
-                <p>You have no completed contests.</p>
+            <div id="completed" class="tab-pane fade empty">
+                <div id="completedrow" class="row">
+
+                </div>
             </div>
 
             <!-- Personal Tab -->
@@ -414,10 +361,12 @@ include('api/homeownerCheck.php');
     <!-- End of Footer -->
 
     <!-- JavaScript -->
-    <script src="js/jquery-2.2.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/libs/jQuery/jquery-2.2.1.min.js"></script>
+    <script src="js/libs/bootstrap/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/designerHome.js"></script>
+    <script src="js/homeownerHomePage.js"></script>
+    <script src="js/homeownerDashPage.js"></script>
+    <script src="js/countdown.js"></script>
 
 
 </body>

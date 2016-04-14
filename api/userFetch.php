@@ -11,6 +11,14 @@ if (isset($_POST['designerProfile'])) {
     $sqlQuery = "SELECT * FROM users WHERE user_id = ". $sortBy;
 
 }
+//fetch records from DB
+if (isset($_POST['homeownerProfile'])) {
+
+    $sortBy = $_SESSION['user_id'];
+    // use $_SESSION['user_id']
+    $sqlQuery = "SELECT * FROM users WHERE user_id = ". $sortBy;
+
+}
 
 $result = $conn->query($sqlQuery);
 

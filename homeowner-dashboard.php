@@ -106,26 +106,26 @@ include('api/homeownerCheck.php');
                 <!-- Sort Dropdown -->
             <div class="dropdown-category cnt-right">
                 <div class="btn-group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button type="button" id="dropDownName" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Newest <span class="caret"></span>
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-                        <a class="sort dropdown-item active" value="Newest" onclick="setSortActiveDesigner(event);">Newest</a>
-                        <a class="sort dropdown-item" data-dropdown="Oldest" onclick="setSortActiveDesigner(event);">Oldest</a>
-                        <a class="sort dropdown-item" data-dropdown="Highest Prize" onclick="setSortActiveDesigner(event);">Highest Prize</a>
-                        <a class="sort dropdown-item" data-dropdown="Lowest Prize" onclick="setSortActiveDesigner(event);">Lowest Prize</a>
+                        <a class="dropdown-item active" value="Newest" onclick="sortActive(event);">Newest</a>
+                        <a class="dropdown-item" data-dropdown="Oldest" onclick="sortActive(event);">Oldest</a>
+                        <a class="dropdown-item" data-dropdown="Highest Prize" onclick="sortActive(event);">Highest Prize</a>
+                        <a class="dropdown-item" data-dropdown="Lowest Prize" onclick="sortActive(event);">Lowest Prize</a>
                     </div>
                 </div>
             </div>
 
-                <div id="activeRow">
+                <div id="activerow">
 
                 </div>
             </div>
 
             <!-- Completed Tab w No Completed Contests -->
             <div id="completed" class="tab-pane fade cnt-center">
-                <div id="completedRow"></div>
+                <div id="completedrow"></div>
             </div>
 
 
@@ -351,12 +351,12 @@ include('api/homeownerCheck.php');
     <!--End of Footer-->
 
     <!-- JavaScript -->
-    <script src="js/jquery-2.2.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/libs/jQuery/jquery-2.2.1.min.js"></script>
+    <script src="js/libs/bootstrap/bootstrap.min.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/main.js"></script>
     <script src="js/countdown.js"></script>
-    <script src="js/homeownerDash.js"></script>
+    <script src="js/homeownerDashPage.js"></script>
 
 </body>
 

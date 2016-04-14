@@ -1,6 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
     retrieveHoweownerActive();
 
+
+    $(".dropdown-item").on("click", function() {
+        $(".dropdown-item").removeClass("active");
+        $(this).addClass("active");
+        $("#dropDownName")[0].innerHTML = this.innerHTML;
+
+    });
+
 });
 
 
@@ -28,8 +36,8 @@ function showAllHomeownerContests(data){
 
     console.log(data);
 
-    let activeDiv = document.getElementById("activeRow");
-    let completedDiv = document.getElementById("completedRow");
+    let activeDiv = document.getElementById("activerow");
+    let completedDiv = document.getElementById("completedrow");
 
     activeDiv.innerHTML = "";
     completedDiv.innerHTML = "";
