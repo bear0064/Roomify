@@ -348,7 +348,7 @@ div#submissions.tab-pane.empty{
     text-decoration: none;
 }
 
-/*.card-fade {
+.card-fade {
     position: absolute;
     bottom: 0em;
     width: 100%;
@@ -358,7 +358,7 @@ div#submissions.tab-pane.empty{
     background-image: -o-linear-gradient( rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
     background-image: linear-gradient( rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
     background-image: -ms-linear-gradient( rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
-}*/
+}
 
 .designerCard{
     height: 270px;
@@ -376,10 +376,11 @@ div#submissions.tab-pane.empty{
 
 .submissionCard{
     height: 375px;
+    overflow: hidden;
 }
 
 .submissionCard .card-fade{
-    height: 3.5em;
+    height: 2rem;
 }
 
 /*  Image Overlay -- Sara  */
