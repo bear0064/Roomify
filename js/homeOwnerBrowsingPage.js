@@ -32,14 +32,14 @@ function getAllDesigners(data) {
 
             var s = "";
             s +=
-                "<div onclick='retrieveDesProf( this.dataset ); data-designer='" + data.users[i].u_id +"' class='col-sm-3'>" +
+                "<div onclick='retrieveDesProf( this.dataset );' data-designer='" + data.users[i].u_id +"'  class='col-sm-3'>" +
                     "<div class='card designerCard text-xs-center'>" +
                         "<div class='card-block'>" +
                             "<img class='media-object img-circle img-thumbnail img-thumbnail-custom' style='width: 125px; height:125px; margin:0 auto;' src='"+ data.users[i].u_photoURL +"' width='100%' alt='Card image cap'>" +
                         "</div>" +
                         "<hr>" +
                         "<div class='card-block designerInfo'>" +
-                            "<h6 class='card-title'><a href='homeowner-view-designerProfile.html'>"+ data.users[i].u_username +"</a></h6>" +
+                            "<h6 class='card-title'><a href='#' onclick='retrieveDesProf( this.dataset );' data-designer='" + data.users[i].u_id +"' >"+ data.users[i].u_username +"</a></h6>" +
                             "<div class=''>" +
                                 "<a href='#' class='link-like'><span class='number-like'>21</span><i class='fa fa-heart-o'></i></a>" +
                             "</div>" +
