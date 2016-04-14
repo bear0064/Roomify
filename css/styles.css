@@ -321,6 +321,7 @@ body {
 }
 
 div#completed.tab-pane.empty,
+div#yourDesigners.tab-pane.empty,
 div#submissions.tab-pane.empty{
     margin-top: 7rem;
 }
@@ -400,7 +401,12 @@ div#submissions.tab-pane.empty{
 }*/
 
 .designerCard{
-    height: 345px;
+    height: 270px;
+    width: 80%;
+}
+
+.designerInfo{
+    padding: 0;
 }
 
 .submissionCard{

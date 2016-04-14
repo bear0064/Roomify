@@ -76,8 +76,8 @@ include('api/authCheck.php');
 <!-- Tab Content Container -->
 <div class="container">
     <div class="tab-content">
-        <!-- Sort Dropdown -->
-        <div class="dropdown-category cnt-right">
+        <!-- Sort Dropdown - to be implemented later -->
+        <!-- <div class="dropdown-category cnt-right">
             <div class="btn-group">
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
@@ -88,7 +88,7 @@ include('api/authCheck.php');
                     <a class="dropdown-item active" href="#">Newest</a>
                 </div>
             </div>
-        </div>
+        </div> -->
 
 
         <!-- All Designers Tab -->
@@ -97,7 +97,7 @@ include('api/authCheck.php');
 
             </div>
 
-            <div class="cnt-center">
+            <div class="cnt-center hidden">
                 <button class="btn btn-secondary">Load More</button>
             </div>
 
@@ -107,8 +107,8 @@ include('api/authCheck.php');
         <div id="yourDesigners" class="tab-pane empty fade cnt-center">
 
             <div id="favDes" class="row">
-                <p>You have no favourite designers.</p>
-                <p>Browse designers <a href="homeowner-browse.php">here</a></p>
+                <p>You do not have any favourite designers yet.</p>
+                <p>Browse designers <a href="homeowner-browse.php">here.</a></p>
             </div>
 
         </div>
