@@ -61,7 +61,7 @@ include ('api/authCheck.php');
     <div class="profile">
         <div class="container" style="padding-top: 50px">
             <div class="row">
-                <div class="col-xs-8">
+                <div class="col-xs-12">
                     <div class="media">
                         <div class="pull-left" href="#">
                             <img class="media-object img-circle img-thumbnail img-thumbnail-custom" src="<?echo $_SESSION["user_pic"]?>" alt="avatar" style="width: 125px;height:125px;">
@@ -70,17 +70,6 @@ include ('api/authCheck.php');
 
 
                         </div>
-                    </div>
-                </div>
-                <div class="col-xs-3">
-                    <div class="row">
-                        <div class="col-xs-3 mail-like">
-                            <a href="#" class="item-right"><i class="fa fa-envelope-o"></i></a>
-                            <div class="clear"></div>
-                        </div>
-                        <ul class="pager col-xs-7 item-right">
-                            <li><a href="#">Edit Profile</a></li>
-                        </ul>
                     </div>
                 </div>
             </div>
@@ -92,9 +81,8 @@ include ('api/authCheck.php');
     <div class="tabs">
         <div class="container">
             <ul class="nav nav-pills">
-                <li class="nav-item"><a class="nav-link active" data-toggle="pill" href="#active">Active</a></li>
-                <li class="nav-item"><a class="nav-link" data-toggle="pill" href="#completed">Completed</a></li>
-                <li class="nav-item"><a class="nav-link" data-toggle="pill" href="#personal">Personal</a></li>
+                
+                <li class="nav-item"><a class="nav-link active" data-toggle="pill" href="#personal">Personal</a></li>
             </ul>
         </div>
     </div>
@@ -105,49 +93,8 @@ include ('api/authCheck.php');
     <div class="container">
         <div class="tab-content">
 
-            <!-- Active Tab w No Active Contests -->
-            <!--
-<div id="active" class="tab-pane fade in active cnt-center">
-    <p>You have no active contests.</p>
-    <p>Click <a href="#">here</a> to get started!</p>
-</div>
--->
-
-            <!-- Active Tab w Active Contests -->
-            <div id="active" class="tab-pane fade in active">
-
-            <!-- Sort Dropdown -->
-            <div class="dropdown-category cnt-right">
-                <div class="btn-group">
-                    <button type="button" id="dropDownName" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Newest <span class="caret"></span>
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-                        <a class="dropdown-item active" value="Newest" onclick="sortActive(event);">Newest</a>
-                        <a class="dropdown-item" data-dropdown="Oldest" onclick="sortActive(event);">Oldest</a>
-                        <a class="dropdown-item" data-dropdown="Highest Prize" onclick="sortActive(event);">Highest Prize</a>
-                        <a class="dropdown-item" data-dropdown="Lowest Prize" onclick="sortActive(event);">Lowest Prize</a>
-                    </div>
-                </div>
-            </div>
-
-
-                <div id="activerow" class="row">
-
-                </div>
-
-
-            </div>
-
-            <!-- Completed Tab w No Completed Contests -->
-            <div id="completed" class="tab-pane fade empty">
-                <div id="completedrow" class="row">
-
-                </div>
-            </div>
-
             <!-- Personal Tab -->
-            <div id="personal" class="tab-pane fade">
+            <div id="personal" class="tab-pane fade in active">
                 <form>
                     <!-- Personal Info -->
                     <div class="row personalInfo">

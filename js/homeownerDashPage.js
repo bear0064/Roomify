@@ -104,6 +104,8 @@ function showAllHomeownerContests(data){
 
     if (completedDiv.childElementCount == 0){
 
-     completedDiv.innerHTML = "<p>You have no completed contests.</p><p>Click <strong>New Contest</strong> above to get started!</p>";
+        document.getElementById("completed").classList.add("empty");
+
+     completedDiv.innerHTML = "<p>You have no completed contests yet.</p>";
     }
 }
