@@ -121,7 +121,7 @@ include('api/authCheck.php');
                 <!-- portfolio submissions - row 1 -->
                 <div class="row">
                     <div class="col-sm-6 col-md-6">
-                        <div class="card designerCard">
+                        <div class="card showcaseCard">
                             <img class="card-img-top" src="images/1.png" width="100%" alt="Card image cap">
                             <div class="card-block">
                                 <div class="pull-xs-right">
@@ -131,7 +131,7 @@ include('api/authCheck.php');
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6">
-                        <div class="card designerCard">
+                        <div class="card showcaseCard">
                             <img class="card-img-top" src="images/1.png" width="100%" alt="Card image cap">
                             <div class="card-block">
                                 <div class="pull-xs-right">
@@ -145,7 +145,7 @@ include('api/authCheck.php');
                 <!-- portfolio submissions - row 2 -->
                 <div class="row">
                     <div class="col-sm-6 col-md-6">
-                        <div class="card designerCard">
+                        <div class="card showcaseCard">
                             <img class="card-img-top" src="images/1.png" width="100%" alt="Card image cap">
                             <div class="card-block">
                                 <div class="pull-xs-right">
