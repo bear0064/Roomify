@@ -92,11 +92,11 @@ function showHomeownerContestsCompleted(data) {
     document.getElementById("completedrow").innerHTML = "";
 
 
-    console.log(data.length);
+    console.log(data[0].rooms[0].files[0].filename);
 
     if (data.length != 0) {
 
-        console.log(data);
+
 
 
         for (let i = 0; i < data.length; i++) {
@@ -120,7 +120,7 @@ function showHomeownerContestsCompleted(data) {
                 "<span>Submitted</span>" +
                 "</div>" +
 
-                "<img class='card-img' src='upload/" + data[i].rooms[0].file[0].filename + " ' alt='Card image'>" +
+                "<img class='card-img' src='upload/" + data[i].rooms[0].files[0].filename + " ' alt='Card image'>" +
 
                 "<div class='card-block card-block-footer'>" +
                 "<div class='row'>" +

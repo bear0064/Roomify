@@ -3,16 +3,21 @@ session_start();
 require_once("dbconnect.php");
 header("Content-Type: application/json");
 
+if(isset($_POST['userId'])){
+    $sqlQuery = "SELECT * FROM users WHERE user_id = ".$_POST['userId'];
+}
+else if (!isset($_POST['userId'])){
 
+    $sqlQuery = "SELECT * FROM users WHERE user_id = ".$_SESSION['user_id'];
+}
 
-$sqlQuery = "SELECT * FROM users WHERE user_id = ?";
 
 
 
 $result = $conn->prepare($sqlQuery);
-$result->execute(array($_POST['userId']));
+$result->execute(array());
 
-$output = '{"code":0, "message":"All the records", "user":"'. $_POST['userId'] . '", "users":[';
+$output = '{"code":0, "message":"All the records", "users":[';
 //loop through records
 $contests = array();
 

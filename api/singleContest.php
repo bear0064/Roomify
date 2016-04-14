@@ -62,6 +62,7 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
             "prize" => $row["prize"],
             "project_desc" => $row["project_desc"],
             "project_title" => $row["project_title"],
+            "state" => $row["state"],
             "rooms" => array()
         );
 

@@ -37,11 +37,11 @@ function getHomeOwner(homeowner){
     
     if(localStorage.getItem('ut') == '1' ){
 
-        location.assign("http://localhost:8888/newRaumJS/homeowner-view-designerProfile.php");
+        location.assign("http://localhost:8888/newRaumJS/homeowner-view-homeowner.php");
         
     } else {
 
-        location.assign("http://localhost:8888/newRaumJS/designer-view-homeownerProfile.php");
+        location.assign("http://localhost:8888/newRaumJS/designer-view-designer.php");
         
     }
     
