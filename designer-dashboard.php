@@ -111,7 +111,7 @@ include('api/designerCheck.php');
                 <!--
             <div id="active" class="tab-pane fade in active cnt-center">
                 <p>You have no active contests.</p>
-                <p>Browse contests <a href="designer-browse.html">here</a></p>
+                <p>Browse contests <a href="designer-browse.html" class="color-blue">here</a></p>
             </div>
             -->
 
@@ -132,7 +132,7 @@ include('api/designerCheck.php');
                     </div>
 
                     <!--<p>You have no completed contests.</p>-->
-                    <!--<p>Browse contests <a href="designer-browse.html">here</a></p>-->
+                    <!--<p>Browse contests <a href="designer-browse.html" class="color-blue">here</a></p>-->
                 </div>
 
             </div>
