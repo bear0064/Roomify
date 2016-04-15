@@ -144,7 +144,7 @@ function submitTo(contest){
   console.log(contest);
     localStorage.setItem('contestId', contest);
 
-//    location.assign("http://localhost:8888/newRaumJS/designer-contest.php");
+//    location.assign("https://ten23mb.edumedia.ca/designer-contest.php");
 
 }
 

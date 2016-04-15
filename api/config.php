@@ -11,7 +11,7 @@
 
 return
 		array(
-			"base_url" => "http://localhost:8888/newRaumJS/api/oAuthEndPoint.php",
+			"base_url" => "https://ten23mb.edumedia.ca/api/oAuthEndPoint.php",
 			"providers" => array(
 				// openid providers
 				"OpenID" => array(
