@@ -97,10 +97,10 @@ session_start();
 
                 </form>
 
-                <form class="form-signup">
+                <form id="userCreate" class="form-signup" action="#" method="post">
                     <group class="inline-radio">
-                        <div><input type="radio" name="member" checked><label>Homeowner</label></div>
-                        <div><input type="radio" name="member"><label>Designer</label></div>
+                        <div><input type="radio" value="homeowner" name="member" checked><label>Homeowner</label></div>
+                        <div><input type="radio" value="designer" name="member" ><label>Designer</label></div>
                     </group>
                     <input class="user-info" type="text" placeholder="Name" name="name" required="required">
                     <input class="user-info" type="email" placeholder="E-mail" name="email" required="required">
@@ -111,16 +111,18 @@ session_start();
                         <div class="container or">
                             <h6><span>Log in via</span></h6>
                         </div>
-                        <div class="col-md-4"><a href="api/create-with.php?provider=Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></div>
-                        <div class="col-md-4"><a href="api/create-with.php?provider=LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
+                        <div class="col-md-4"><a onclick="submitResponse(this.href);return false;" href="api/create-with.php?provider=Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></div>
+                        <div class="col-md-4"><a onclick="submitResponse(this.href);return false;" href="api/create-with.php?provider=LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
                         <div class="col-md-4"><a href="#0"><i class="fa fa-twitter" aria-hidden="true"></i></a></div>
                     </div>
-                </form>
+                    
 
+                </form>
             </div>
         </div>
     </div>
     <script src="js/jquery-2.2.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/style.js"></script>
+    <script src="js/login.js"></script>
 </body>
