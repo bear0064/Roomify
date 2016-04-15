@@ -105,6 +105,8 @@ function showAllHomeownerContests(data){
     if (completedDiv.childElementCount == 0){
 
         document.getElementById("completed").classList.add("empty");
+        document.getElementById("completed").classList.add("cnt-center");
+
 
      completedDiv.innerHTML = "<p>You have no completed contests yet.</p>";
     }
