@@ -16,6 +16,7 @@ include('api/homeownerCheck.php');
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link href="css/styles.css" rel="stylesheet">
+        <link href="css/modal.css" rel="stylesheet">
         <!-- Fonts -->
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,900' rel='stylesheet' type='text/css'>
     </head>
@@ -180,6 +181,29 @@ include('api/homeownerCheck.php');
                     </div>
                 </div>
                 <!-- End of Submissions Tab -->
+
+                <!-- Submission View Pop-Up -->
+
+                <div class="modal fade" id="submissionView" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog modal-xl" role="document">
+                        <div class="modal-content">
+                            <div class="row">
+                                <div class="col-sm-8 nopadding">
+                                    <img id="submissionImage" src="" style="max-width:100%;" />
+                                </div>
+                                <div class="col-sm-4">
+                                    <p id="submissionText" style="margin-top"></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- End of Submission View Pop-Up -->
+
 
                 <!-- About Tab -->
                 <div id="about" class="tab-pane fade cnt-center">
@@ -351,7 +375,6 @@ include('api/homeownerCheck.php');
         <script src="js/libs/jQuery/jquery-2.2.1.min.js"></script>
         <script src="js/libs/bootstrap/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
-        
         <script src="js/displayDesignerProfile.js"></script>
     </body>
 
