@@ -98,7 +98,7 @@ session_start();
         </div>
         <div class="row">
             <div class="col-md-6">
-                <img src="img/homeowner-img.svg" alt="image">
+                <img src="img/designer-img.svg" alt="image">
             </div>
             <div class="col-md-5 col-md-offset-1">
                 <h2>Roomify for designers.</h2>
