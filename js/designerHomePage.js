@@ -25,7 +25,7 @@ function getDesignerProfile(data){
 
     document.getElementById("profile").innerHTML = "";
 
-        localStorage.setItem('ut', data.users[0].u_usertype);
+        localStorage.setItem('ut', data.users[0].u_currentmode);
 
         var s = "";
         s += "<br>"+
@@ -68,11 +68,6 @@ function sortDesignerSubmissions(){
 function getDesignerSubs(data){
 
     console.log(data);
-
-
-
-
-
 
     if (data.length != 0) {
 

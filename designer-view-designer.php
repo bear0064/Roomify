@@ -168,8 +168,8 @@ include('api/designerCheck.php');
                             Newest <span class="caret"></span>
                         </button>
                         <div  class="dropdown-menu" aria-labelledby="dropdownMenu">
-                            <a class="dropdown-item active" href="#">Newest</a>
-                            <a class="dropdown-item" href="#">Oldest</a>
+                            <a class="sort dropdown-item active" href="#" onclick="desSortDesignerSubmissions(event);">Newest</a>
+                            <a class="sort dropdown-item" href="#" onclick="desSortDesignerSubmissions(event);">Oldest</a>
                         </div>
                     </div>
                 </div>

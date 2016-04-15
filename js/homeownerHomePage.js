@@ -18,7 +18,7 @@ function getHomeownerProfile(data){
 
     document.getElementById("profile").innerHTML = "";
 
-    localStorage.setItem('ut', data.users[0].u_usertype);
+    localStorage.setItem('ut', data.users[0].u_currentmode);
 
     var s = "";
     s += "<br>"+
@@ -78,13 +78,10 @@ function showAllHomeownerContests(data){
             "<h5 class='card-title'>" + data[i].project_title +"</h5>" +
             "<h6 class='card-subtitle text-muted'>"+ data[i].rooms[0].room_type +"</h6>" +
             "</div>" +
-
             "<div class='submittedBadge hidden'>" +
             "<span>Submitted</span>" +
             "</div>" +
-
             "<img class='card-img' src='upload/" + data[i].rooms[0].files[0].filename.slice(0, -2) + "."+ data[i].rooms[0].files[0].filetype.substring(6) + " ' alt='Card image'>" +
-
             "<div class='card-block card-block-footer'>" +
             "<div class='row'>" +
             "<div class='col-xs-8'>"+
@@ -111,6 +108,7 @@ function showAllHomeownerContests(data){
         if (data[i].state == "qualifying"){
 
             activeDiv.innerHTML += s;
+
         }else if (data[i].state == "completed"){
 
             completedDiv.innerHTML += s;

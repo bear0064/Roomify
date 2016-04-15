@@ -35,7 +35,7 @@ function getHomeOwner(homeowner){
 
 
     
-    if(localStorage.getItem('ut') == '1' ){
+    if(localStorage.getItem('ut') == 'homeowner' ){
 
         localStorage.setItem('homeownerId', homeowner.user);
         location.assign("http://localhost:8888/newRaumJS/homeowner-view-homeowner.php");

@@ -115,3 +115,60 @@ function showDesignerDetails(data) {
 
 
 }
+
+function desSortDesignerSubmissions(data){
+    var sortBy = event.target.innerHTML;
+    let uId = localStorage.getItem('designerId');
+
+    let desData = new FormData();
+    desData.append("sortDesMethod", sortBy);
+    desData.append("userDes", uId);
+    //calls the data request function passing in desired url, parameters, and the function to fire upon callback
+    dataRequest("api/desVdes.php", desData, desGetDesignerSubs);
+
+}
+
+function desGetDesignerSubs(data){
+
+    document.getElementById("outputSubmissions").innerHTML = "";
+
+    if (data.length != 0) {
+
+        for (let i=0; i < data.length; i++){
+
+            var s = "";
+            s +=
+
+                "<div class='col-md-6'>"+
+                "<div class='card submissionCard' data-id='" + data[i].submission_id + "' onclick='showFullSize(this.dataset.id);'>"+
+                "<a href='#'>"+
+                "<img class='card-img-top' src='upload/"+ data[i].filename +"' width='100%' alt='Card image cap'>"+
+                "<div class='card-block'>"+
+                "<p class='card-text'>"+ data[i].submission_text +"</p>"+
+                "<div class='card-fade'></div>"+
+                "</div>"+
+                "</a>"+
+                "</div>"+
+                "</div>"+
+                "</div>";
+
+            document.getElementById("outputSubmissions").innerHTML +=s;
+        }
+    }else {
+
+        document.getElementById("submissions").innerHTML = "";
+        document.getElementById("submissions").classList.add('empty');
+        document.getElementById("submissions").classList.add('cnt-center');
+
+
+        var s = "";
+        s +=
+            "<p>This Designer has not made a submission to a contest.</p>";
+
+
+
+        document.getElementById("submissions").innerHTML += s;
+
+    }
+
+}

@@ -71,7 +71,7 @@ include('api/homeownerCheck.php');
     <div class="row">
       <div class="col-xs-9 back">
         <i class="fa fa-chevron-left"></i>
-        <a href="homeowner-browse.php">All Contests</a>
+        <a href="homeowner-dashboard.php">Back</a>
       </div>
       <ul id="designerSubmit" class="pager col-xs-3">
         <!--                <li><a href="#">Submit</a></li>-->

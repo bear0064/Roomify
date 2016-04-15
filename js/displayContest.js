@@ -120,19 +120,15 @@ function showSingleContest(data){
 
     if (data[0].state == 'qualifying') {
 
-        if (localStorage.getItem('ut') == '2'){
+            document.getElementById("designerSubmit").innerHTML = "";
 
-            var e = '';
-            e +=
-                "<li><a onclick='submitTo( this.dataset.contest );' data-toggle='modal' data-target='#submissionModal' data-contest='" + data[0].project_id + "' >Submit</a></li>";
-            document.getElementById("designerSubmit").innerHTML += e;
-        } else {
-            var e = '';
-            e +=
-                "<li><a>Completed</a></li>";
+        } else{
+
+        var e = '';
+        e += "<li><a>Completed</a></li>";
+
             document.getElementById("designerSubmit").innerHTML += e;
         }
-    }
 }
 
 function submitTo(contest){
