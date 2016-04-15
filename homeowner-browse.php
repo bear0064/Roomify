@@ -17,6 +17,8 @@ include('api/homeownerCheck.php');
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="css/styles.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,900' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -25,7 +27,7 @@ include('api/homeownerCheck.php');
     <div class="navbar-inner">
         <div class="logo">
             <a href="index.php">
-                <i class="fa fa-connectdevelop"></i>
+                <img src="img/footer-logo.svg" width="50">
             </a>
         </div>
         <div class="inner-header">
