@@ -607,7 +607,8 @@ function finalizeContest(){
     
     nextButton.setAttribute("data-dismiss","modal");
     clearModal();
-    
+
+    location.reload();
     
 }
 

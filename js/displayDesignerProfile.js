@@ -172,3 +172,27 @@ function desGetDesignerSubs(data){
     }
 
 }
+
+function showFullSize(id){
+
+    let thisSub;
+
+    for (let i=0;i<subData.length;i++){
+
+        if (subData[i].submission_id == id){
+
+            thisSub = subData[i];
+        }
+
+    }
+
+
+    let img = document.getElementById("submissionImage");
+    let text = document.getElementById("submissionText");
+
+    img.src = "upload/"+ thisSub.filename;
+    text.innerHTML = thisSub.submission_text;
+
+
+
+}

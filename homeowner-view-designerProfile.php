@@ -351,6 +351,7 @@ include('api/homeownerCheck.php');
         <script src="js/libs/jQuery/jquery-2.2.1.min.js"></script>
         <script src="js/libs/bootstrap/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
+        
         <script src="js/displayDesignerProfile.js"></script>
     </body>
 

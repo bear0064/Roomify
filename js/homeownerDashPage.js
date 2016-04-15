@@ -110,4 +110,14 @@ function showAllHomeownerContests(data){
 
      completedDiv.innerHTML = "<p>You have no completed contests yet.</p>";
     }
+    if (data.length == 0){
+
+        document.getElementById("activerow").classList.add("empty");
+        document.getElementById("activerow").classList.add("cnt-center");
+
+
+        activeDiv.innerHTML = "<p>You have no active contests.</p>"+
+            "<p>Start by clicking New Contest to begin your home makeover!.</p>"
+        ;
+    }
 }

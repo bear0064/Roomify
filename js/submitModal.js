@@ -152,7 +152,10 @@ function finalizeSubmit(){
 
         if  (res.code == 0){
             console.log ("SUCCESS SUB UPLOAD");
+
+            
             location.reload();
+
 
         }else{
             console.log("error :(");
@@ -160,5 +163,7 @@ function finalizeSubmit(){
     });
 
     document.getElementById("submitBtn").setAttribute("data-dismiss","modal");
+
+
 
 }

@@ -130,7 +130,6 @@ function showSingleContest(data){
 
             document.getElementById("designerSubmit").innerHTML += e;
 
-
         }
     } else {
 
