@@ -20,12 +20,12 @@ function dataRequest(url, params, callback){
 
 function retrieveOne(contest){
     localStorage.setItem('contestId', contest.contest);
-    location.assign("http://localhost:8888/newRaumJS/designer-contest.php");
+    location.assign("https://ten23mb.edumedia.ca/designer-contest.php");
 }
 
 function retrieveDesProf(designer){
     localStorage.setItem('designerId', designer.designer);
-    location.assign("http://localhost:8888/newRaumJS/homeowner-view-designerProfile.php");
+    location.assign("https://ten23mb.edumedia.ca/homeowner-view-designerProfile.php");
 }
 
 function getHomeOwner(homeowner){
@@ -38,19 +38,19 @@ function getHomeOwner(homeowner){
     if(localStorage.getItem('ut') == 'homeowner' ){
 
         localStorage.setItem('homeownerId', homeowner.user);
-        location.assign("http://localhost:8888/newRaumJS/homeowner-view-homeowner.php");
+        location.assign("https://ten23mb.edumedia.ca/homeowner-view-homeowner.php");
         
     } else {
 
         localStorage.setItem('designerId', homeowner.user);
-        location.assign("http://localhost:8888/newRaumJS/designer-view-designer.php");
+        location.assign("https://ten23mb.edumedia.ca/designer-view-designer.php");
         
     }
 }
 
 function retrieveOneHoCont(contest){
     localStorage.setItem('contestId', contest.contest);
-    location.assign("http://localhost:8888/newRaumJS/homeowner-contest.php");
+    location.assign("https://ten23mb.edumedia.ca/homeowner-contest.php");
 }
 
 function sortActive(){

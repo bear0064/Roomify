@@ -1,5 +1,10 @@
+"use strict";
+let subData;
+
 document.addEventListener("DOMContentLoaded", function () {
     passDesigner();
+
+
 
     $(".dropdown-item").on("click", function () {
         $(".dropdown-item").removeClass("active");
@@ -47,6 +52,7 @@ function showShowcase(data) {
 
 function showDesignerSubmissions(data) {
 
+    subData = data;
 
     console.log(data);
 
@@ -58,8 +64,8 @@ function showDesignerSubmissions(data) {
             s +=
 
                 "<div class='col-md-6'>"+
-                "<div class='card submissionCard' data-id='" + data[i].submission_id + "' onclick='showFullSize(this.dataset.id);'>"+
-                "<a href='#'>"+
+                "<div class='card submissionCard'>"+
+                "<a href='#' data-toggle='modal' data-target='#submissionView' data-id='" + data[i].submission_id + "' onclick='showFullSize(this.dataset.id);'>"+
                 "<img class='card-img-top' src='upload/"+ data[i].filename +"' width='100%' alt='Card image cap'>"+
                 "<div class='card-block'>"+
                 "<p class='card-text'>"+ data[i].submission_text +"</p>"+
@@ -190,8 +196,8 @@ function showFullSize(id){
     let img = document.getElementById("submissionImage");
     let text = document.getElementById("submissionText");
 
-    img.src = "upload/"+ thisSub.filename;
-    text.innerHTML = thisSub.submission_text;
+    img.src = "upload/"+thisSub[0].filename;
+    text.innerHTML = thisSub[0].submission_text;
 
 
 
