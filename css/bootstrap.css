@@ -5189,23 +5189,23 @@ Login / Sign up
   .form-logo a {
     padding: 10px; }
 
-.nav {
+.nav-custom {
   width: 100%;
   padding-top: 30px;
   opacity: 1;
   transition: all .5s ease;
   text-align: center; }
-  .nav ul {
+  .nav-custom ul {
     text-align: center;
     margin-left: -40px; }
-  .nav li {
+  .nav-custom li {
     font-size: 18px;
     display: inline;
     text-align: left;
     font-weight: 300;
     padding-right: 10px;
     color: #ffffff; }
-    .nav li:last-child {
+    .nav-custom li:last-child {
       padding-left: 20px; }
 
 .signin-active a {
