@@ -142,8 +142,8 @@ include('api/designerCheck.php');
                 <div class="row">
                     <div class="col-md-1">
                         <div class="logo">
-                            <a href="#">
-                                <i class="fa fa-connectdevelop"></i>
+                            <a href="index.php">
+                                <img src="img/footer-logo.svg" width="50">    
                             </a>
                         </div>
                     </div>
