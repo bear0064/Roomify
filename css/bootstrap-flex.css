@@ -5284,7 +5284,6 @@ Login / Sign up
   color: #334867;
   text-decoration: none;
   transition: all .25s ease;
-  pointer-events: none;
   cursor: default;
   border: none; }
 
@@ -5300,7 +5299,6 @@ Login / Sign up
   color: #334867 !important;
   text-decoration: none;
   padding-bottom: 10px;
-  pointer-events: none;
   cursor: default; }
 
 .signup-inactive a {
