@@ -251,9 +251,9 @@ include('api/homeownerCheck.php');
                     <div class="row">
                         <div class="col-sm-1 col-md-1">
                             <div class="logo">
-                                <a href="#">
-                                    <i class="fa fa-connectdevelop"></i>
-                                </a>
+                            <a href="index.php">
+                                <img src="img/footer-logo.svg" width="50">    
+                            </a>
                             </div>
                         </div>
                         <div class="col-sm-2 col-md-2">
