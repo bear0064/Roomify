@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="">
 
@@ -68,7 +71,7 @@
     <div class="container">
         <div class="frame">
             <div class="form-logo">
-                <a href="index.html"><img src="img/footer-logo.svg" width="50"></a>
+                <a href="index.php"><img src="img/footer-logo.svg" width="50"></a>
             </div>
             <div class="nav-custom">
                 <ul>
@@ -87,8 +90,8 @@
                         <div class="container or">
                             <h6><span>Log in via</span></h6>
                         </div>
-                        <div class="col-md-4"><a href="#0"><i class="fa fa-facebook" aria-hidden="true"></i></a></div>
-                        <div class="col-md-4"><a href="#0"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
+                        <div class="col-md-4"><a href="api/login-with.php?provider=Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></div>
+                        <div class="col-md-4"><a href="api/login-with.php?provider=LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
                         <div class="col-md-4"><a href="#0"><i class="fa fa-twitter" aria-hidden="true"></i></a></div>
                     </div>
 
@@ -108,8 +111,8 @@
                         <div class="container or">
                             <h6><span>Log in via</span></h6>
                         </div>
-                        <div class="col-md-4"><a href="#0"><i class="fa fa-facebook" aria-hidden="true"></i></a></div>
-                        <div class="col-md-4"><a href="#0"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
+                        <div class="col-md-4"><a href="api/create-with.php?provider=Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></div>
+                        <div class="col-md-4"><a href="api/create-with.php?provider=LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a></div>
                         <div class="col-md-4"><a href="#0"><i class="fa fa-twitter" aria-hidden="true"></i></a></div>
                     </div>
                 </form>
