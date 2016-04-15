@@ -87,9 +87,11 @@ function showSingleContest(data){
     var elem = document.querySelector('.gallery');
     var flkty = new Flickity( elem, {
         // options
-        imagesLoaded:true,
-        percentPosition: false,
-        wrapAround: true
+         imagesLoaded:true,
+         percentPosition: false,
+        // wrapAround: true
+
+
 
     });
 
@@ -119,19 +121,24 @@ function showSingleContest(data){
 
 
     if (data[0].state == 'qualifying') {
+        if (localStorage.getItem('ut') == "designer"){
+
+
 
         var e = '';
         e += "<li><a onclick='submitTo( this.dataset.contest );' data-toggle='modal' data-target='#submissionModal' data-contest='" + data[0].project_id +"' >Submit</a></li>";
 
             document.getElementById("designerSubmit").innerHTML += e;
 
-        } else{
+
+        }
+    } else {
 
         var e = '';
         e += "<li><a>Completed</a></li>";
 
             document.getElementById("designerSubmit").innerHTML += e;
-        }
+    }
 }
 
 function submitTo(contest){

@@ -50,7 +50,7 @@ if (isset($_GET['provider'])) {
             $lastName = $user_profile->lastName;
             $email = $user_profile->email;
             $user_username = $firstName . substr($lastName, 0, 1);
-            $country = $details->country;
+            $country = $details->country;   
             $current_mode = $_POST['member'];
             $photoURL = $user_profile->photoURL;
 
