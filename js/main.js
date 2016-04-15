@@ -63,6 +63,17 @@ function sortActive(){
 
 }
 
+function sortHomeActive(){
+
+    let sortBy = event.target.innerHTML;
+    let data = new FormData();
+    data.append("sortHomeActive", sortBy);
+    //calls the data request function passing in desired url, parameters, and the function to fire upon callback
+    dataRequest("api/sort.php", data, showSortedActiveContests);
+
+}
+
+
 function sortCompleted(){
 
     let sortBy = event.target.innerHTML;
