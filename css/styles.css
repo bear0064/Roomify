@@ -40,231 +40,32 @@ body {
     padding-bottom: 0;
 }
 
+
 /*Header*/
 
-
-/*
 .header {
-    
-}
-
-.navbar-inner{
-    height: 75px;
     background-color: #334867;
-}
-.nav>li>a{
     position: relative;
-    display: inline-block;
-}
-.navbar-inner .nav>li>a{
-    padding: 25.5px;
-}
-.navbar-inner img{
-    margin-top: 25px;
-    margin-left: 25px;
-    position: absolute;
-}
-.navbar-inner ul {
-    list-style-type: none;
-    margin-left: 85px;
-    padding: 0;
-    overflow: hidden;
 }
 
-.navbar-inner li {
-    float: left;
-}
-
-.navbar-inner li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-.navbar-inner li a:hover:not(.active) {
-    background-color: #253a59;
-}
-
-.navbar-inner .active {
-    background-color: #83c0ff;
-    pointer-events: none;
-}
-*/
-
-header {
-    background-color: #334867;
-}
-
-.logo {
-    margin-top: 18px;
-}
-
-.logo a {
-    padding-top: 20px;
-    padding-left: 12px;
-}
-
-.navbar {
-    height: 70px;
-    padding: 0 1rem;
-}
-
-.primary-link {
-    font-size: 15px;
-}
-
-.primary-link a.active {
-    background-color: #83c0ff;
-    pointer-events: none;
-}
-
-.primary-link a:hover {
-    color: #ffffff;
-    background-color: #253a59;
-}
-
-.navbar-nav li {
-    margin-right: -15px;
-}
-
-.navbar .nav>li>a {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
-}
-
-.navbar .nav li a {
-    margin-right: 0;
-}
-
-.primary-nav-icon a:hover,
-.primary-nav-icon a:focus {
-    color: #83c0ff;
-}
-
-.fa-bell-o:hover,
-.fa-envelope-o:hover {
-    color: #83c0ff;
-}
-
-.img-thumbnail {
-    height: 50px;
-    border: none;
-    background: none;
-}
-
-.fa-chevron-down {
-    padding-left: 5px;
-    font-size: 14px;
-    font-weight: 100;
-    color: #83c0ff;
-}
-
-.profile-pic {
-    background-color: #253a59;
-}
-
-.profile-pic:hover {
-    background-color: #253a59;
-}
-
-
-/* -------------------------------- 
-
-Dropdowns
-
--------------------------------- */
-
-.dropdown {
-    padding: 10px 0;
-}
-
-.dropdown-toggle::after {
-    content: none;
-}
-
-.dropdown-menu {
-    left: auto;
-    right: 0!important;
-    border: 1px solid #ebeef2;
-    border-radius: 0 0 3px 3px;
-    width: 250px;
-    margin-top: 0px;
-    background-color: #fff;
-    text-align: left;
-    font-size: 14px;
-}
-.dropdown-divider{
-    background-color: #ebeef2;
-}
-
-.dropdown-profile {
-    margin-right: 23px;
-}
-
-.dropdown-inbox {
-    margin-right: 185px;
-}
-
-.dropdown-notif {
-    margin-right: 117px;
-}
-
-.dropdown-menu-header {
-    padding: 10px 15px 5px;
-    font-weight: 400;
-    color: #334867;
-}
-
-.label-danger {
-    margin-left: 5px;
-    font-weight: 300;
-    font-size: 13px;
-    padding: 5px 10px;
-    background-color: #83c0ff;
-}
-.dropdown-item{
-    color: #a1b7ce;
-    pointer-events: none;
-    text-align: center;
-    padding: 0 10px;
-}
-.dropdown-profile > .dropdown-item{
-    color: #334867;
-    text-align: left;
-    pointer-events: all;
-    padding-top: 10px;
-    padding-left: 15px;
-    padding-bottom: 5px;
-}
-.dropdown-profile > .dropdown-item:last-child{
-    text-align: center;
-    padding-top: 3px;
-}
-.dropdown-profile > .dropdown-item:hover{
-        background-color: #fff;
-    color: #83c0ff;
-}
-/*
 .header .inner-header,
 .header .logo {
-    padding: 2.2rem 0;
+    /*  padding: 60px 0;*/
+    padding: 2rem 0 1rem;
 }
-
 
 .header .inner-header {
-    width: 70%;
+    width: 85%;
     float: left;
 }
-*/
 
-
-/*
 .header .nav {
     display: inline-block;
+    width: 84%;
+}
+
+.header ul.nav {
+    width: auto;
 }
 
 .header .nav a,
@@ -294,7 +95,6 @@ Dropdowns
 
 .header .nav li.active a {
     color: #fff;
-    background-color: #83c0ff;
 }
 
 .header .logo {
@@ -302,7 +102,7 @@ Dropdowns
     width: 15%;
     float: left;
     text-align: center;
-    margin-top: -5px;
+    margin-top: -3px;
 }
 
 .header .container {
@@ -310,8 +110,27 @@ Dropdowns
 }
 
 .browse {
-    margin-left: -4rem;
+    /*margin-left: -4rem;*/
 }
+
+.navbar-brand {
+    margin-right: 1%;
+}
+
+.navbar {
+    padding: 0;
+}
+
+.pull-right .nav .dropdown-menu {
+    right: 0;
+    left: inherit;
+}
+
+.logo-sp {
+    display: none;
+}
+
+/*sara add*/
 
 .navbar-inner {
     height: 5.5rem;
@@ -323,6 +142,7 @@ Dropdowns
 
 .nav > li > a {
     padding: 0;
+    margin-right: 60px;
 }
 
 .nav .open > a,
@@ -350,9 +170,9 @@ Dropdowns
 
 .header .pull-right {
     background-color: #253a59;
-    width: 12%;
+    width: 15%;
     text-align: center;
-    height: 100%;
+    height: 5.5rem;
 }
 
 .header .pull-right a {
@@ -370,10 +190,14 @@ Dropdowns
     border: none;
     background: none;
 }
-*/
 
 
 /* Content */
+
+.dropdown-menu {
+    background-color: #334867;
+    text-align: left;
+}
 
 .dropdown-item.active,
 .dropdown-item.active:hover,
@@ -382,15 +206,12 @@ Dropdowns
 }
 
 .dropdown-item.active:after {
-/*
     font-family: FontAwesome;
     content: "\f00c";
-*/
     color: #83c0ff;
     float: right;
 }
 
-/*
 .dropdown-category {
     margin-bottom: 20px;
 }
@@ -408,18 +229,7 @@ Dropdowns
 .dropdown-category .btn-group.open .dropdown-toggle {
     box-shadow: none;
 }
-*/
 
-#favDes{
-    color: #334867;
-}
-#favDes a{
-    color: #334867;
-    font-weight: 500;
-}
-#favDes a:hover{
-    color: #83c0ff;
-}
 
 /*sara add*/
 
@@ -443,21 +253,12 @@ Dropdowns
     margin-left: 0;
 }
 
-.nav-pills{
-    font-size: 14px;
-    letter-spacing: .2px;
-    font-weight: 300;
-    margin-left: -53px;
-}
-
 .nav-pills .nav-link {
     background-color: transparent;
     border-bottom: 1px solid transparent;
-    color: #8a9eb5;
+    color: #bccddd;
     border-radius: 0;
-    padding: 0px 30px 20px;
-        font-weight: 300;
-    letter-spacing: .5px;
+    padding: 20px 40px;
 }
 
 .nav-pills .nav-link:hover {
@@ -478,10 +279,10 @@ Dropdowns
 .nav-pills .nav-item.open .nav-link:focus,
 .nav-pills .nav-item.open .nav-link:hover {
     background-color: transparent;
-    border-bottom: 2px solid #83c0ff;
-    color: #83c0ff;
+    border-bottom: 1px solid #83c0ff;
+    color: #52657c;
     border-radius: 0;
-    padding: 0px 30px 20px;
+    padding: 20px 40px;
 }
 
 
@@ -911,10 +712,6 @@ div#brief.tab-pane {
     padding: 0;
 }
 
-.profile{
-    margin-left: -85px;
-}
-
 .designerCard .card-block,
 .showcaseCard .card-block,
 .link-like {
@@ -972,7 +769,6 @@ div#brief.tab-pane {
 .media,
 div.name > a {
     color: #8a9eb5;
-    padding-top: -10px;
 }
 
 .item-review .media {
@@ -988,15 +784,8 @@ div.name > a {
 }
 
 .media .name {
-    font-size: 18px;
-    font-weight: 400;
-    color: #334867;
-    margin-bottom: -10px;
-}
-.media p:last-child{
-    margin-top: -10px;
-    font-size: 14px;
-    
+    font-size: 1.3em;
+    font-weight: bold;
 }
 
 .stars ul {
@@ -1055,17 +844,15 @@ div#personal.tab-pane {
 
 .save button {
     border: 1px solid #83c0ff;
-    border-radius: 3px;
-    background: #83c0ff;
-    color: #ffffff;
-    padding: 0.5rem 1.5rem;
-    font-weight: 300;
-    letter-spacing: .3px;
+    border-radius: 2rem;
+    background: none;
+    color: #83c0ff;
+    padding: 0.5rem 2.5rem;
 }
 
 .save button:hover {
-    border: 1px solid #378feb;
-    background: #378feb;
+    border: 1px solid #83c0ff;
+    background: #83c0ff;
     color: white;
 }
 
@@ -1084,28 +871,389 @@ div#personal.tab-pane {
 
 /*End of Personal Info*/
 
+/* Page Setting */
 
-/*DK add*/
+/**
+ * iOS 6 style switch checkboxes
+ * by Lea Verou http://lea.verou.me
+ */
 
-.color-blue {
-    color: blue;
+:root .list-item-checkbox input[type="checkbox"] { /* :root here acting as a filter for older browsers */
+  position: absolute;
+  opacity: 0;
+}
+
+:root input[type="checkbox"].ios-switch + div {
+  display: inline-block;
+  vertical-align: middle;
+  width: 3em; height: 1em;
+  border: 1px solid rgba(0,0,0,.3);
+  border-radius: 999px;
+  margin: 0 .5em;
+  background: white;
+  background-image: linear-gradient(rgba(0,0,0,.1), transparent),
+                    linear-gradient(90deg, hsl(210, 90%, 60%) 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  background-origin: border-box;
+  background-clip: border-box;
+  overflow: hidden;
+  transition-duration: .4s;
+  transition-property: padding, width, background-position, text-indent;
+  box-shadow: 0 .1em .1em rgba(0,0,0,.2) inset,
+              0 .45em 0 .1em rgba(0,0,0,.05) inset;
+  font-size: 150%; /* change this and see how they adjust! */
+}
+
+:root input[type="checkbox"].ios-switch:checked + div {
+  padding-left: 2em;
+  background-position: 0 0;
+}
+
+:root input[type="checkbox"].ios-switch + div:before {
+  content: 'On';
+  float: left;
+  width: 1.65em; height: 1.65em;
+  margin: -.1em;
+  border: 1px solid rgba(0,0,0,.35);
+  border-radius: inherit;
+  background: white;
+  background-image: linear-gradient(rgba(0,0,0,.2), transparent);
+  box-shadow: 0 .1em .1em .1em hsla(0,0%,100%,.8) inset,
+              0 0 .5em rgba(0,0,0,.3);
+  color: white;
+  text-shadow: 0 -1px 1px rgba(0,0,0,.3);
+  text-indent: -2.5em;
+}
+
+:root input[type="checkbox"].ios-switch:active + div:before {
+  background-color: #eee;
+}
+
+:root input[type="checkbox"].ios-switch:focus + div {
+  box-shadow: 0 .1em .1em rgba(0,0,0,.2) inset,
+              0 .45em 0 .1em rgba(0,0,0,.05) inset,
+              0 0 .4em 1px rgba(255,0,0,.5);
+}
+
+:root input[type="checkbox"].ios-switch + div:before,
+:root input[type="checkbox"].ios-switch + div:after {
+  font: bold 60%/1.9 sans-serif;
+  text-transform: uppercase;
+}
+
+:root input[type="checkbox"].ios-switch + div:after {
+  content: 'Off';
+  float: left;
+  text-indent: .5em;
+  color: rgba(0,0,0,.45);
+  text-shadow: none;
+
 }
 
 
+/* Switch code ends here, from now on it’s just bling for the demo page */
+
+.list-item-checkbox label {
+  position: relative;
+  display: block;
+  padding: .8em;
+  border-top-width: 0;
+  font: 90% sans-serif;
+}
+
+.list-item {
+    border-bottom: 0.5px solid gray;
+}
+
+.list-item .title {     
+    font-weight: bold;      
+}
+
+.list-item ul {
+    padding: 0;
+}
+
+.list-item ul label {       
+    padding-left: 0;        
+}
+
+.list-item .switch {
+    float: right;
+}
+
+.list-item-checkbox input[type="checkbox"] {
+    display:none;
+}
+.list-item-checkbox input[type="checkbox"] + label {
+    color:#000;
+    font-family:Arial, sans-serif;
+    font-size:90%;
+}
+.list-item-checkbox input[type="checkbox"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    /*background:url(http://webdesigntutsplus.s3.amazonaws.com/tuts/391_checkboxes/check_radio_sheet.png) left top no-repeat;*/
+    cursor:pointer;
+    float: right;
+    background-color: #83c0ff;
+    border-radius: 5px;
+}
+.list-item-checkbox input[type="checkbox"]:checked + label span {
+    background:url(../img/icon-check.png) no-repeat;
+}
+
+.profile .row,
+.tab-content .row,
+footer .row {
+    margin: 0;
+}
+
+.header ul li.mes-sp,
+.header ul li.not-sp {
+    display: none;
+}
+
+.row .col-sm-6:first-child {
+    padding-left: 0;
+}
+
+.row .col-sm-6:last-child {
+    padding-right: 0;
+}
+
+/* End Page Setting */
+
 /*Footer*/
 
-footer .container {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 0.9375rem 0;
+footer .container{
+    padding: 0;
 }
 
 footer ul {
     padding: 0;
 }
 
-@media screen and ( min-width: 768px) {
+footer ul a:hover {
+    color: #fff;
+}
+
+footer .contact {
+    text-align: right;
+}
+
+/*Page Designer Contest*/
+#brief > .row {
+    margin: 0;
+}
+
+.label-pill {
+    padding: 0.5rem 1rem;
+    margin-right: 5px;
+}
+
+.flickity-prev-next-button {
+    bottom: -40%;
+}
+
+.link-breadcrumb .row {
+    margin: 0;
+}
+
+.tab-price .tabs,
+.tab-price .price {
+    float: none;
+}
+
+.tab-price .price {
+    text-align: left;
+}
+
+#contestModal .tab-content {
+    min-height: auto;
+}
+
+/*End Page Designer Contest*/
+
+@media screen and (max-width: 991px) {
+    .header .inner-header {
+        width: 80%;
+    }
+    .header .pull-right {
+        width: 20%;
+    }
+
+    .header ul.nav li:last-child a {
+        margin-right: 0;
+    }
+
+    .count-number .caption {
+        font-size: 0.75rem;
+    }
+
+    .languages .row .col-sm-4 {
+        padding-right: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
     .gallery img {
         height: 600px;
+    }    
+}
+
+@media screen and (max-width: 767px) {
+    .header .inner-header {
+        width: 75%;
     }
+    .header .pull-right {
+        width: 25%;
+    }
+
+    .nav > li > a {
+        margin-right: 30px;
+    }
+
+    .tab-pane {
+        margin-left: 0;
+        border: 1px solid #c1c1c1;
+        border-top: none;
+    }
+
+    div#personal.tab-pane {
+        margin-right: 0;
+    }
+
+    #mySubmissions .dropdown-menu {
+        right: 0;
+        left: inherit;
+    }
+
+    .showcaseCard {
+        width: auto;
+    }
+
+    .item-review .media {
+        position: relative;
+        left: 0;
+        margin-bottom: 2%;
+    }
+
+    .modal-xl {
+        min-width: auto;
+        width: 90%;
+    }
+
+    #contestModal div.modal-body {
+        height: auto;
+    }
+
+    #roomList,
+    #features {
+        display:inline-block;    
+    }
+
+    #step1 ul>li, #step2 ul#features>li {
+        width: 46%;
+    }
+
+    #contestModal .prog-bar {
+        display: none;
+    }
+
+    #contestModal .modal-content {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 543px) {
+    .navbar-inner {
+        height: auto;
+    }
+
+    .header .logo,
+    .header .nav,
+    .header .inner-header,
+    .header ul {
+        width: 100%;
+    }
+
+    .header ul {
+        padding-left: 0;
+    }
+
+    .header ul li {
+        display: block;
+        float: none;
+    }
+
+    .header .pull-right {
+        display: none;
+    }
+
+    .header .navbar-nav,
+    .header .inner-header {
+        padding: 0.5rem 1rem 0 1rem;
+    }
+
+    .pull-right .nav .dropdown-menu {
+        right: inherit;
+        left: 0;
+    }
+
+    .header .comments {
+        margin-top: 0;
+    }
+
+    .header .logo-pc {
+        display: none;
+    }
+
+    .header ul li.mes-sp,
+    .header ul li.not-sp {
+        display: block;
+    }
+
+    .row .col-sm-6 {
+        padding: 0;
+    }
+
+    .count-number .col-md-3 {
+        margin-bottom: 10px;
+    }
+
+    .logo-sp {
+        display: inline-block;
+        float: right;
+        padding: 0;
+    }
+
+    .navbar-toggler {
+        cursor: pointer;
+        padding: 1.5rem .75rem 0;
+    }
+
+    ul.comments li {
+        display: none;
+    }
+
+    .header ul li.browse {
+        margin-top: 5px;
+    }
+
+    .modal-dialog {
+        margin: 10px auto;
+    }
+
+    .modal-content .col-sm-12 .col-sm-7 {
+        margin-top: 10px;
+        padding-left: 0;
+    }
+
+    footer .contact {
+    text-align: left;
+}
 }
