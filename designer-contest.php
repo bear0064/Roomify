@@ -252,6 +252,7 @@ include('api/designerCheck.php');
                             </div>
                         </div>
 
+<<<<<<< Updated upstream
                         <div class="col-sm-7" style="padding-right: 0;">
                             <textarea id="submissionDesc" rows="8" class="form-control" placeholder="Describe your mood board here."></textarea>
                             <div class="divider col-sm-12 nopadding">
@@ -259,6 +260,16 @@ include('api/designerCheck.php');
                             </div>
                             <h6 class="b3header">Budget Used <span id="budgetVal" class="pull-xs-right">$500</span></h6>
                             <input type="range" id="budgetSlider" class="" value="500" min="200" max="15000" step="50" oninput="showBudgetValue(this.value);">
+=======
+                        <div class="modal-footer myFooter" id="submissionFooter">
+                            <button id="cancelBtn" type="button" class="btn btn-default pull-xs-left" data-dismiss="modal" onclick="clearModal();">
+                                Cancel
+                            </button>
+                            <span id="modalError" class="center"></span>
+                            <button id="submitBtn" type="button" class="btn btn-primary pull-xs-right" onclick="finalizeSubmit();">
+                                Submit
+                            </button>
+>>>>>>> Stashed changes
                         </div>
 
                     </div>

@@ -134,7 +134,12 @@ function deleteImage(file){
     });
 }
 
-function clearModal(){}
+function clearModal(){
+
+    document.getElementById("submissionDesc").value = "";
+    document.getElementById("budgetSlider").value = 500;
+
+}
 
 function finalizeSubmit(){
 
