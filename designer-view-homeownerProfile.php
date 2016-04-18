@@ -133,62 +133,24 @@ include('api/designerCheck.php');
             </div>
 
         </div>
-        </div>
         <!-- End of Content Container -->
 
         <!-- Footer -->
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-1">
-                        <div class="logo">
-                            <a href="index.php">
-                                <img src="img/footer-logo.svg" width="50">    
-                            </a>
+            <footer id="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="img/footer-logo.svg" width="50">
                         </div>
-                    </div>
-                    <div class="col-md-2">
-                        <div class="title-link">
-                            Links
+                        <div class="col-md-6 footer-nav">
+                            <ul>
+                                <li><a href="#0">Contact Us</a></li>
+                                <li><a href="#0">Team</a></li>
+                            </ul>
                         </div>
-                        <ul>
-                            <li><a href="#">Help Center</a></li>
-                            <li><a href="#">Terms of Service</a></li>
-                            <li><a href="#">Security</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-2">
-                        <div class="title-link">
-                            About Us
-                        </div>
-                        <ul>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Sign In</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-2">
-                        <div class="title-link">
-                            Social
-                        </div>
-                        <ul>
-                            <li><a href="#">Facebook</a></li>
-                            <li><a href="#">Twitter</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-5 contact">
-                        <p>info@newraum.com</p>
-                        <p>1.123.456.7890</p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-11 col-md-offset-1 copyright">
-                        &copy;2016 NewRaum
-                    </div>
-                </div>
-            </div>
-        </footer>
+            </footer>
         <!-- End of Footer -->
 
         <!-- JavaScript -->

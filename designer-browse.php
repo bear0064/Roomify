@@ -23,6 +23,7 @@ include('api/designerCheck.php');
 
     <body>
         <!-- Header Area -->
+        <!--
         <div class="header">
             <div class="navbar-inner">
                 <div class="logo">
@@ -57,6 +58,60 @@ include('api/designerCheck.php');
                 <div class="clear"></div>
             </div>
         </div>
+-->
+        <header>
+            <nav class="navbar">
+
+                <!-- Brand -->
+                <div class="navbar-brand logo">
+                    <a href="index.php">
+                        <img src="img/footer-logo.svg" width="50">
+                    </a>
+                </div>
+
+                <!-- Links -->
+                <ul class="nav navbar-nav">
+                    <li class="nav-item primary-link">
+                        <a class="nav-link" href="designer-dashboard.php">Dashboard</a>
+                    </li>
+                    <li class="nav-item primary-link">
+                        <a class="nav-link active" href="designer-browse.php">Browse</a>
+                    </li>
+                    <li class="nav-item dropdown pull-xs-right profile-pic">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img
+                            src="<? echo $_SESSION["user_pic"] ?>"
+                            class="avatar img-circle img-thumbnail img-thumbnail-custom" alt="avatar"><i
+                            class="fa fa-chevron-down"></i></a>
+                        <div class="dropdown-menu dropdown-profile" aria-labelledby="dropdownMenu">
+                            <a class="dropdown-item" href="designer-profile.php">Profile</a>
+                            <a class="dropdown-item" href="#">Settings</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="api/logout.php"><i class="fa fa-sign-out"></i> Logout</a>
+                        </div>
+                    </li>
+                    <li class="primary-nav-icon nav-item pull-xs-right">
+                        <a href="#" class="nav-link" data-toggle="dropdown"><i class="fa fa-bell-o"></i></a>
+                        <div class="dropdown-menu dropdown-notif">
+                            <div class="dropdown-menu-header">Notifications <span class="label label-pill label-danger">0</span></div>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">You have 0 notifications</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">View all</a>
+                        </div>
+                    </li>
+                    <li class="primary-nav-icon nav-item pull-xs-right">
+                        <a href="#" class="nav-link" data-toggle="dropdown"><i class="fa fa-envelope-o"></i></a>
+                        <div class="dropdown-menu dropdown-inbox">
+                            <div class="dropdown-menu-header">Inbox <span class="label label-pill label-danger">0</span></div>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">You have 0 messages</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">View all</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
         <!-- End of Header Area -->
 
         <!-- Tabs Container -->
@@ -114,54 +169,17 @@ include('api/designerCheck.php');
         <!--End of Tab Content Container-->
 
         <!--Start of Footer-->
-        <footer>
+        <footer id="footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-1 col-md-1">
-                        <div class="logo">
-                            <a href="index.php">
-                                <img src="img/footer-logo.svg" width="50">    
-                            </a>
-                        </div>
+                    <div class="col-md-6">
+                        <img src="img/footer-logo.svg" width="50">
                     </div>
-                    <div class="col-sm-2 col-md-2">
-                        <div class="title-link">
-                            Links
-                        </div>
+                    <div class="col-md-6 footer-nav">
                         <ul>
-                            <li><a href="#">Help Center</a></li>
-                            <li><a href="#">Terms of Service</a></li>
-                            <li><a href="#">Security</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#0">Contact Us</a></li>
+                            <li><a href="#0">Team</a></li>
                         </ul>
-                    </div>
-                    <div class="col-sm-2 col-md-2">
-                        <div class="title-link">
-                            About Us
-                        </div>
-                        <ul>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Sign In</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-2 col-md-2">
-                        <div class="title-link">
-                            Social
-                        </div>
-                        <ul>
-                            <li><a href="#">Facebook</a></li>
-                            <li><a href="#">Twitter</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-5 col-md-5 contact">
-                        <p>info@newraum.com</p>
-                        <p>1.123.456.7890</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-11 col-md-offset-1 copyright">
-                        &copy;2016 NewRaum
                     </div>
                 </div>
             </div>

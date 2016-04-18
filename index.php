@@ -14,6 +14,7 @@ session_start();
     <link rel="stylesheet" href="css/bootstrap.css">
     <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/animate.min.css">
 </head>
 
 <body>
@@ -61,10 +62,12 @@ session_start();
 
 <section class="container-fluid" id="section1">
     <div class="container intro">
+        <div class="animated fadeInDown">
         <div class="hero-title">Embrace your Space</div>
         <div class="hero-para">Connecting <span class="highlight">homeowners</span> with professional and aspiring <span
                 class="highlight">interior designers</span></div>
-        <div class="learn-more btn">
+            </div>
+        <div class="learn-more btn animated fadeInUp">
             <img src="img/play-icon.svg" width="40">Learn more
         </div>
     </div>

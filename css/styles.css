@@ -40,25 +40,229 @@ body {
     padding-bottom: 0;
 }
 
-
 /*Header*/
 
+
+/*
 .header {
-    background-color: #334867;
-    position: relative;
+    
 }
 
+.navbar-inner{
+    height: 75px;
+    background-color: #334867;
+}
+.nav>li>a{
+    position: relative;
+    display: inline-block;
+}
+.navbar-inner .nav>li>a{
+    padding: 25.5px;
+}
+.navbar-inner img{
+    margin-top: 25px;
+    margin-left: 25px;
+    position: absolute;
+}
+.navbar-inner ul {
+    list-style-type: none;
+    margin-left: 85px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navbar-inner li {
+    float: left;
+}
+
+.navbar-inner li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar-inner li a:hover:not(.active) {
+    background-color: #253a59;
+}
+
+.navbar-inner .active {
+    background-color: #83c0ff;
+    pointer-events: none;
+}
+*/
+
+header {
+    background-color: #334867;
+}
+
+.logo {
+    margin-top: 18px;
+}
+
+.logo a {
+    padding-top: 20px;
+    padding-left: 12px;
+}
+
+.navbar {
+    height: 70px;
+    padding: 0 1rem;
+}
+
+.primary-link {
+    font-size: 15px;
+}
+
+.primary-link a.active {
+    background-color: #83c0ff;
+    pointer-events: none;
+}
+
+.primary-link a:hover {
+    color: #ffffff;
+    background-color: #253a59;
+}
+
+.navbar-nav li {
+    margin-right: -15px;
+}
+
+.navbar .nav>li>a {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.navbar .nav li a {
+    margin-right: 0;
+}
+
+.primary-nav-icon a:hover,
+.primary-nav-icon a:focus {
+    color: #83c0ff;
+}
+
+.fa-bell-o:hover,
+.fa-envelope-o:hover {
+    color: #83c0ff;
+}
+
+.img-thumbnail {
+    height: 50px;
+    border: none;
+    background: none;
+}
+
+.fa-chevron-down {
+    padding-left: 5px;
+    font-size: 14px;
+    font-weight: 100;
+    color: #83c0ff;
+}
+
+.profile-pic {
+    background-color: #253a59;
+}
+
+.profile-pic:hover {
+    background-color: #253a59;
+}
+
+
+/* -------------------------------- 
+
+Dropdowns
+
+-------------------------------- */
+
+.dropdown {
+    padding: 10px 0;
+}
+
+.dropdown-toggle::after {
+    content: none;
+}
+
+.dropdown-menu {
+    left: auto;
+    right: 0!important;
+    border: 1px solid #ebeef2;
+    border-radius: 0 0 3px 3px;
+    width: 250px;
+    margin-top: 0px;
+    background-color: #fff;
+    text-align: left;
+    font-size: 14px;
+}
+.dropdown-divider{
+    background-color: #ebeef2;
+}
+
+.dropdown-profile {
+    margin-right: 23px;
+}
+
+.dropdown-inbox {
+    margin-right: 185px;
+}
+
+.dropdown-notif {
+    margin-right: 117px;
+}
+
+.dropdown-menu-header {
+    padding: 10px 15px 5px;
+    font-weight: 400;
+    color: #334867;
+}
+
+.label-danger {
+    margin-left: 5px;
+    font-weight: 300;
+    font-size: 13px;
+    padding: 5px 10px;
+    background-color: #83c0ff;
+}
+.dropdown-item{
+    color: #a1b7ce;
+    pointer-events: none;
+    text-align: center;
+    padding: 0 10px;
+}
+.dropdown-profile > .dropdown-item{
+    color: #334867;
+    text-align: left;
+    pointer-events: all;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-bottom: 5px;
+}
+.dropdown-profile > .dropdown-item:last-child{
+    text-align: center;
+    padding-top: 3px;
+}
+.dropdown-profile > .dropdown-item:hover{
+        background-color: #fff;
+    color: #83c0ff;
+}
+/*
 .header .inner-header,
 .header .logo {
-    /*  padding: 60px 0;*/
     padding: 2.2rem 0;
 }
+
 
 .header .inner-header {
     width: 70%;
     float: left;
 }
+*/
 
+
+/*
 .header .nav {
     display: inline-block;
 }
@@ -90,6 +294,7 @@ body {
 
 .header .nav li.active a {
     color: #fff;
+    background-color: #83c0ff;
 }
 
 .header .logo {
@@ -97,7 +302,7 @@ body {
     width: 15%;
     float: left;
     text-align: center;
-    margin-top: -3px;
+    margin-top: -5px;
 }
 
 .header .container {
@@ -107,9 +312,6 @@ body {
 .browse {
     margin-left: -4rem;
 }
-
-
-/*sara add*/
 
 .navbar-inner {
     height: 5.5rem;
@@ -121,7 +323,6 @@ body {
 
 .nav > li > a {
     padding: 0;
-    margin-right: 120px;
 }
 
 .nav .open > a,
@@ -169,14 +370,10 @@ body {
     border: none;
     background: none;
 }
+*/
 
 
 /* Content */
-
-.dropdown-menu {
-    background-color: #334867;
-    text-align: left;
-}
 
 .dropdown-item.active,
 .dropdown-item.active:hover,
@@ -185,12 +382,15 @@ body {
 }
 
 .dropdown-item.active:after {
+/*
     font-family: FontAwesome;
     content: "\f00c";
+*/
     color: #83c0ff;
     float: right;
 }
 
+/*
 .dropdown-category {
     margin-bottom: 20px;
 }
@@ -208,7 +408,18 @@ body {
 .dropdown-category .btn-group.open .dropdown-toggle {
     box-shadow: none;
 }
+*/
 
+#favDes{
+    color: #334867;
+}
+#favDes a{
+    color: #334867;
+    font-weight: 500;
+}
+#favDes a:hover{
+    color: #83c0ff;
+}
 
 /*sara add*/
 
@@ -232,12 +443,21 @@ body {
     margin-left: 0;
 }
 
+.nav-pills{
+    font-size: 14px;
+    letter-spacing: .2px;
+    font-weight: 300;
+    margin-left: -53px;
+}
+
 .nav-pills .nav-link {
     background-color: transparent;
     border-bottom: 1px solid transparent;
-    color: #bccddd;
+    color: #8a9eb5;
     border-radius: 0;
-    padding: 20px 40px;
+    padding: 0px 30px 20px;
+        font-weight: 300;
+    letter-spacing: .5px;
 }
 
 .nav-pills .nav-link:hover {
@@ -258,10 +478,10 @@ body {
 .nav-pills .nav-item.open .nav-link:focus,
 .nav-pills .nav-item.open .nav-link:hover {
     background-color: transparent;
-    border-bottom: 1px solid #83c0ff;
-    color: #52657c;
+    border-bottom: 2px solid #83c0ff;
+    color: #83c0ff;
     border-radius: 0;
-    padding: 20px 40px;
+    padding: 0px 30px 20px;
 }
 
 
@@ -691,6 +911,10 @@ div#brief.tab-pane {
     padding: 0;
 }
 
+.profile{
+    margin-left: -85px;
+}
+
 .designerCard .card-block,
 .showcaseCard .card-block,
 .link-like {
@@ -748,6 +972,7 @@ div#brief.tab-pane {
 .media,
 div.name > a {
     color: #8a9eb5;
+    padding-top: -10px;
 }
 
 .item-review .media {
@@ -763,8 +988,15 @@ div.name > a {
 }
 
 .media .name {
-    font-size: 1.3em;
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: 400;
+    color: #334867;
+    margin-bottom: -10px;
+}
+.media p:last-child{
+    margin-top: -10px;
+    font-size: 14px;
+    
 }
 
 .stars ul {
@@ -823,15 +1055,17 @@ div#personal.tab-pane {
 
 .save button {
     border: 1px solid #83c0ff;
-    border-radius: 2rem;
-    background: none;
-    color: #83c0ff;
-    padding: 0.5rem 2.5rem;
+    border-radius: 3px;
+    background: #83c0ff;
+    color: #ffffff;
+    padding: 0.5rem 1.5rem;
+    font-weight: 300;
+    letter-spacing: .3px;
 }
 
 .save button:hover {
-    border: 1px solid #83c0ff;
-    background: #83c0ff;
+    border: 1px solid #378feb;
+    background: #378feb;
     color: white;
 }
 
@@ -850,17 +1084,20 @@ div#personal.tab-pane {
 
 /*End of Personal Info*/
 
+
 /*DK add*/
+
 .color-blue {
- color: blue;
+    color: blue;
 }
+
 
 /*Footer*/
 
 footer .container {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 0.9375rem 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 0.9375rem 0;
 }
 
 footer ul {
