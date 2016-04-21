@@ -23,6 +23,7 @@ session_start();
         <a href="#"><img src="img/cd-logo.svg" width="110"></a>
     </div>
 
+
     <nav>
         <ul class="cd-secondary-nav">
             <li class="nav-item pull-xs-right signin-btn btn">
@@ -30,6 +31,7 @@ session_start();
                     <img class="person-icon" src="img/person-icon.svg" width="23">Log in
                 </a>
             </li>
+            <li class="nav-item pull-xs-right">Demo as Guest --></li>
         </ul>
     </nav>
 
