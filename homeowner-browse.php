@@ -119,6 +119,12 @@ include('api/homeownerCheck.php');
                             <a class="dropdown-item" href="#">View all</a>
                         </div>
                     </li>
+                    <!--TODO SWITCH VIEW BUTTON-->
+                    <li class="primary-nav-icon nav-item pull-xs-right">
+                        <a class="nav-link" href="">
+                            <img class="person-icon" src="img/person-icon.svg" width="23">Switch User Type
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </header>
