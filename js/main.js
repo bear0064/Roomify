@@ -1,9 +1,9 @@
-"use strict";
+
 
 //function to handle all server side data requests
 function dataRequest(url, params, callback){
     
-    let xhr = new XMLHttpRequest();
+    var xhr = new XMLHttpRequest();
     xhr.open("POST", url, true);
 
 
@@ -56,8 +56,8 @@ function retrieveOneHoCont(contest){
 
 function sortActive(){
 
-    let sortBy = event.target.innerHTML;
-    let data = new FormData();
+    var sortBy = event.target.innerHTML;
+    var data = new FormData();
     data.append("sortActive", sortBy);
     //calls the data request function passing in desired url, parameters, and the function to fire upon callback
     dataRequest("api/sort.php", data, showSortedActiveContests);
@@ -66,8 +66,8 @@ function sortActive(){
 
 function sortHomeActive(){
 
-    let sortBy = event.target.innerHTML;
-    let data = new FormData();
+    var sortBy = event.target.innerHTML;
+    var data = new FormData();
     data.append("sortHomeActive", sortBy);
     //calls the data request function passing in desired url, parameters, and the function to fire upon callback
     dataRequest("api/sort.php", data, showSortedActiveContests);
@@ -77,8 +77,8 @@ function sortHomeActive(){
 
 function sortCompleted(){
 
-    let sortBy = event.target.innerHTML;
-    let data = new FormData();
+    var sortBy = event.target.innerHTML;
+    var data = new FormData();
     data.append("sortComplete", sortBy);
     //calls the data request function passing in desired url, parameters, and the function to fire upon callback
     dataRequest("api/sort.php", data, showSortedCompletedContests);
@@ -93,7 +93,7 @@ function showSortedActiveContests(data){
 
     if (data.length != 0) {
 
-        for (let i=0; i < data.length; i++){
+        for (var i=0; i < data.length; i++){
 
             data[i].closing_date = data[i].closing_date.split(/[- :]/);
             data[i].closing_date = new Date(data[i].closing_date[0], data[i].closing_date[1]-1, data[i].closing_date[2], data[i].closing_date[3], data[i].closing_date[4], data[i].closing_date[5]);
@@ -161,7 +161,7 @@ function showSortedCompletedContests(data){
 
     if (data.length != 0) {
 
-        for (let i=0; i < data.length; i++){
+        for (var i=0; i < data.length; i++){
 
             data[i].closing_date = data[i].closing_date.split(/[- :]/);
             data[i].closing_date = new Date(data[i].closing_date[0], data[i].closing_date[1]-1, data[i].closing_date[2], data[i].closing_date[3], data[i].closing_date[4], data[i].closing_date[5]);
@@ -224,8 +224,8 @@ function showSortedCompletedContests(data){
 
 function sortDesActive(){
 
-    let sortBy = event.target.innerHTML;
-    let data = new FormData();
+    var sortBy = event.target.innerHTML;
+    var data = new FormData();
     data.append("sortUserActive", sortBy);
     //calls the data request function passing in desired url, parameters, and the function to fire upon callback
     dataRequest("api/sort.php", data, showSortedActiveContests);
@@ -234,8 +234,8 @@ function sortDesActive(){
 
 function sortDesCompleted(){
 
-    let sortBy = event.target.innerHTML;
-    let data = new FormData();
+    var sortBy = event.target.innerHTML;
+    var data = new FormData();
     data.append("sortUserComplete", sortBy);
     //calls the data request function passing in desired url, parameters, and the function to fire upon callback
     dataRequest("api/sort.php", data, showSortedCompletedContests);
@@ -246,8 +246,8 @@ function changeUserType(type){
 
     console.log(type.usertype);
     
-    let accountType = type.usertype;
-    let data = new FormData();
+    var accountType = type.usertype;
+    var data = new FormData();
     data.append("accountType", accountType);
     //calls the data request function passing in desired url, parameters, and the function to fire upon callback
     dataRequest("api/changeAccount.php", data, userChangeCallback);

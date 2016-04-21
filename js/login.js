@@ -8,9 +8,9 @@ function guestLogin(){
 
     
     
-    let account = "guest";
+    var account = "guest";
     console.log(account);
-    let data = new FormData();
+    var data = new FormData();
     data.append("guestLogin", account);
     //calls the data request function passing in desired url, parameters, and the function to fire upon callback
     dataRequest("api/login-guest.php", data, guestLoginCallback);

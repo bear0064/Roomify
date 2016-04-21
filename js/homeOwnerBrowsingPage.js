@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function retrieveAllDesigners() {
-    let getMe = 'designers';
-    let data = new FormData();
+    var getMe = 'designers';
+    var data = new FormData();
     data.append("getAllDesigners", getMe);
     //calls the data request function passing in desired url, parameters, and the function to fire upon callback
     dataRequest("api/getAllDesigners.php", data, getAllDesigners);
@@ -28,7 +28,7 @@ function getAllDesigners(data) {
 
     if (data.users.length != 0) {
 
-        for (let i = 0; i < data.users.length; i++) {
+        for (var i = 0; i < data.users.length; i++) {
 
             var s = "";
             s +=

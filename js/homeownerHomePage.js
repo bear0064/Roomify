@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 function retrieveHomeownerProfile(){
-    let getMe = 'homeownerProfile';
-    let data = new FormData();
+    var getMe = 'homeownerProfile';
+    var data = new FormData();
     data.append("homeownerProfile", getMe);
     //calls the data request function passing in desired url, parameters, and the function to fire upon callback
     dataRequest("api/userFetch.php", data, getHomeownerProfile);
@@ -40,8 +40,8 @@ function getHomeownerProfile(data){
 
 
 function retrieveHoweownerActive(){
-    let getMe = 'homeownersActive';
-    let data = new FormData();
+    var getMe = 'homeownersActive';
+    var data = new FormData();
     data.append("homeownersActive", getMe);
     //calls the data request function passing in desired url, parameters, and the function to fire upon callback
     dataRequest("api/getHomeownerDashboard.php", null, showAllHomeownerContests);
@@ -52,19 +52,19 @@ function showAllHomeownerContests(data){
 
     console.log(data);
 
-    let activeDiv = document.getElementById("activerow");
-    let completedDiv = document.getElementById("completedrow");
+    var activeDiv = document.getElementById("activerow");
+    var completedDiv = document.getElementById("completedrow");
 
     activeDiv.innerHTML = "";
     completedDiv.innerHTML = "";
 
-    for (let i=0; i < data.length; i++){
+    for (var i=0; i < data.length; i++){
 
         data[i].closing_date = data[i].closing_date.split(/[- :]/);
         data[i].closing_date = new Date(data[i].closing_date[0], data[i].closing_date[1]-1, data[i].closing_date[2], data[i].closing_date[3], data[i].closing_date[4], data[i].closing_date[5]);
         console.log(data[i].closing_date);
 
-        let state = data[i].state;
+        var state = data[i].state;
 
         console.log(data[i].rooms[0].files[0].filename);
 

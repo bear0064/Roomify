@@ -1,5 +1,5 @@
-"use strict";
-let subData;
+
+var subData;
 
 document.addEventListener("DOMContentLoaded", function() {
     passSingleContestId();
@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function passSingleContestId(){
 
-    let contest = localStorage.getItem('contestId');
+    var contest = localStorage.getItem('contestId');
 
-    let data = new FormData();
+    var data = new FormData();
     data.append("id", contest);
     //calls the data request function passing in desired url, parameters, and the function to fire upon callback
     dataRequest("api/singleContest.php", data, showSingleContest);
@@ -50,7 +50,7 @@ function showSingleContest(data){
 
     document.getElementById("contBrief").innerHTML +=a;
 
-    for (let k=0; k < data[0].rooms[0].properties.length; k++) {
+    for (var k=0; k < data[0].rooms[0].properties.length; k++) {
 
         var y = "";
         y +=
@@ -72,7 +72,7 @@ function showSingleContest(data){
 
     document.getElementById("imageSlider").innerHTML +=b;
 
-    for (let j=0; j < data[0].rooms[0].files.length; j++) {
+    for (var j=0; j < data[0].rooms[0].files.length; j++) {
 
         var x = "";
         x +=
@@ -155,7 +155,7 @@ function showContestSubmissions(data){
 
     if (data.length != 0) {
 
-                for (let i=0; i < data.length; i++){
+                for (var i=0; i < data.length; i++){
 
                     var s = "";
                         s +=
@@ -202,9 +202,9 @@ function showContestSubmissions(data){
 
 function showFullSize(id){
 
-    let thisSub;
+    var thisSub;
 
-    for (let i=0;i<subData.length;i++){
+    for (var i=0;i<subData.length;i++){
 
         if (subData[i].submission_id == id){
 
@@ -214,8 +214,8 @@ function showFullSize(id){
     }
 
 
-    let img = document.getElementById("submissionImage");
-    let text = document.getElementById("submissionText");
+    var img = document.getElementById("submissionImage");
+    var text = document.getElementById("submissionText");
 
     img.src = "upload/"+ thisSub.filename;
     text.innerHTML = thisSub.submission_text;

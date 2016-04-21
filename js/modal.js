@@ -1,25 +1,25 @@
-"use strict";
+
 //************ GLOBAL VARIABLES *************//
-let oneFileBool = true;
-let roomsData;
+var oneFileBool = true;
+var roomsData;
 //init some global variables to hold DOM elements
-let roomList, featuresList, uploadList, nextButton, backButton, errorText,
+var roomList, featuresList, uploadList, nextButton, backButton, errorText,
     contestTitle, contestDesc, contestLength = 0, contestPrize;
 
 //dimensions element variables
-let unitSelected, widthMeters, heightMeters, lengthMeters, widthFeet, widthInches, lengthFeet, lengthInches, heightFeet, heightInches;
+var unitSelected, widthMeters, heightMeters, lengthMeters, widthFeet, widthInches, lengthFeet, lengthInches, heightFeet, heightInches;
 //hold final dimensions
-let roomWidth, roomLength, roomHeight;
+var roomWidth, roomLength, roomHeight;
 
 //init an array to hold all modal windows and prog bar li
-let modalArray = new Array();
-let progArray = new Array();
+var modalArray = new Array();
+var progArray = new Array();
 
 //init some global counter variables
-let currentStep, currentRoom;
+var currentStep, currentRoom;
 
 //init the variable that will hold an array of all room objects
-let roomSelections = [];
+var roomSelections = [];
 
 //******************************************//
 
@@ -68,7 +68,7 @@ function modalInit(){
     modalArray[3] = document.getElementById("step4");
     
     progArray = document.querySelectorAll("ul.progress-indicator>li");
-    for (let i=1; i < progArray.length; i++){
+    for (var i=1; i < progArray.length; i++){
         progArray[i].className = "";   
     }
     
@@ -136,13 +136,13 @@ function backClick(){
 
 function nextClick(){
     
-    let nextState = false;
-    let errorMsg = "";
+    var nextState = false;
+    var errorMsg = "";
     
     switch (currentStep){
         case 1:
                 
-            for (let i=0; i < roomList.children.length; i++){
+            for (var i=0; i < roomList.children.length; i++){
                 if ( roomList.children[i].classList.contains("selected")){
                     nextState = true;
                     break;
@@ -155,7 +155,7 @@ function nextClick(){
             
         case 2:
             
-            for (let i=0; i < featuresList.children.length; i++){
+            for (var i=0; i < featuresList.children.length; i++){
                     
                     if (featuresList.children[i].classList.contains("selected")){
                         nextState = true;
@@ -276,7 +276,7 @@ function nextStep(){
 
 function switchModalView(showMe){
                 
-    for (let i=0; i < modalArray.length; i++){
+    for (var i=0; i < modalArray.length; i++){
         modalArray[i].classList.add("hidden");
     }
     
@@ -292,12 +292,12 @@ function updateRoomsModal(response){
     
     console.log(roomsData);
     
-     for (let i=0; i < roomsData.length; i++){
+     for (var i=0; i < roomsData.length; i++){
         
              
-            let li = document.createElement("li");
+            var li = document.createElement("li");
             li.innerHTML = roomsData[i].roomType;
-            let check = document.createElement("span");
+            var check = document.createElement("span");
             check.className = "checkMark fa fa-check pull-right";
             li.appendChild(check);
 
@@ -323,7 +323,7 @@ function handleFeatureClick(ev){
 function handleRoomClick(ev){
 
     //this if statent limits one room selection. remove everthing but the 'else' code to return to multiple room selection 
-        for (let i=0; i < roomList.children.length; i++){
+        for (var i=0; i < roomList.children.length; i++){
             if (roomList.children[i].classList.contains("selected")){
                 roomList.children[i].classList.remove("selected");
                 ev.target.lastChild.classList.remove("checked");
@@ -338,7 +338,7 @@ function saveRoomSelections(){
     
     roomSelections = [];
     
-    for (let i=0; i < roomList.children.length; i++){
+    for (var i=0; i < roomList.children.length; i++){
         if ( roomList.children[i].classList.contains("selected")){
             roomSelections.push({
                 
@@ -355,7 +355,7 @@ function saveRoomSelections(){
 
 function saveRoomFeatures(){
     
-    for (let i=0; i < featuresList.children.length; i++){
+    for (var i=0; i < featuresList.children.length; i++){
         
         if ( featuresList.children[i].classList.contains("selected")){
             console.log(featuresList.children[i].dataset);
@@ -371,7 +371,7 @@ function saveRoomFeatures(){
 
 function updateFeaturesModal(){
 
-    let h5 = document.getElementById("modalLabel");
+    var h5 = document.getElementById("modalLabel");
     h5.innerHTML = roomSelections[currentRoom].roomType + " Features";
     featuresList.innerHTML = "";
     widthMeters.value = "";
@@ -385,16 +385,16 @@ function updateFeaturesModal(){
     heightInches.value = "";
    
     
-    for (let i=0; i < roomsData.length; i++){
+    for (var i=0; i < roomsData.length; i++){
         
         if (roomSelections[currentRoom].roomType == roomsData[i].roomType){
             
-            for (let x=0; x < roomsData[i].features.length; x++){
+            for (var x=0; x < roomsData[i].features.length; x++){
              
-                    let li = document.createElement("li");
+                    var li = document.createElement("li");
                     li.innerHTML = roomsData[i].features[x];
                     li.setAttribute("data-name", roomsData[i].features[x]);
-                    let check = document.createElement("span");
+                    var check = document.createElement("span");
                     check.className = "checkMark fa fa-check pull-right";
                     
                     li.appendChild(check);
@@ -403,8 +403,8 @@ function updateFeaturesModal(){
         }  
     }  
     
-    let dxInputs = document.querySelectorAll(".dxIn");
-    for (let i=0;i<dxInputs.length;i++){
+    var dxInputs = document.querySelectorAll(".dxIn");
+    for (var i=0;i<dxInputs.length;i++){
         
         dxInputs[i].addEventListener("keyup", showMetricLabel);
     }
@@ -412,19 +412,19 @@ function updateFeaturesModal(){
 
 function imagesModal(){
     
-    let form = document.getElementById('uploadForm');
-    let dropZone = document.getElementById('dropZone');
-    let header = document.getElementById('imgLabel');
-    let fileCount = 0;
+    var form = document.getElementById('uploadForm');
+    var dropZone = document.getElementById('dropZone');
+    var header = document.getElementById('imgLabel');
+    var fileCount = 0;
     
     header.innerHTML = roomSelections[currentRoom].roomType + " Images";
 
-    let startUpload = function(files) {
+    var startUpload = function(files) {
         
         createFileItem(files[0].name);
         console.log(files);
         
-        let data = new FormData();   
+        var data = new FormData();
         data.append("SelectedFile", files[0]);
         
         dataRequest("api/fileUpload.php", data, function(response){
@@ -442,19 +442,19 @@ function imagesModal(){
                  
                  console.log(uploadList.childElementCount);
             
-                 let targetDiv = uploadList.querySelector('[data-name="'+files[0].name+'"');
+                 var targetDiv = uploadList.querySelector('[data-name="'+files[0].name+'"');
                  
                  setTimeout(function(){
-                    let progB = targetDiv.querySelector("p.progBar");
+                    var progB = targetDiv.querySelector("p.progBar");
                     progB.classList.add("success");
                  }, 2000);
                  
                  setTimeout(function(){
-                        let span = targetDiv.querySelector("span.hidden");
+                        var span = targetDiv.querySelector("span.hidden");
                         span.classList.remove("hidden");
-                        let thumb = targetDiv.querySelector(".myThumb2");
+                        var thumb = targetDiv.querySelector(".myThumb2");
                         thumb.src = "upload/" + response.fileName;
-                        let w = $('.myThumb2').last().width();
+                        var w = $('.myThumb2').last().width();
                         $('.myThumb2').css({'height': w +'px'});
                      
                      
@@ -472,7 +472,7 @@ function imagesModal(){
     }
     
     form.addEventListener('submit', function(e) {
-        let uploadFiles = document.getElementById('uploadFiles').files;
+        var uploadFiles = document.getElementById('uploadFiles').files;
         e.preventDefault()
 
         if (uploadFiles.length > 0 && oneFileBool){
@@ -504,20 +504,20 @@ function imagesModal(){
 
 function createFileItem(fileName){
     
-    let wrapper = document.createElement("div");
-    let thumbDiv = document.createElement("div");
-    let mainDiv = document.createElement("div");
-    let capDiv = document.createElement("div");
-    let capInput = document.createElement("textarea");
-    let capDone  = document.createElement("div");
-    let doneIcon = document.createElement("i");
-    let breakDiv = document.createElement("div");
-    let thumbImg = document.createElement("img");
-    let nameH6 = document.createElement("h6");
-    let closeBtn = document.createElement("button");
-    let progP = document.createElement("p");
-    let capSpan  = document.createElement("span");
-    let successSpan = document.createElement("span");
+    var wrapper = document.createElement("div");
+    var thumbDiv = document.createElement("div");
+    var mainDiv = document.createElement("div");
+    var capDiv = document.createElement("div");
+    var capInput = document.createElement("textarea");
+    var capDone  = document.createElement("div");
+    var doneIcon = document.createElement("i");
+    var breakDiv = document.createElement("div");
+    var thumbImg = document.createElement("img");
+    var nameH6 = document.createElement("h6");
+    var closeBtn = document.createElement("button");
+    var progP = document.createElement("p");
+    var capSpan  = document.createElement("span");
+    var successSpan = document.createElement("span");
     
     wrapper.setAttribute("class","nopadding");
     wrapper.setAttribute("data-name",fileName);
@@ -582,7 +582,7 @@ function createFileItem(fileName){
 
 function finalizeContest(){
     
-    let project = new FormData();
+    var project = new FormData();
     
     project.append("title", contestTitle.value);
     project.append("desc", contestDesc.value);
@@ -614,7 +614,7 @@ function finalizeContest(){
 
 function dataRequest(url, params, callback){
 
-    let xhr = new XMLHttpRequest();
+    var xhr = new XMLHttpRequest();
     xhr.open("POST", url, true);
 
 
@@ -649,14 +649,14 @@ function deleteImage(file, target){
     
     if(r == true)
     {
-        let data = new FormData();
+        var data = new FormData();
         data.append("file",file);
        dataRequest("api/deleteUpload.php", data, function(res){
            
            console.log(res.message);
            uploadList.removeChild(target.parentElement.parentElement.parentElement);
            
-           for (let i=0; i < roomSelections[currentRoom].roomFiles.length; i++){
+           for (var i=0; i < roomSelections[currentRoom].roomFiles.length; i++){
                
                if (roomSelections[currentRoom].roomFiles[i].originalName == file){
                    
@@ -671,7 +671,7 @@ function deleteImage(file, target){
 function showMetricLabel(ev){
     
     ev.preventDefault();
-    let label = document.querySelectorAll(".dxInLabel");
+    var label = document.querySelectorAll(".dxInLabel");
     
     if (this.value){
         label[this.getAttribute('data-value')].classList.add("revealMe");
@@ -683,7 +683,7 @@ function showMetricLabel(ev){
 
 function toggleCaption(ev){
 
-    let parent;
+    var parent;
 
     if (ev.target.classList.contains("fa-check")){
 
@@ -693,9 +693,9 @@ function toggleCaption(ev){
         parent = ev.target.parentElement.parentElement;
     }
 
-    let parentDivs = parent.querySelectorAll("div");
+    var parentDivs = parent.querySelectorAll("div");
 
-    for (let i=0; i<parentDivs.length;i++){
+    for (var i=0; i<parentDivs.length;i++){
 
         if (parentDivs[i].classList.contains("col-sm-9")) {
 
@@ -711,7 +711,7 @@ function toggleCaption(ev){
 
     if (!ev.target.classList.contains("addCaption")){
 
-        for (let y=0; y < roomSelections[currentRoom].roomFiles.length; y++){
+        for (var y=0; y < roomSelections[currentRoom].roomFiles.length; y++){
 
             if (roomSelections[currentRoom].roomFiles[y].originalName == parent.dataset.name){
 

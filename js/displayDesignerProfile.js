@@ -1,5 +1,5 @@
-"use strict";
-let subData;
+
+var subData;
 
 document.addEventListener("DOMContentLoaded", function () {
     passDesigner();
@@ -16,9 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function passDesigner() {
 
-    let user = localStorage.getItem('designerId');
+    var user = localStorage.getItem('designerId');
 
-    let data = new FormData();
+    var data = new FormData();
     data.append("userId", user);
 
     //dataRequest("api/getHoDet.php", data, showShowcase);
@@ -58,7 +58,7 @@ function showDesignerSubmissions(data) {
 
     if (data.length != 0) {
 
-        for (let i=0; i < data.length; i++){
+        for (var i=0; i < data.length; i++){
 
             var s = "";
             s +=
@@ -124,9 +124,9 @@ function showDesignerDetails(data) {
 
 function desSortDesignerSubmissions(data){
     var sortBy = event.target.innerHTML;
-    let uId = localStorage.getItem('designerId');
+    var uId = localStorage.getItem('designerId');
 
-    let desData = new FormData();
+    var desData = new FormData();
     desData.append("sortDesMethod", sortBy);
     desData.append("userDes", uId);
     //calls the data request function passing in desired url, parameters, and the function to fire upon callback
@@ -140,7 +140,7 @@ function desGetDesignerSubs(data){
 
     if (data.length != 0) {
 
-        for (let i=0; i < data.length; i++){
+        for (var i=0; i < data.length; i++){
 
             var s = "";
             s +=
@@ -181,9 +181,9 @@ function desGetDesignerSubs(data){
 
 function showFullSize(id){
 
-    let thisSub;
+    var thisSub;
 
-    for (let i=0;i<subData.length;i++){
+    for (var i=0;i<subData.length;i++){
 
         if (subData[i].submission_id == id){
 
@@ -193,8 +193,8 @@ function showFullSize(id){
     }
 
 
-    let img = document.getElementById("submissionImage");
-    let text = document.getElementById("submissionText");
+    var img = document.getElementById("submissionImage");
+    var text = document.getElementById("submissionText");
 
     img.src = "upload/"+thisSub[0].filename;
     text.innerHTML = thisSub[0].submission_text;

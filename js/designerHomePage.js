@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 function retrieveDesignerProfile(){
-    let getMe = 'designerProfile';
-    let data = new FormData();
+    var getMe = 'designerProfile';
+    var data = new FormData();
     data.append("designerProfile", getMe);
     //calls the data request function passing in desired url, parameters, and the function to fire upon callback
     dataRequest("api/userFetch.php", data, getDesignerProfile);
@@ -46,8 +46,8 @@ function getDesignerProfile(data){
 }
 
 function retrieveDesignerSubmissions(){
-    let getMe = 'designerSubmissions';
-    let data = new FormData();
+    var getMe = 'designerSubmissions';
+    var data = new FormData();
     data.append("designerSubmissions", getMe);
     //calls the data request function passing in desired url, parameters, and the function to fire upon callback
     dataRequest("api/getDesSub.php", data, getDesignerSubs);
@@ -55,8 +55,8 @@ function retrieveDesignerSubmissions(){
 
 
 function sortDesignerSubmissions(){
-    let sortBy = event.target.innerHTML;
-    let data = new FormData();
+    var sortBy = event.target.innerHTML;
+    var data = new FormData();
     data.append("sortMethod", sortBy);
     //calls the data request function passing in desired url, parameters, and the function to fire upon callback
     dataRequest("api/getDesSub.php", data, getDesignerSubs);
@@ -71,7 +71,7 @@ function getDesignerSubs(data){
 
     if (data.length != 0) {
 
-        for (let i=0; i < data.length; i++){
+        for (var i=0; i < data.length; i++){
 
             var s = "";
             s +=

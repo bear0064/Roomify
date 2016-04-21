@@ -1,29 +1,29 @@
-let userSubmission;
-let projID;
+var userSubmission;
+var projID;
 
 function submitTo(id){
 
     projID = id;
 
-    let form = document.getElementById('uploadForm');
-    let dropZone = document.getElementById('dropZone');
+    var form = document.getElementById('uploadForm');
+    var dropZone = document.getElementById('dropZone');
 
-    let startUpload = function(files) {
+    var startUpload = function(files) {
 
-        let progP = document.querySelector("p.progBar");
+        var progP = document.querySelector("p.progBar");
         document.getElementById("imageUploadBox").classList.add("hidden");
         document.getElementById("imagePreview").classList.remove("hidden");
 
-        let imageHeader = document.getElementById("imgName")
+        var imageHeader = document.getElementById("imgName")
         imageHeader.innerHTML = truncate(files[0].name);
-        let deleteIcon = document.createElement("i");
+        var deleteIcon = document.createElement("i");
         deleteIcon.setAttribute("class","fa fa-times pull-xs-right");
         imageHeader.appendChild(deleteIcon);
 
         setTimeout(function(){ progP.classList.add("loading"); }, 500);
 
         
-        let data = new FormData();
+        var data = new FormData();
         data.append("SelectedFile", files[0]);
 
         dataRequest("api/fileUpload.php", data, function(response){
@@ -50,7 +50,7 @@ function submitTo(id){
                 }, 2000);
 
                 setTimeout(function(){
-                    let thumb = document.querySelector("#imagePreview > img.myThumb");
+                    var thumb = document.querySelector("#imagePreview > img.myThumb");
                     thumb.src = "upload/" + response.fileName;
 
                 },4500);
@@ -66,7 +66,7 @@ function submitTo(id){
     }
 
     form.addEventListener('submit', function(e) {
-        let uploadFiles = document.getElementById('uploadFiles').files;
+        var uploadFiles = document.getElementById('uploadFiles').files;
         e.preventDefault()
 
         if (uploadFiles.length > 0 && oneFileBool){
@@ -117,17 +117,17 @@ function truncate(string){
 
 function deleteImage(file){
 
-    let data = new FormData();
+    var data = new FormData();
     data.append("file",file);
     dataRequest("api/deleteUpload.php", data, function(res){
 
         document.getElementById("imageUploadBox").classList.remove("hidden");
         document.getElementById("imagePreview").classList.add("hidden");
 
-        let thumb = document.querySelector("#imagePreview > img.myThumb");
+        var thumb = document.querySelector("#imagePreview > img.myThumb");
         thumb.src = "img/imgPlaceHolder.png";
 
-        let progP = document.querySelector("p.progBar");
+        var progP = document.querySelector("p.progBar");
         progP.className = "progBar";
 
 
@@ -147,7 +147,7 @@ function finalizeSubmit(){
     userSubmission.budget = document.getElementById("budgetSlider").value;
 
 
-    let data = new FormData();
+    var data = new FormData();
     data.append("projID", projID);
     data.append("file", JSON.stringify(userSubmission.file));
     data.append("desc", userSubmission.description);
@@ -158,7 +158,7 @@ function finalizeSubmit(){
         if  (res.code == 0){
             console.log ("SUCCESS SUB UPLOAD");
 
-            
+
             location.reload();
 
 
