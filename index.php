@@ -27,11 +27,11 @@ session_start();
     <nav>
         <ul class="cd-secondary-nav">
             <li class="nav-item pull-xs-right signin-btn btn">
-                <a href="login.php">
+                <a id="loginButtonDiv" href="login.php">
                     <img class="person-icon" src="img/person-icon.svg" width="23">Log in
                 </a>
             </li>
-            <li class="nav-item pull-xs-right">Demo as Guest --></li>
+
         </ul>
     </nav>
 
@@ -167,6 +167,7 @@ session_start();
 <script src="js/jquery-2.2.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/style.js"></script>
+<script src="js/main.js"></script>
 <script src="js/login.js"></script>
 
 </body>

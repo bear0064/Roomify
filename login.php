@@ -122,10 +122,10 @@ session_start();
             </div>
         </div>
     </div>
-    <!-- CALEB TODO -->
-    <p style="text-align:center;margin:20px;font-size:14px;cursor:pointer;" onclick="">Log in as Guest</p>
+    <p style="text-align:center;margin:20px;font-size:14px;cursor:pointer;" onclick="guestLogin();">Log in as Guest</p>
     <script src="js/jquery-2.2.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/login.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/style.js"></script>
 </body>

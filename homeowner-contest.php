@@ -118,11 +118,14 @@ include('api/homeownerCheck.php');
                         </div>
                     </li>
                     <!--TODO SWITCH VIEW BUTTON-->
-                    <li class="primary-nav-icon nav-item pull-xs-right">
-                        <a class="nav-link" href="">
-                            <img class="person-icon" src="img/person-icon.svg" width="23">Switch User Type
+                    <?php if($_SESSION['user_type'] == 1)
+                    { echo "<li class='primary-nav-icon nav-item pull-xs-right'>
+                        <a class='nav-link' data-userType='designer' onclick='changeUserType(this.dataset);'>
+                            <img class='person-icon' src='img/person-icon.svg' width='23'>Switch User Type
                         </a>
-                    </li>
+                    </li>";
+                    }
+                    ?>
                 </ul>
             </nav>
         </header>

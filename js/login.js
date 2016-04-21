@@ -3,3 +3,32 @@ var submitResponse = function(url) {
     form.action = url;
     form.submit();
 };
+
+function guestLogin(){
+
+    
+    
+    let account = "guest";
+    console.log(account);
+    let data = new FormData();
+    data.append("guestLogin", account);
+    //calls the data request function passing in desired url, parameters, and the function to fire upon callback
+    dataRequest("api/login-guest.php", data, guestLoginCallback);
+
+}
+
+function guestLoginCallback(data) {
+
+    if(data == 'homeowner'){
+
+        location.assign("http://localhost:8888/newRaumJS/homeowner-profile.php");
+
+    } else {
+
+        location.assign("http://localhost:8888/newRaumJS/designer-profile.php");
+
+    }
+
+
+}
+

@@ -55,6 +55,7 @@
                     $results = $conn->prepare($sqlQuery);
                     $results->execute();
 
+                    $_SESSION["user_type"] = $results2[0]->user_type;
                     $_SESSION["user_id"] = $results2[0]->user_id;
                     $_SESSION["current_mode"] = $results2[0]->current_mode;
                     $_SESSION["user_pic"] = $user_profile->photoURL;

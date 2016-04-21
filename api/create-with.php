@@ -74,6 +74,7 @@ if (isset($_GET['provider'])) {
 
                     $newId = $conn->lastInsertId();
 
+                    $_SESSION["user_type"] = 2;
                     $_SESSION["user_id"] = $newId;
                     $_SESSION["user_pic"] = $photoURL;
 

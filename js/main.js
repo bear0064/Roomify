@@ -18,6 +18,7 @@ function dataRequest(url, params, callback){
 }
 
 
+
 function retrieveOne(contest){
     localStorage.setItem('contestId', contest.contest);
     location.assign("https://ten23mb.edumedia.ca/designer-contest.php");
@@ -240,4 +241,36 @@ function sortDesCompleted(){
     dataRequest("api/sort.php", data, showSortedCompletedContests);
 
 }
+
+function changeUserType(type){
+
+    console.log(type.usertype);
+    
+    let accountType = type.usertype;
+    let data = new FormData();
+    data.append("accountType", accountType);
+    //calls the data request function passing in desired url, parameters, and the function to fire upon callback
+    dataRequest("api/changeAccount.php", data, userChangeCallback);
+    
+}
+
+function userChangeCallback(data){
+
+    
+
+    if(data == 'homeowner'){
+
+        location.assign("http://localhost:8888/newRaumJS/homeowner-profile.php");
+
+    } else {
+
+        location.assign("http://localhost:8888/newRaumJS/designer-profile.php");
+
+    }
+
+
+}
+
+
+
 
