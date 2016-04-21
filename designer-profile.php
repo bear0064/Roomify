@@ -123,7 +123,7 @@ include('api/designerCheck.php');
                                 <img class="media-object img-circle img-thumbnail img-thumbnail-custom" src="<?echo $_SESSION["user_pic"]?>" alt="avatar" style="width: 125px;height:125px;">
                             </div>
                             <div id="profile" class="media-body" style="padding-left: 20px">
-                            </div>o
+                            </div>
                         </div>
                     </div>
                 </div>
