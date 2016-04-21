@@ -62,10 +62,10 @@
 
                     if ($_SESSION["current_mode"] == 'homeowner'){
 
-                        header('Location: http://localhost:8888/newRaumJS/homeowner-profile.php');
+                        header('Location: https://ten23mb.edumedia.ca/homeowner-profile.php');
                     } else {
 
-                        header('Location: http://localhost:8888/newRaumJS/designer-profile.php');
+                        header('Location: https://ten23mb.edumedia.ca/designer-profile.php');
                     }
 
 

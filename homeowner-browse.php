@@ -49,7 +49,7 @@ include('api/homeownerCheck.php');
 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img
-                            src="<? echo $_SESSION["user_pic"] ?>"
+                            src="<?php echo $_SESSION["user_pic"] ?>"
                             class="avatar img-circle img-thumbnail img-thumbnail-custom" alt="avatar"><i
                             class="fa fa-chevron-down"></i></a>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenu">
@@ -89,7 +89,7 @@ include('api/homeownerCheck.php');
                     </li>
                     <li class="nav-item dropdown pull-xs-right profile-pic">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img
-                            src="<? echo $_SESSION["user_pic"] ?>"
+                            src="<?php echo $_SESSION["user_pic"] ?>"
                             class="avatar img-circle img-thumbnail img-thumbnail-custom" alt="avatar"><i
                             class="fa fa-chevron-down"></i></a>
                         <div class="dropdown-menu dropdown-profile" aria-labelledby="dropdownMenu">

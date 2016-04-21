@@ -8,8 +8,10 @@
 
 $dbhost = 'localhost';
 $dbname = 'ten23mb';
-$dbuser = 'root';
-$dbpass = 'root';
+//$dbuser = 'root';
+$dbuser = 'ten23mb';
+//$dbpass = 'root';
+$dbpass = 'RaumView';
 
 
 try {
