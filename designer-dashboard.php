@@ -23,42 +23,6 @@ include('api/designerCheck.php');
 
     <body>
         <!-- Header Area -->
-<!--
-        <div class="header">
-            <div class="navbar-inner">
-                <div class="logo">
-                    <a href="index.php">
-                        <img src="img/footer-logo.svg" width="50">
-                    </a>
-                </div>
-                <div class="inner-header">
-                    <ul class="nav">
-                        <li class="divider-vertical"></li>
-                        <li class="active"><a href="designer-dashboard.php"><i class="icon-home icon-white"></i> Dashboard</a></li>
-                        <li class="browse"><a href="designer-browse.php"><i class="icon-home icon-white"></i> Browse</a></li>
-                    </ul>
-                    <ul class="comments">
-                        <li><a href="#"><i class="fa fa-comments-o"></i></a></li>
-                        <li><a href="#"><i class="fa fa-bell-o"></i></a></li>
-                    </ul>
-                </div>
-                <div class="pull-right">
-                    <ul class="nav">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="<?php echo $_SESSION["user_pic"]?>" class="avatar img-circle img-thumbnail img-thumbnail-custom" alt="avatar"><i class="fa fa-chevron-down"></i></a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-                                <a class="dropdown-item" href="designer-profile.php">Profile</a>
-                                <a class="dropdown-item" href="#">Settings</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="api/logout.php">Logout</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="clear"></div>
-            </div>
-        </div>
--->
         <header>
             <nav class="navbar">
 
@@ -113,7 +77,7 @@ include('api/designerCheck.php');
                     <?php if($_SESSION['user_type'] == 1)
                     { echo "<li class='primary-nav-icon nav-item pull-xs-right'>
                         <a class='nav-link' data-userType='homeowner' onclick='changeUserType(this.dataset);'>
-                            <img class='person-icon' src='img/person-icon.svg' width='23'>Switch User Type
+                            <img class='person-icon' src='img/person-icon.svg' width='23'>Switch to Homeowner
                         </a>
                     </li>";                                
                     }
@@ -171,15 +135,7 @@ include('api/designerCheck.php');
                 </div>
 
 
-                <!-- Active Tab w No Active Contests -->
-                <!--
-            <div id="active" class="tab-pane fade in active cnt-center">
-                <p>You have no active contests.</p>
-                <p>Browse contests <a href="designer-browse.html" class="color-blue">here</a></p>
-            </div>
-            -->
-
-                <!-- Active Tab w Active Contests -->
+                <!-- Active Tab  -->
                 <div id="active" class="tab-pane fade in active">
                     <div id="activerow" class="row">
 
@@ -194,9 +150,7 @@ include('api/designerCheck.php');
                     <div id="completedrow" class="row">
 
                     </div>
-
-                    <!--<p>You have no completed contests.</p>-->
-                    <!--<p>Browse contests <a href="designer-browse.html" class="color-blue">here</a></p>-->
+                    
                 </div>
 
             </div>

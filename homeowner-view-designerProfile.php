@@ -24,42 +24,6 @@ include('api/homeownerCheck.php');
     <body>
 
         <!-- Header Area -->
-<!--
-        <div class="header">
-            <div class="navbar-inner">
-                <div class="logo">
-                    <a href="index.php">
-                        <img src="img/footer-logo.svg" width="50">
-                    </a>
-                </div>
-                <div class="inner-header">
-                    <ul class="nav">
-                        <li class="divider-vertical"></li>
-                        <li><a href="homeowner-dashboard.php">Dashboard</a></li>
-                        <li class="browse"><a href="homeowner-browse.php">Browse</a></li>
-                    </ul>
-                    <ul class="comments">
-                        <li><a href="#"><i class="fa fa-comments-o"></i></a></li>
-                        <li><a href="#"><i class="fa fa-bell-o"></i></a></li>
-                    </ul>
-                </div>
-                <div class="pull-right">
-                    <ul class="nav">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="<?php echo $_SESSION["user_pic"]?>" class="avatar img-circle img-thumbnail img-thumbnail-custom" alt="avatar"><i class="fa fa-chevron-down"></i></a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-                                <a class="dropdown-item" href="homeowner-profile.php">Profile</a>
-                                <a class="dropdown-item" href="#">Settings</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="api/logout.php">Logout</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="clear"></div>
-            </div>
-        </div>
--->
         <header>
             <nav class="navbar">
 
@@ -110,6 +74,15 @@ include('api/homeownerCheck.php');
                             <a class="dropdown-item" href="#">View all</a>
                         </div>
                     </li>
+                     <!--TODO SWITCH VIEW BUTTON-->
+                    <?php if($_SESSION['user_type'] == 1)
+                    { echo "<li class='primary-nav-icon nav-item pull-xs-right'>
+                        <a class='nav-link' data-userType='designer' onclick='changeUserType(this.dataset);'>
+                            <img class='person-icon' src='img/person-icon.svg' width='23'>Switch to Designer
+                        </a>
+                    </li>";
+                    }
+                    ?>
                 </ul>
             </nav>
         </header>

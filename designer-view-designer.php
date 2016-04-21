@@ -23,40 +23,68 @@ include('api/designerCheck.php');
     <body>
 
         <!-- Header Area -->
-        <div class="header">
-            <div class="navbar-inner">
-                <div class="logo">
+        <header>
+            <nav class="navbar">
+
+                <!-- Brand -->
+                <div class="navbar-brand logo">
                     <a href="index.php">
                         <img src="img/footer-logo.svg" width="50">
                     </a>
                 </div>
-                <div class="inner-header">
-                    <ul class="nav">
-                        <li class="divider-vertical"></li>
-                        <li><a href="homeowner-dashboard.php">Dashboard</a></li>
-                        <li class="browse"><a href="homeowner-browse.php">Browse</a></li>
-                    </ul>
-                    <ul class="comments">
-                        <li><a href="#"><i class="fa fa-comments-o"></i></a></li>
-                        <li><a href="#"><i class="fa fa-bell-o"></i></a></li>
-                    </ul>
-                </div>
-                <div class="pull-right">
-                    <ul class="nav">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="<?php echo $_SESSION["user_pic"]?>" class="avatar img-circle img-thumbnail img-thumbnail-custom" alt="avatar"><i class="fa fa-chevron-down"></i></a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-                                <a class="dropdown-item" href="homeowner-profile.php">Profile</a>
-                                <a class="dropdown-item" href="#">Settings</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="api/logout.php">Logout</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="clear"></div>
-            </div>
-        </div>
+
+                <!-- Links -->
+                <ul class="nav navbar-nav">
+                    <li class="nav-item primary-link">
+                        <a class="nav-link" href="designer-dashboard.php">Dashboard</a>
+                    </li>
+                    <li class="nav-item primary-link">
+                        <a class="nav-link" href="designer-browse.php">Browse</a>
+                    </li>
+                    <li class="nav-item dropdown pull-xs-right profile-pic">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img
+                            src="<?php echo $_SESSION["user_pic"] ?>"
+                            class="avatar img-circle img-thumbnail img-thumbnail-custom" alt="avatar"><i
+                            class="fa fa-chevron-down"></i></a>
+                        <div class="dropdown-menu dropdown-profile" aria-labelledby="dropdownMenu">
+                            <a class="dropdown-item" href="designer-profile.php">Profile</a>
+                            <a class="dropdown-item" href="#">Settings</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="api/logout.php"><i class="fa fa-sign-out"></i> Logout</a>
+                        </div>
+                    </li>
+                    <li class="primary-nav-icon nav-item pull-xs-right">
+                        <a href="#" class="nav-link" data-toggle="dropdown"><i class="fa fa-bell-o"></i></a>
+                        <div class="dropdown-menu dropdown-notif">
+                            <div class="dropdown-menu-header">Notifications <span class="label label-pill label-danger">0</span></div>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">You have 0 notifications</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">View all</a>
+                        </div>
+                    </li>
+                    <li class="primary-nav-icon nav-item pull-xs-right">
+                        <a href="#" class="nav-link" data-toggle="dropdown"><i class="fa fa-envelope-o"></i></a>
+                        <div class="dropdown-menu dropdown-inbox">
+                            <div class="dropdown-menu-header">Inbox <span class="label label-pill label-danger">0</span></div>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">You have 0 messages</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">View all</a>
+                        </div>
+                    </li>
+                    <!--TODO SWITCH VIEW BUTTON-->
+                    <?php if($_SESSION['user_type'] == 1)
+                    { echo "<li class='primary-nav-icon nav-item pull-xs-right'>
+                        <a class='nav-link' data-userType='homeowner' onclick='changeUserType(this.dataset);'>
+                            <img class='person-icon' src='img/person-icon.svg' width='23'>Switch to Homeowner
+                        </a>
+                    </li>";
+                    }
+                    ?>
+                </ul>
+            </nav>
+        </header>
         <!-- End of Header Area -->
 
         <!-- Profile Info Container -->

@@ -110,7 +110,7 @@ function getAllDesignerActiveprojects(data) {
                 "<h6 class='card-subtitle text-muted'>" + data[i].rooms[0].room_type + "</h6>" +
                 "</div>" +
 
-                "<div class='submittedBadge hidden'>" +
+                "<div class='submittedBadge'>" +
                 "<span>Submitted</span>" +
                 "</div>" +
 

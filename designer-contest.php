@@ -25,48 +25,7 @@ include('api/designerCheck.php');
     </head>
 
     <body>
-        <!-- Header Area -->
-        <!--
-        <div class="header">
-            <div class="navbar-inner">
-                <div class="logo">
-                    <a href="index.php">
-                        <img src="img/footer-logo.svg" width="50">
-                    </a>
-                </div>
-                <div class="inner-header">
-                    <ul class="nav">
-                        <li class="divider-vertical"></li>
-                        <li><a href="designer-dashboard.php"><i class="icon-home icon-white"></i> Dashboard</a></li>
-                        <li class="browse"><a href="designer-browse.php">Browse</a></li>
-                    </ul>
-                    <ul class="comments">
-                        <li>
-                            <a href="#"><i class="fa fa-comments-o"></i></a></li>
-                        <li><a href="#"><i class="fa fa-bell-o"></i></a></li>
-                    </ul>
-                </div>
-                <div class="pull-right">
-                    <ul class="nav">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img
-                            src="<?php echo $_SESSION["user_pic"] ?>"
-                            class="avatar img-circle img-thumbnail img-thumbnail-custom"
-                            alt="avatar"><i
-                            class="fa fa-chevron-down"></i></a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-                                <a class="dropdown-item" href="designer-profile.php">Profile</a>
-                                <a class="dropdown-item" href="#">Settings</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="api/logout.php">Logout</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="clear"></div>
-            </div>
-        </div>
--->
+
         <header>
             <nav class="navbar">
 
@@ -121,7 +80,7 @@ include('api/designerCheck.php');
                     <?php if($_SESSION['user_type'] == 1)
                     { echo "<li class='primary-nav-icon nav-item pull-xs-right'>
                         <a class='nav-link' data-userType='homeowner' onclick='changeUserType(this.dataset);'>
-                            <img class='person-icon' src='img/person-icon.svg' width='23'>Switch User Type
+                            <img class='person-icon' src='img/person-icon.svg' width='23'>Switch to Homeowner
                         </a>
                     </li>";
                     }
@@ -261,7 +220,7 @@ include('api/designerCheck.php');
                             </div>
                         </div>
 
-<<<<<<< Updated upstream
+
                         <div class="col-sm-7" style="padding-right: 0;">
                             <textarea id="submissionDesc" rows="8" class="form-control" placeholder="Describe your mood board here."></textarea>
                             <div class="divider col-sm-12 nopadding">
@@ -269,28 +228,18 @@ include('api/designerCheck.php');
                             </div>
                             <h6 class="b3header">Budget Used <span id="budgetVal" class="pull-xs-right">$500</span></h6>
                             <input type="range" id="budgetSlider" class="" value="500" min="200" max="15000" step="50" oninput="showBudgetValue(this.value);">
-=======
-                        <div class="modal-footer myFooter" id="submissionFooter">
-                            <button id="cancelBtn" type="button" class="btn btn-default pull-xs-left" data-dismiss="modal" onclick="clearModal();">
-                                Cancel
-                            </button>
-                            <span id="modalError" class="center"></span>
-                            <button id="submitBtn" type="button" class="btn btn-primary pull-xs-right" onclick="finalizeSubmit();">
-                                Submit
-                            </button>
->>>>>>> Stashed changes
                         </div>
-
                     </div>
 
                     <div class="modal-footer myFooter" id="submissionFooter">
-                        <button id="cancelBtn" type="button" class="btn btn-default pull-xs-left" onclick="clearModal();">
+                        <button id="cancelBtn" type="button" class="btn btn-default pull-xs-left" data-dismiss="modal" onclick="clearModal();">
                             Cancel
                         </button>
                         <span id="modalError" class="center"></span>
                         <button id="submitBtn" type="button" class="btn btn-primary pull-xs-right" onclick="finalizeSubmit();">
                             Submit
                         </button>
+                    </div>
                     </div>
                 </div>
             </div>
