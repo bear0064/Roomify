@@ -137,7 +137,7 @@ include('api/homeownerCheck.php');
                     <div class="dropdown-category cnt-right">
                         <div class="btn-group">
                             <button type="button" id="dropDownName" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Newest <span class="caret"></span>
+                                Newest <i class="fa fa-chevron-down filter-icon"></i>
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenu">
                                 <a class="dropdown-item active" value="Newest" onclick="sortHomeActive(event);">Newest</a>

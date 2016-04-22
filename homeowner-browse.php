@@ -130,7 +130,7 @@ include('api/homeownerCheck.php');
                 <div id="yourDesigners" class="tab-pane empty fade cnt-center">
                     <div id="favDes" class="row">
                         <p>You do not have any favourite designers</p>
-                        <p>Browse designers <a href="homeowner-browse.php">here</a></p>
+                        <p>Browse designers <a class="here" href="homeowner-browse.php">here</a></p>
                     </div>
                 </div>
             </div>

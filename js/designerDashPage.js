@@ -143,7 +143,7 @@ function getAllDesignerActiveprojects(data) {
         var s = "";
         s +=
             "<p>You have no active contests.</p>" +
-            "<p>Browse contests <a href='designer-browse.php'>here</a></p>";
+            "<p>Browse contests <a class='here' href='designer-browse.php'>here</a></p>";
 
 
         document.getElementById("active").innerHTML += s;
@@ -238,7 +238,7 @@ function getAllDesignerCompletedprojects(data) {
         var s = "";
         s +=
             "<p>You have no completed contests.</p>" +
-            "<p>Browse contests <a href='designer-browse.php'>here</a></p>";
+            "<p>Browse contests <a class='here' href='designer-browse.php'>here</a></p>";
 
         document.getElementById("completed").innerHTML += s;
     }

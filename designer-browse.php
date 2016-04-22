@@ -106,7 +106,7 @@ include('api/designerCheck.php');
                     <div class="btn-group">
                         <button type="button" id="dropDownName" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Newest
-                            <span class="caret"></span>
+                            <i class="fa fa-chevron-down filter-icon"></i>
                         </button>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenu">
@@ -163,7 +163,7 @@ include('api/designerCheck.php');
         <script src="js/libs/jQuery/jquery-2.2.1.min.js"></script>
         <script src="js/libs/bootstrap/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
-        <script src="js/designerSort.js"></script>
+        <!-- <script src="js/designerSort.js"></script> -->
         <script src="js/designerBrowsingPage.js"></script>
         <script src="js/countdown.js"></script>
     </body>

@@ -23,45 +23,6 @@ include('api/designerCheck.php');
 
     <body>
         <!-- Header Area -->
-<<<<<<< Updated upstream
-=======
-        <!--
-        <div class="header">
-            <div class="navbar-inner">
-                <div class="logo">
-                    <a href="index.php">
-                        <img src="img/footer-logo.svg" width="50">
-                    </a>
-                </div>
-                <div class="inner-header">
-                    <ul class="nav">
-                        <li class="divider-vertical"></li>
-                        <li class="active"><a href="designer-dashboard.php"><i class="icon-home icon-white"></i> Dashboard</a></li>
-                        <li class="browse"><a href="designer-browse.php"><i class="icon-home icon-white"></i> Browse</a></li>
-                    </ul>
-                    <ul class="comments">
-                        <li><a href="#"><i class="fa fa-comments-o"></i></a></li>
-                        <li><a href="#"><i class="fa fa-bell-o"></i></a></li>
-                    </ul>
-                </div>
-                <div class="pull-right">
-                    <ul class="nav">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="<?php echo $_SESSION["user_pic"]?>" class="avatar img-circle img-thumbnail img-thumbnail-custom" alt="avatar"><i class="fa fa-chevron-down"></i></a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-                                <a class="dropdown-item" href="designer-profile.php">Profile</a>
-                                <a class="dropdown-item" href="#">Settings</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="api/logout.php">Logout</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="clear"></div>
-            </div>
-        </div>
--->
->>>>>>> Stashed changes
         <header>
             <nav class="navbar">
 
