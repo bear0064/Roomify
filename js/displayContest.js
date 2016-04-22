@@ -144,7 +144,7 @@ function submitTo(contest){
   console.log(contest);
     localStorage.setItem('contestId', contest);
 
-//    location.assign("https://ten23mb.edumedia.ca/designer-contest.php");
+//    location.assign("https://roomify.calebbear.com/designer-contest.php");
 
 }
 

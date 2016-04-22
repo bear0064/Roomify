@@ -62,10 +62,10 @@
 
                     if ($_SESSION["current_mode"] == 'homeowner'){
 
-                        header('Location: https://ten23mb.edumedia.ca/homeowner-profile.php');
+                        header('Location: https://roomify.calebbear.com/homeowner-profile.php');
                     } else {
 
-                        header('Location: https://ten23mb.edumedia.ca/designer-profile.php');
+                        header('Location: https://roomify.calebbear.com/designer-profile.php');
                     }
 
 

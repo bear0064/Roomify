@@ -11,7 +11,7 @@
 
 return
 		array(
-			"base_url" => "https://ten23mb.edumedia.ca/api/oAuthEndPoint.php",
+			"base_url" => "https://roomify.calebbear.com/api/oAuthEndPoint.php",
 			"providers" => array(
 				// openid providers
 				"OpenID" => array(

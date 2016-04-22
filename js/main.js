@@ -21,12 +21,12 @@ function dataRequest(url, params, callback){
 
 function retrieveOne(contest){
     localStorage.setItem('contestId', contest.contest);
-    location.assign("https://ten23mb.edumedia.ca/designer-contest.php");
+    location.assign("https://roomify.calebbear.com/designer-contest.php");
 }
 
 function retrieveDesProf(designer){
     localStorage.setItem('designerId', designer.designer);
-    location.assign("https://ten23mb.edumedia.ca/homeowner-view-designerProfile.php");
+    location.assign("https://roomify.calebbear.com/homeowner-view-designerProfile.php");
 }
 
 function getHomeOwner(homeowner){
@@ -39,19 +39,19 @@ function getHomeOwner(homeowner){
     if(localStorage.getItem('ut') == 'homeowner' ){
 
         localStorage.setItem('homeownerId', homeowner.user);
-        location.assign("https://ten23mb.edumedia.ca/homeowner-view-homeowner.php");
+        location.assign("https://roomify.calebbear.com/homeowner-view-homeowner.php");
         
     } else {
 
         localStorage.setItem('designerId', homeowner.user);
-        location.assign("https://ten23mb.edumedia.ca/designer-view-designer.php");
+        location.assign("https://roomify.calebbear.com/designer-view-designer.php");
         
     }
 }
 
 function retrieveOneHoCont(contest){
     localStorage.setItem('contestId', contest.contest);
-    location.assign("https://ten23mb.edumedia.ca/homeowner-contest.php");
+    location.assign("https://roomify.calebbear.com/homeowner-contest.php");
 }
 
 function sortActive(){
@@ -260,11 +260,11 @@ function userChangeCallback(data){
 
     if(data == 'homeowner'){
 
-        location.assign("https://ten23mb.edumedia.ca/homeowner-profile.php");
+        location.assign("https://roomify.calebbear.com/homeowner-profile.php");
 
     } else {
 
-        location.assign("https://ten23mb.edumedia.ca/designer-profile.php");
+        location.assign("https://roomify.calebbear.com/designer-profile.php");
 
     }
 

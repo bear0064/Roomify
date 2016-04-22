@@ -21,11 +21,11 @@ function guestLoginCallback(data) {
 
     if(data == 'homeowner'){
 
-        location.assign("https://ten23mb.edumedia.ca/homeowner-profile.php");
+        location.assign("https://roomify.calebbear.com/homeowner-profile.php");
 
     } else {
 
-        location.assign("https://ten23mb.edumedia.ca/designer-profile.php");
+        location.assign("https://roomify.calebbear.com/designer-profile.php");
 
     }
 
