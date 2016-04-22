@@ -147,7 +147,7 @@ session_start();
             <div class="col-md-6 footer-nav">
                 <ul>
                     <li><a href="#0">Contact Us</a></li>
-                    <li><a href="#0">Team</a></li>
+                    <li><a href="team.php">Team</a></li>
                 </ul>
             </div>
         </div>

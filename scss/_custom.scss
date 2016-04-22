@@ -620,6 +620,84 @@ section {
     }
 }
 
+#section5 {
+    background-color: #f0f3f7;
+    color: #334867;
+    font-weight: 300;
+    padding-top: 150px;
+    .team-title{
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: .7px;
+    }
+    .team{
+        text-transform: lowercase;
+        font-size: 40px;
+        color: #83c0ff;
+        font-weight: 100;
+        margin-bottom: 50px;
+    }
+    .teamBox{
+        margin-top: 50px;
+    }
+    .card{
+        border: none;
+        border-radius: 0;
+    }
+    .card-block{
+        height: 130px;
+    }
+//    .teammain{
+//        display: block;
+//        margin-top: 21px;
+//        outline: 1px solid red;
+//    }
+//    .avatarcontent{
+//        display: inline-block;
+//        height: 480px;
+//        margin-bottom: 70px;
+//        outline: 1px solid blue;
+//    }
+//    .avatar{
+//        display: inline-block;
+//        overflow: hidden;
+//        width:320px;
+//        height: 410px;
+//        outline: 1px solid green;
+//    }
+#steps {
+//  width: 100%;
+/*   text-align: center;
+   */}
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+.list-unstyled {
+  display: table;
+  width: 80%;
+  margin: 0 auto;
+}
+.l-u {
+  display: inline-block;
+  width: 32%;
+  min-width: 200px;
+  margin: 0.5%;
+  line-height: 22px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, .3);
+  height: 110px;
+}
+.l-u p {
+  padding: 0 10px;
+  color: #1d70b7;
+  margin-top: 20px;
+  margin-left: 10px;
+  text-align: left;
+}
+}
+
 footer {
     background-color: #334867;
     color: white;

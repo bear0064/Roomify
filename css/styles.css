@@ -390,7 +390,6 @@ Dropdowns
     float: right;
 }
 
-/*
 .dropdown-category {
     margin-bottom: 20px;
 }
@@ -408,7 +407,6 @@ Dropdowns
 .dropdown-category .btn-group.open .dropdown-toggle {
     box-shadow: none;
 }
-*/
 
 #favDes{
     color: #334867;
@@ -420,6 +418,26 @@ Dropdowns
 #favDes a:hover{
     color: #83c0ff;
 }
+.btn{
+    font-size: 14px;
+    color: #334867;
+    font-weight: 400;
+}
+.filter-icon{
+    font-size: 11px;
+}
+
+.filter-item{
+    text-align: left;
+    padding: 5px;
+    padding-left: 15px;
+    pointer-events: all;
+}
+/*
+.dropdown-menu.active{
+    color: red;
+}
+*/
 
 /*sara add*/
 

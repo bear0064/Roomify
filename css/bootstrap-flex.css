@@ -5211,6 +5211,55 @@ section {
     #section4 .notify-btn:hover {
       background-color: #378feb; }
 
+#section5 {
+  background-color: #f0f3f7;
+  color: #334867;
+  font-weight: 300;
+  padding-top: 150px; }
+  #section5 .team-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .7px; }
+  #section5 .team {
+    text-transform: lowercase;
+    font-size: 40px;
+    color: #83c0ff;
+    font-weight: 100;
+    margin-bottom: 50px; }
+  #section5 .teamBox {
+    margin-top: 50px; }
+  #section5 .card {
+    border: none;
+    border-radius: 0; }
+  #section5 .card-block {
+    height: 130px; }
+  #section5 #steps {
+    /*   text-align: center;
+       */ }
+  #section5 .wrapper {
+    width: 100%;
+    margin: 0 auto; }
+  #section5 .list-unstyled {
+    display: table;
+    width: 80%;
+    margin: 0 auto; }
+  #section5 .l-u {
+    display: inline-block;
+    width: 32%;
+    min-width: 200px;
+    margin: 0.5%;
+    line-height: 22px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
+    height: 110px; }
+  #section5 .l-u p {
+    padding: 0 10px;
+    color: #1d70b7;
+    margin-top: 20px;
+    margin-left: 10px;
+    text-align: left; }
+
 footer {
   background-color: #334867;
   color: white;
@@ -5260,23 +5309,23 @@ Login / Sign up
   .form-logo a {
     padding: 10px; }
 
-.nav {
+.nav-custom {
   width: 100%;
   padding-top: 30px;
   opacity: 1;
   transition: all .5s ease;
   text-align: center; }
-  .nav ul {
+  .nav-custom ul {
     text-align: center;
     margin-left: -40px; }
-  .nav li {
+  .nav-custom li {
     font-size: 18px;
     display: inline;
     text-align: left;
     font-weight: 300;
     padding-right: 10px;
     color: #ffffff; }
-    .nav li:last-child {
+    .nav-custom li:last-child {
       padding-left: 20px; }
 
 .signin-active a {
